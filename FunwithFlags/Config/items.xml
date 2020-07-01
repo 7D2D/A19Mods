@@ -1,0 +1,31 @@
+<configs>
+	<append xpath="/items">	
+		<item name="flagPole">
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="flagPole" />		
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Miron"/>
+			<property name="Stacknumber" value="50"/> <!-- STK resource -->
+			<property name="EconomicValue" value="12"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+			<property name="CreativeMode" value="Player"/>
+		</item>
+		
+		<item name="flagCanvas"> 
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="flagCanvas" />			
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Stacknumber" value="25"/> <!-- STK resource -->
+			<property name="RepairAmount" value="50"/>
+			<property name="FuelValue" value="1"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		</item>
+	</append>
+</configs>

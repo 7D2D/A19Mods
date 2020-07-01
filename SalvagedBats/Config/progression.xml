@@ -1,0 +1,5 @@
+<progression>
+
+		<append xpath="//perk[@name='perkPummelPete']//passive_effect[@name='RecipeTagUnlocked']/@tags">,meleeAluminumBat,meleePlainBat</append>
+
+</progression>

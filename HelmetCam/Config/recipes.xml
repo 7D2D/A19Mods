@@ -1,0 +1,9 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="modArmorHelmetCam" count="1" craft_area="workbench" >
+			<ingredient name="modArmorHelmetCamSchematic" count="1"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+		</recipe>
+	</append>
+</configs>

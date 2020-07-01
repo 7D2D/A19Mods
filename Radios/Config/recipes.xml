@@ -1,0 +1,21 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="JukeBox" count="1" craft_area="workbench" >
+			<ingredient name="resourceMechanicalParts" count="3"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="glassBusinessSheet" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="OldRadio" count="1" craft_area="workbench" >
+			<ingredient name="resourceMechanicalParts" count="2"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>	
+		<recipe name="RA801" count="1" craft_area="workbench" >
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="glassBusinessSheet" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>				
+	</append>
+</configs>

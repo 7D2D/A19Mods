@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="2-NoSpawning" />
+		<Description value="A modlet the removes the spawning for testing creature params." />
+		<Author value="Xyth" />
+		<Version value="1.0" />
+		<Website value="" />
+	</ModInfo>
+</xml>

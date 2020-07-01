@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Fun with Flags" />
+		<Description value="RallyPoint Flags and Flags using shader motion to simulate wind effects" />
+		<Author value="Xyth" />
+		<Version value="2.0" />
+		<Website value="" />
+	</ModInfo>
+</xml>

@@ -1,0 +1,20 @@
+<configs>
+		<append xpath="/recipes" >
+			<recipe name="zombiePinup01" count="1" craft_area="workbench">
+				<ingredient name="resourcePaper" count="10" />
+				<ingredient name="resourceGlue" count="2" />
+			</recipe>			
+			<recipe name="zombiePinup02" count="1" craft_area="workbench">
+				<ingredient name="resourcePaper" count="10" />
+				<ingredient name="resourceGlue" count="2" />
+			</recipe>			
+			<recipe name="zombiePinup03" count="1" craft_area="workbench">
+				<ingredient name="resourcePaper" count="10" />
+				<ingredient name="resourceGlue" count="2" />
+			</recipe>			
+			<recipe name="zombiePinup04" count="1" craft_area="workbench">
+				<ingredient name="resourcePaper" count="10" />
+				<ingredient name="resourceGlue" count="2" />
+			</recipe>
+		</append> 
+</configs>

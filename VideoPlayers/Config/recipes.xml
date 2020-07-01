@@ -1,0 +1,9 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="VideoTV" count="1" craft_area="workbench" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="glassBusinessSheet" count="1"/>
+		</recipe>
+	</append>
+</configs>

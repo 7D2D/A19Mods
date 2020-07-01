@@ -1,0 +1,4 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+modArmorHelmetCam,item_modifiers,mod,New,Helmet Cam,,,,,
+modArmorHelmetCamDesc,item_modifiers,mod,New,"Ever wanted to know, what's behind you? Annoyed by vultures? Then this is the right mod for your helmet!",,,,,
+modArmorHelmetCamSchematic,item_modifiers,mod,New,Helmet Cam Schematic,,,,,

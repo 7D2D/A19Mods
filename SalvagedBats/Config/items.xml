@@ -1,0 +1,555 @@
+<configs>
+<!--		<remove xpath="/items/item[@name='meleeWpnClubT1BaseballBat']" />	-->
+		<append xpath="/items">	
+			<item name="meleeClubBaseballBat"> <!-- T3 clubs -->
+				<property name="Tags" value="blunt,bat,shaft,grip,head,pommel,sweetspot,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
+				<property name="DisplayType" value="melee"/>
+				<property name="Group" value="Ammo/Weapons"/>
+	<!--			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Bat/bat_Prefab.prefab"/> -->
+				<property name="Meshfile" value="#@modfolder:Resources/salvagedbats.unity3d?TFPbat_X" />
+				<property name="HoldType" value="65"/>
+				<property name="Material" value="Mwood"/> <property name="Weight" value="6"/>
+				<property name="RepairTools" value="resourceRepairKit"/>
+				<property name="SoundDestroy" value="wooddestroy1"/>
+				<property name="RepairExpMultiplier" value="5.5"/>
+				<property name="EconomicBundleSize" value="1"/>
+				<property name="EconomicValue" value="700"/>
+				<property name="FuelValue" value="250"/>
+				<property name="UnlockedBy" value="perkPummelPete"/>
+				<property name="ShowQuality" value="true"/>
+
+				<property class="Action0">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Sound_start" value="batwood_swinglight"/>
+					<property name="Sphere" value=".1"/>
+					<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+
+					<property name="UseGrazingHits" value="true"/>
+					<property name="GrazeStart" value=".25"/>
+					<property name="GrazeEnd" value=".32"/>
+					<property name="SwingDegrees" value="65"/>
+					<property name="SwingAngle" value="120"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="woodhitorganic"/>
+				</property>
+				<property class="GrazeSounds">
+					<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+				</property>
+				</property>
+
+				<property class="Action1">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Sound_start" value="batwood_swingheavy"/>
+					<property name="Sphere" value=".15"/>
+					<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+					<property name="UsePowerAttackAnimation" value="true"/>
+
+					<property name="UseGrazingHits" value="true"/>
+					<property name="IsHorizontalSwing" value="true"/>
+					<property name="GrazeStart" value=".25"/>
+					<property name="GrazeEnd" value=".32"/>
+					<property name="SwingDegrees" value="120"/>
+					<property name="SwingAngle" value="90"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="woodhitorganic"/>
+				</property>
+				<property class="GrazeSounds">
+					<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+				</property>
+						</property>
+
+				<effect_group name="meleeClubBaseballBat">
+					<passive_effect name="EntityDamage" operation="base_set" value="25.2"/> <!-- meleeClubBaseballBat -->
+					<passive_effect name="BlockDamage" operation="base_set" value="20.1"/>
+					<passive_effect name="AttacksPerMinute" operation="base_set" value="52"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="16.1" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6" tags="perkPummelPete"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+					<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+					<passive_effect name="BlockRange" operation="base_set" value="3"/>
+
+					<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+					<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+					<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+
+					<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+					<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+					<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+					<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+				</effect_group>
+				<effect_group name="Power Attack">
+					<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="StaminaLoss" operation="base_add" value="24.2" tags="secondary"/>
+				</effect_group>
+			</item>		
+		
+		
+			<item name="meleeAluminumBat">
+					<property name="Tags" value="bat,alumbat,shaft,grip,head,pommel,sweetspot,blunt,club,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
+					<property name="DisplayType" value="melee"/>
+					<property name="Group" value="Ammo/Weapons"/>
+					<property name="Meshfile" value="#@modfolder:Resources/salvagedbats.unity3d?AlumBat_X" /> <!-- CC 4.0 Licenced model by Gravity jack -->
+					<property name="HandMeshfile" value="#@modfolder:Resources/salvagedbats.unity3d?AlumBat_X"/> 
+					<property name="HoldType" value="65"/>
+					<property name="Material" value="Mmetal"/> <property name="Weight" value="4"/>
+					<property name="RepairTools" value="resourceRepairKit"/>
+					<property name="SoundDestroy" value="wooddestroy1"/>
+					<property name="RepairExpMultiplier" value="5.5"/>
+					<property name="EconomicBundleSize" value="1"/>
+					<property name="EconomicValue" value="700"/>
+					<property name="FuelValue" value="0"/>
+					<property name="UnlockedBy" value="perkPummelPete"/>
+					<property name="ShowQuality" value="true"/>
+					<property name="CustomIcon" value="AlumBat" />
+					<property class="Action0">
+						<property name="Class" value="DynamicMelee"/>
+						<property name="Sound_start" value="batwood_swinglight"/>
+						<property name="Sphere" value=".1"/>
+						<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+
+						<property name="UseGrazingHits" value="true"/>
+						<property name="GrazeStart" value=".25"/>
+						<property name="GrazeEnd" value=".32"/>
+						<property name="SwingDegrees" value="65"/>
+						<property name="SwingAngle" value="120"/>
+					<property class="HitSounds">
+						<property name="Override0" value="organic" param1="metalhollowhitorganic"/>
+					</property>
+					<property class="GrazeSounds">
+						<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+					</property>
+					</property>
+
+					<property class="Action1">
+						<property name="Class" value="DynamicMelee"/>
+						<property name="Sound_start" value="batwood_swingheavy"/>
+						<property name="Sphere" value=".15"/>
+						<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+						<property name="UsePowerAttackAnimation" value="true"/>
+						<property name="UseGrazingHits" value="true"/>
+						<property name="IsHorizontalSwing" value="true"/>
+						<property name="GrazeStart" value=".25"/>
+						<property name="GrazeEnd" value=".32"/>
+						<property name="SwingDegrees" value="120"/>
+						<property name="SwingAngle" value="90"/>
+						<property class="HitSounds">
+							<property name="Override0" value="organic" param1="metalhollowhitorganic"/>
+						</property>
+						<property class="GrazeSounds">
+							<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+						</property>
+					</property>
+
+					<effect_group name="meleeClubAlumBat">
+						<passive_effect name="EntityDamage" operation="base_set" value="30.2"/> <!-- meleeClubBaseballBat -->
+						<passive_effect name="BlockDamage" operation="base_set" value="25.1"/>
+						<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
+						<passive_effect name="StaminaLoss" operation="base_set" value="12.1" tags="primary"/>
+						<passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6" tags="perkPummelPete"/>
+						<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+						<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+						<passive_effect name="BlockRange" operation="base_set" value="3"/>
+
+						<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+						<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+						<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+
+						<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+						<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+						<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+						<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+					</effect_group>
+					<effect_group name="Power Attack">
+						<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+						<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+						<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+					</effect_group>
+				</item>
+			
+			<item name="meleePlainBat">
+					<property name="Tags" value="bat,plainbat,shaft,grip,head,pommel,sweetspot,blunt,club,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
+					<property name="DisplayType" value="melee"/>
+					<property name="Group" value="Ammo/Weapons"/>
+					<property name="Meshfile" value="#@modfolder:Resources/salvagedbats.unity3d?PlainBat_X" /> <!-- CC 4.0 Licenced model by Gravity jack -->
+					<property name="HandMeshfile" value="#@modfolder:Resources/salvagedbats.unity3d?PlainBat_X"/> 
+					<property name="HoldType" value="65"/>
+					<property name="Material" value="Mwood"/> <property name="Weight" value="6"/>
+					<property name="RepairTools" value="resourceRepairKit"/>
+					<property name="SoundDestroy" value="wooddestroy1"/>
+					<property name="RepairExpMultiplier" value="5.5"/>
+					<property name="EconomicBundleSize" value="1"/>
+					<property name="EconomicValue" value="700"/>
+					<property name="FuelValue" value="250"/>
+					<property name="UnlockedBy" value="perkPummelPete"/>
+					<property name="ShowQuality" value="true"/>
+					<property name="CustomIcon" value="PlainBat" />
+					<property class="Action0">
+						<property name="Class" value="DynamicMelee"/>
+						<property name="Sound_start" value="batwood_swinglight"/>
+						<property name="Sphere" value=".1"/>
+						<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+
+						<property name="UseGrazingHits" value="true"/>
+						<property name="GrazeStart" value=".25"/>
+						<property name="GrazeEnd" value=".32"/>
+						<property name="SwingDegrees" value="65"/>
+						<property name="SwingAngle" value="120"/>
+					<property class="HitSounds">
+						<property name="Override0" value="organic" param1="woodhitorganic"/>
+					</property>
+					<property class="GrazeSounds">
+						<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+					</property>
+					</property>
+					<property class="Action1">
+						<property name="Class" value="DynamicMelee"/>
+						<property name="Sound_start" value="batwood_swingheavy"/>
+						<property name="Sphere" value=".15"/>
+						<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+						<property name="UsePowerAttackAnimation" value="true"/>
+						<property name="UseGrazingHits" value="true"/>
+						<property name="IsHorizontalSwing" value="true"/>
+						<property name="GrazeStart" value=".25"/>
+						<property name="GrazeEnd" value=".32"/>
+						<property name="SwingDegrees" value="120"/>
+						<property name="SwingAngle" value="90"/>
+					<property class="HitSounds">
+						<property name="Override0" value="organic" param1="woodhitorganic"/>
+					</property>
+					<property class="GrazeSounds">
+						<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+					</property>
+					</property>
+					<effect_group name="meleeClubPlainBat">
+						<passive_effect name="EntityDamage" operation="base_set" value="20.2"/> <!-- meleeClubBaseballBat -->
+						<passive_effect name="BlockDamage" operation="base_set" value="15.1"/>
+						<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+						<passive_effect name="StaminaLoss" operation="base_set" value="14.1" tags="primary"/>
+						<passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6" tags="perkPummelPete"/>
+						<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+						<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+						<passive_effect name="BlockRange" operation="base_set" value="3"/>
+
+						<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+						<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+						<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+
+						<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+						<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+						<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+						<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+					</effect_group>
+					<effect_group name="Power Attack">
+						<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+						<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+						<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+					</effect_group>
+				</item>	
+		<!-- Legendary Items  -->		
+				<item name="MeleeBatLegendarySawBat">
+			
+					<property name="Tags" value="sawbat,shaft,blunt,club,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
+					<property name="DisplayType" value="melee"/>
+					<property name="Group" value="Ammo/Weapons"/>
+					<property name="Meshfile" value="#@modfolder:Resources/salvagedbats.unity3d?SawBat_X" />
+					<property name="HandMeshfile" value="#@modfolder:Resources/salvagedbats.unity3d?SawBat_X"/> 
+					<property name="HoldType" value="65"/>
+					<property name="Material" value="Mmetal"/> <property name="Weight" value="8"/>
+					<property name="RepairTools" value="resourceRepairKit"/>
+					<property name="SoundDestroy" value="wooddestroy1"/>
+					<property name="RepairExpMultiplier" value="5.5"/>
+					<property name="EconomicBundleSize" value="1"/>
+					<property name="EconomicValue" value="700"/>
+					<property name="FuelValue" value="250"/>
+					<property name="UnlockedBy" value="perkPummelPete"/>
+					<property name="ShowQuality" value="true"/>
+					<property name="CustomIcon" value="SawBat" />
+					<property class="Action0">
+						<property name="Class" value="DynamicMelee"/>
+						<property name="Sound_start" value="batwood_swinglight"/>
+						<property name="Sphere" value=".1"/>
+						<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+						<property name="UseGrazingHits" value="true"/>
+						<property name="GrazeStart" value=".25"/>
+						<property name="GrazeEnd" value=".32"/>
+						<property name="SwingDegrees" value="65"/>
+						<property name="SwingAngle" value="120"/>
+						<property class="HitSounds">
+							<property name="Override0" value="organic" param1="metalhollowhitorganic"/>
+						</property>
+						<property class="GrazeSounds">
+							<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+						</property>
+					</property>
+					<property class="Action1">
+						<property name="Class" value="DynamicMelee"/>
+						<property name="Sound_start" value="batwood_swingheavy"/>
+						<property name="Sphere" value=".15"/>
+						<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+						<property name="UsePowerAttackAnimation" value="true"/>
+						<property name="UseGrazingHits" value="true"/>
+						<property name="IsHorizontalSwing" value="true"/>
+						<property name="GrazeStart" value=".25"/>
+						<property name="GrazeEnd" value=".32"/>
+						<property name="SwingDegrees" value="120"/>
+						<property name="SwingAngle" value="90"/>
+						<property class="HitSounds">
+							<property name="Override0" value="organic" param1="metalhollowhitorganic"/>
+						</property>
+						<property class="GrazeSounds">
+							<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+						</property>
+					</property>
+					<effect_group name="meleeClubSawBat">
+						<passive_effect name="EntityDamage" operation="base_set" value="50.2"/> <!-- meleeClubBaseballBat -->
+						<passive_effect name="BlockDamage" operation="base_set" value="35.1"/>
+						<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
+						<passive_effect name="StaminaLoss" operation="base_set" value="15.1" tags="primary"/>
+						<passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6" tags="perkPummelPete"/>
+						<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+						<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+						<passive_effect name="BlockRange" operation="base_set" value="3"/>
+
+						<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+						<passive_effect name="ModPowerBonus" operation="perc_add" value=".20" tags="EntityDamage,BlockDamage"/>
+						<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+
+						<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+						<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+						<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+						<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+						<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+					</effect_group>
+					<effect_group name="Power Attack">
+						<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+						<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+						<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+					</effect_group>
+				</item>	
+			
+			<item name="meleeAluminumBatSchematic">
+				<property name="Extends" value="schematicMaster"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="CustomIcon" value="alumBatSchematic"/>
+				<property name="Unlocks" value="meleeAluminumBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeAluminumBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>
+			</item>
+			<item name="meleePlainBatSchematic">
+				<property name="Extends" value="schematicMaster"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="CustomIcon" value="plainBatSchematic"/>
+				<property name="Unlocks" value="meleePlainBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleePlainBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>
+			</item>
+
+			<item name="modBeanCanBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modBeanCanBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modBeanCanBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modBeanCanBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>
+			</item>
+			<item name="modBarbedBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modBarbedBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modBarbedBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modBarbedBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modNailedBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modNailedBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modNailedBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modNailedBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>			
+			<item name="modCrownBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modCrownBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modCrownBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modCrownBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modNautilusBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modNautilusBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modNautilusBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modNautilusBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modAxeBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modAxeBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modAxeBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modAxeBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modMaceBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modMaceBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modMaceBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMaceBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modKanaboBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="CustomIcon" value="modKanaboBatSchematic" />
+				<property name="Unlocks" value="modKanaboBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modKanaboBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>			
+			<item name="modSmallGearBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modSmallGearBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modSmallGearBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modSmallGearBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modSpeedBallBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modSpeedBallBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modSpeedBallBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modSpeedBallBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modWeightGearBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modWeightGearBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modWeightGearBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modWeightGearBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modSparkyBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modSparkyBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modSparkyBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modSparkyBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modGripRubberBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modGripRubberBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modGripRubberBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGripRubberBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modGripLeatherBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modGripLeatherBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modGripLeatherBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGripLeatherBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modPommelHoundBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modPommelHoundBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modPommelHoundBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modPommelHoundBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>	
+			<item name="modPommelPantherBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modPommelPantherBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modPommelPantherBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modPommelPantherBa" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>
+			<item name="modBurningBatSchematic">
+				<property name="Extends" value="schematicNoQualityMaster"/>
+				<property name="CustomIcon" value="modBurningBatSchematic" />
+				<property name="CreativeMode" value="Player"/>
+				<property name="Unlocks" value="modBurningBat"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modBurningBat" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				</effect_group>				
+			</item>			
+			
+		</append>
+</configs>

@@ -1,0 +1,97 @@
+﻿Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+meleeAluminumBat,items,Melee,New,Aluminum Bat,,,,,
+meleeAluminumBatDesc,items,Melee,New,The Aluminum T3 Bat is a little league favorite, needs less stamina to swing.\n\nRepair with a Repair Kit.\nScrap to Baseball Bat parts.,,,,,
+meleeAluminumBatSchematic,items,Melee,New,Aluminum Bat Schematic,,,,,
+meleePlainBat,items,Melee,New,Plain Bat,,,,,
+meleePlainBatDesc,items,Melee,New,The Plain Bat is a basic T1 wooden bat.\n\nRepair with a Repair Kit.\nScrap to Baseball Bat parts.,,,,,
+meleePlainBatSchematic,items,Melee,New,Plain Bat Schematic,,,,,
+meleeBatLegendarySawBat,items,Melee,New,Legendary SawBat,,,,,
+meleeLegendarySawBatDesc,items,Melee,New,The SawBat is an animated legendary (T4?) bat. \n\nRepair with a Repair Kit.\nScrap to Baseball Bat parts.,,,,,
+modBeanCanBat,item_modifiers,mod,New,BeanCan Bat Mod,,,,,
+modBeanCanBatDesc,item_modifiers,mod,New,"20% chance to cause bleeding damage, 40% with power attacks.\nCan be installed in bats.",,,,,
+modBeanCanBatSchematic,item_modifiers,Mod,New,BeanCan Bat Mod Schematic,,,,,
+modHoeBat,item_modifiers,mod,New,Hoe Bat Mod,,,,,
+modHoeBatDesc,item_modifiers,mod,New,"50% chance to stun with power attacks.\nCan be installed in bats.",,,,,
+modHoeBatSchematic,item_modifiers,Mod,New,Hoe Bat Mod Schematic,,,,,
+modPickBat,item_modifiers,mod,New,Pick Bat Mod,,,,,
+modPickBatDesc,item_modifiers,mod,New,"20% chance to cause bleeding damage, 40% with power attacks.\nCan be installed in bats.",,,,,
+modPickBatSchematic,item_modifiers,Mod,New,Pick Bat Mod Schematic,,,,,
+modCrownBat,item_modifiers,mod,New,Crown Bat Mod,,,,,
+modCrownBatDesc,item_modifiers,mod,New,"Adds a close range (10 block range) AOE Charisma buff when holding the bat.\nCan be installed in bats.",,,,,
+modCrownBatSchematic,item_modifiers,Mod,New,Crown Bat Mod Schematic,,,,,modBarbedBat,item_modifiers,mod,New,Barbed Bat Mod,,,,,
+modNautilusBat,item_modifiers,mod,New,Nautilus Bat Mod,,,,,
+modNautilusBatDesc,item_modifiers,mod,New,"Shreads armor on contact!.\nCan be installed in bats.",,,,,
+modNautilusBatSchematic,item_modifiers,Mod,New,Nautilus Bat Mod Schematic,,,,,
+modBarbedBat,item_modifiers,mod,New,Barbed Bat Mod,,,,,
+modBarbedBatDesc,item_modifiers,mod,New,"20% chance to cause bleeding damage, 40% with power attacks.\nCan be installed in bats.",,,,,
+modBarbedBatSchematic,item_modifiers,Mod,New,Barbed Bat Mod Schematic,,,,,
+modAxeBat,item_modifiers,mod,New,Axe Bat Mod,,,,,
+modAxeBatDesc,item_modifiers,mod,New,"20% chance to cause bleeding damage, 40% with power attacks.\nCan be installed in bats.",,,,,
+modAxeBatSchematic,item_modifiers,Mod,New,Axe Bat Mod Schematic,,,,,
+modMaceBat,item_modifiers,mod,New,Mace Bat Mod,,,,,
+modMaceBatDesc,item_modifiers,mod,New,"20% chance to knock down the bad guys.\nCan be installed in bats.",,,,,
+modMaceBatSchematic,item_modifiers,Mod,New,Mace Bat Mod Schematic,,,,,
+modKanaboBat,item_modifiers,mod,New,Kanabo Bat Mod,,,,,
+modKanaboBatDesc,item_modifiers,mod,New,"Shreads armor on contact!\nCan be installed in bats.",,,,,
+modKanaboBatSchematic,item_modifiers,Mod,New,Kanabo Bat Mod Schematic,,,,,
+modNailedBat,item_modifiers,mod,New,Nailed Bat Mod,,,,,
+modNailedBatDesc,item_modifiers,mod,New,"Shreads armor on contact!\nCan be installed in bats.",,,,,
+modNailedBatSchematic,item_modifiers,Mod,New,Nailed Bat Mod Schematic,,,,,
+modSmallGearBat,item_modifiers,mod,New,SmallGear Bat Mod,,,,,
+modSmallGearBatDesc,item_modifiers,mod,New,"10% chance to stun.\nCan be installed in bats.",,,,,
+modSmallGearBatSchematic,item_modifiers,Mod,New,SmallGear Bat Mod Schematic,,,,,
+modSpeedBallBat,item_modifiers,mod,New,SpeedBall Bat Mod,,,,,
+modSpeedBallBatDesc,item_modifiers,mod,New,"Speeds up your attack rate.\nCan be installed in bats.",,,,,
+modSpeedBallBatSchematic,item_modifiers,Mod,New,SpeedBall Bat Mod Schematic,,,,,
+modWeightGearBat,item_modifiers,mod,New,WeightGear Bat Mod,,,,,
+modWeightGearBatDesc,item_modifiers,mod,New,"20% chance to stun.\nCan be installed in bats.",,,,,
+modWeightGearBatSchematic,item_modifiers,Mod,New,WeightGear Bat Mod Schematic,,,,,
+modSparkyBat,item_modifiers,mod,New,Sparky Bat Mod,,,,,
+modSparkyBatDesc,item_modifiers,mod,New,"Changes damage type to electrical and adds a little damage.\nCan be installed in the aluminum and plain bats.",,,,,
+modSparkyBatSchematic,item_modifiers,Mod,New,Sparky Bat Mod Schematic,,,,,
+modBurningBat,item_modifiers,mod,New,Burning Bat Mod,,,,,
+modBurningBatDesc,item_modifiers,mod,New,"Changes damage type to heat and adds a little damage.\nCan be installed in the aluminum and plain bats.",,,,,
+modBurningBatSchematic,item_modifiers,Mod,New,Burning Bat Mod Schematic,,,,,
+modGripRubberBat,item_modifiers,mod,New,GripRubber Bat Mod,,,,,
+modGripRubberBatDesc,item_modifiers,mod,New,"Reduces stamina loss when swinging the bat.\nCan be installed in bats.",,,,,
+modGripRubberBatSchematic,item_modifiers,Mod,New,GripRubber Bat Mod Schematic,,,,,
+modGripLeatherBat,item_modifiers,mod,New,GripLeather Bat Mod,,,,,
+modGripLeatherBatDesc,item_modifiers,mod,New,"slightly reduces stamina loss when swinging the bat.\nCan be installed in bats.",,,,,
+modGripLeatherBatSchematic,item_modifiers,Mod,New,GripLeather Bat Mod Schematic,,,,,
+modPommelHoundBat,item_modifiers,mod,New,PommelHound Bat Mod,,,,,
+modPommelHoundBatDesc,item_modifiers,mod,New,"Heals you over time when under 80% health.\nCan be installed in bats.",,,,,
+modPommelHoundBatSchematic,item_modifiers,Mod,New,PommelHound Bat Mod Schematic,,,,,
+modPommelPantherBat,item_modifiers,mod,New,PommelPanther Bat Mod,,,,,
+modPommelPantherBatDesc,item_modifiers,mod,New,"Heals you over time when under 50% health.\nCan be installed in bats.",,,,,
+modPommelPantherBatSchematic,item_modifiers,Mod,New,PommelPanther Bat Mod Schematic,,,,,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+﻿<configs>
+<append xpath="/blockplaceholders">
+    <placeholder name="tv">
+      <block name="TVWall" prob="0.1"/>
+      <block name="tv" prob="0.9" />
+    </placeholder>
+  </append> 
+</configs>

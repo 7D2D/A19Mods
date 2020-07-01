@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/Sounds">
+		<SoundDataNode name="pageturn"> <AudioSource name="Sounds/AudioSource_Interact"/>
+			<Noise ID="1" range="7" volume="15" time="2" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/PageFlips.unity3d?pageflip01"/>
+			<AudioClip ClipName="#@modfolder:Resources/PageFlips.unity3d?pageflip02"/>
+			<AudioClip ClipName="#@modfolder:Resources/PageFlips.unity3d?pageflip03"/>
+			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>	
+	</append>
+</configs>

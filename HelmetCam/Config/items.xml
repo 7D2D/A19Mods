@@ -1,0 +1,10 @@
+<configs>
+		<append xpath="/items">	
+			<item name="modArmorHelmetCamSchematic">
+				<property name="Extends" value="schematicMaster"/>
+				<property name="CustomIcon" value="modHelmetCamSchematic" />
+				<property name="DescriptionKey" value="schematicMaster2Desc"/>
+				<property name="EconomicValue" value="500"/>
+			</item>
+		</append>
+</configs>

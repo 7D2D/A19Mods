@@ -1,0 +1,13 @@
+<configs>
+		<append xpath="/item_modifiers" >
+			<item_modifier name="modArmorHelmetCam" installable_tags="head" blocked_tags="clothing" modifier_tags="cam" type="attachment" rarity="0.5">
+				<property name="Stacknumber" value="1"/>
+				<property name="Material" value="Msteel"/>
+				<property name="CustomIcon" value="modHelmetCam"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="HelmetCam"/>
+					<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="HelmetCam"/>
+				</effect_group>				
+			</item_modifier>
+		</append>
+</configs>

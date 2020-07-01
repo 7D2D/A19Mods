@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="1-NoPottyMouth" />
+		<Description value="A modlet the removes the vulgar voiceclips from the BanditHate SoundDataNodes" />
+		<Author value="Xyth" />
+		<Version value="1.0" />
+		<Website value="" />
+	</ModInfo>
+</xml>

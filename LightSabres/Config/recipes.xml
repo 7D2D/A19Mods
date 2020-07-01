@@ -1,0 +1,9 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="LazerGem" count="1" craft_area="workbench" >
+			<ingredient name="resourceRawDiamond" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+	</append>
+</configs>

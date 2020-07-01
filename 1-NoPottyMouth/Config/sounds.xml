@@ -1,0 +1,21 @@
+<configs>
+
+	<remove xpath="/Sounds/SoundDataNode[@name='malehatealert']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_alert_02']"/>
+	<remove xpath="/Sounds/SoundDataNode[@name='malehatealert']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_alert_03']"/>
+	<remove xpath="/Sounds/SoundDataNode[@name='malehatealert']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_alert_06']"/>
+
+	<remove xpath="/Sounds/SoundDataNode[@name='malehateattack']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_attack_01']"/>
+	<remove xpath="/Sounds/SoundDataNode[@name='malehateattack']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_attack_02']"/>
+
+	<remove xpath="/Sounds/SoundDataNode[@name='malehatedeath']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_death_10']"/>
+	<remove xpath="/Sounds/SoundDataNode[@name='malehatedeath']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_death_11']"/>
+
+	<remove xpath="/Sounds/SoundDataNode[@name='malehateroam']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_roam_05']"/>
+	<remove xpath="/Sounds/SoundDataNode[@name='malehateroam']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_roam_09']"/>
+
+	<remove xpath="/Sounds/SoundDataNode[@name='malehatesense']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_sense_07']"/>
+	<remove xpath="/Sounds/SoundDataNode[@name='malehatesense']/AudioClip[@ClipName='Sounds/VO/Male_Hate/male_hate_sense_08']"/>
+
+	<!-- <AudioClip ClipName="#@modfolder(0-CreaturePackHumans):Resources/GurlzSounds.unity3d?Female_BossesDeath_05_KarenK" /> -->
+
+</configs>

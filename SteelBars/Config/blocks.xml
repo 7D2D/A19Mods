@@ -1,0 +1,185 @@
+<configs>
+	<append xpath="/blocks">	
+		<block name="steelBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBarsCentered" />
+			<property name="MaxDamage" value="6000"/>
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelBarsCentered01"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+		</block>	
+		<block name="steelBars">
+			<property name="Extends" value="steelBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="steelBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelBars01"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+		</block>
+		<block name="WroughtIronBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Miron" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="wroughtIronBarsCentered" />
+			<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+			<property name="MaxDamage" value="2500"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBarsCentered01"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+		</block>	
+		<block name="WroughtIronBars">
+			<property name="Extends" value="WroughtIronBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="wroughtIronBars" />
+			<property name="MaxDamage" value="2500"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBars01"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+		</block>
+		<block name="WoodDowelBarsCentered">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Mwood" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="woodDowelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceWood" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WoodDowelBarsCentered01"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+		</block>	
+		<block name="WoodDowelBars">
+			<property name="Extends" value="WoodDowelBarsCentered"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="woodDowelBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WoodDowelBars01"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>			
+		</block>
+		<block name="steelBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>
+			<property name="MaxDamage" value="8000"/>
+			<property name="DowngradeBlock" value="steelBarsCentered"/>
+		</block>
+		<block name="steelBars01">
+			<property name="Extends" value="steelBarsCentered01"/>
+			<property name="Material" value="Msteel" />
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBars_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="steelBars" />
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>		
+			<property name="DowngradeBlock" value="steelBars"/>
+		</block>
+	<!-- WroughtIronBars01 -->	
+		<block name="WroughtIronBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Miron" />
+			<property name="MaxDamage" value="5000"/>
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="wroughtIronBarsCentered" />
+			<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelBarsCentered"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WroughtIronBarsCentered"/>
+		</block>	
+		<block name="WroughtIronBars01">
+			<property name="Extends" value="WroughtIronBarsCentered01"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?IronBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="wroughtIronBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="steelBars"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WroughtIronBars"/>
+		</block>
+	<!-- WoodDowelBars01 -->			
+		<block name="WoodDowelBarsCentered01">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="Mwood" />
+			<property name="MaxDamage" value="300"/>
+			<property name="StabilitySupport" value="true" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBarsCentered_X"/>
+			<property name="Collide" value="melee,movement,rocket" />
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="woodDowelBarsCentered" />
+			<property class="RepairItems"> <property name="resourceWood" value="10"/> </property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBarsCentered"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WoodDowelBarsCentered"/>
+		</block>	
+		<block name="WoodDowelBars01">
+			<property name="Extends" value="WoodDowelBarsCentered01"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?WoodBars_X"/> <!-- All models are free assets from Unity store by KrazyFX -->
+			<property name="CustomIcon" value="woodDowelBars" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WroughtIronBars"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="6"/>
+			</property>
+			<property name="DowngradeBlock" value="WoodDowelBars"/>
+		</block>		
+	</append>
+</configs>

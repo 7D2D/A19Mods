@@ -1,0 +1,56 @@
+<configs>
+	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT1']">
+			<item name="modHoeBat"/>
+			<item name="modPickBat"/>
+			<item name="modSmallGearBat"/>
+			<item name="modPommelPantherBat"/>
+			<item name="modBarbedBat"/>
+			<item name="modNailedBat"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT2']">
+			<item name="modCrownBat"/>
+			<item name="modNautilusBat"/>
+			<item name="modMaceBat"/>
+			<item name="modKanaboBat"/>
+			<item name="modWeightGearBat"/>
+			<item name="modGripLeatherBat"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT3']">
+			<item name="modBeanCanBat"/>
+			<item name="modAxeBat"/>
+			<item name="modSpeedBallBat"/>
+			<item name="modSparkyBat"/>					
+			<item name="modPommelHoundBat"/>
+			<item name="modGripRubberBat"/>		
+	</append>
+		<append xpath="/lootcontainers/lootgroup[@name='schematicsModsCommon']">
+					
+			<item name="modSmallGearBatSchematic"/>
+			<item name="modPommelPantherBatSchematic"/>	
+			<item name="modBarbedBatSchematic"/>
+		</append>
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']">
+			<item name="modCrownBatSchematic"/>
+			<item name="modNautilusBatSchematic"/>
+			<item name="modMaceBatSchematic"/>
+			<item name="modKanaboBatSchematic"/>
+			<item name="modWeightGearBatSchematic"/>
+			<item name="modGripLeatherBatSchematic"/>	
+			<item name="modBeanCanBatSchematic"/>
+			<item name="modAxeBatSchematic"/>
+			<item name="modSpeedBallBatSchematic"/>
+			<item name="modSparkyBatSchematic"/>
+			<item name="modNailedBatSchematic"/>
+			<item name="modPommelHoundBatSchematic"/>
+			<item name="modGripRubberBatSchematic"/>
+			
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_PummelPete']">
+		
+		<item name="meleeAluminumBat" prob="0.25" mods="head,sweetspot,effects,grip,pommel" mod_chance=".20"/> 
+		<item name="meleePlainBat" prob="0.65" mods="head,sweetspot,effects,grip,pommel" mod_chance=".20"/> 
+		<item name="MeleeBatLegendarySawBat" prob="0.1"/>
+	</append>	
+
+</configs> 

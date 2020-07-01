@@ -1,0 +1,150 @@
+<configs>
+		<append xpath="/items">	
+			<item name="meleeLightSabreRed">
+				<property name="Tags" value="blunt,club,melee,light,weapon,meleeWeapon,perkStayDown"/>
+				<property name="DisplayType" value="melee"/>
+				<property name="Meshfile" value="#@modfolder:Resources/LightSabres.unity3d?LightSabreRed_X" /> <!-- Free Hilt model -->
+				<property name="HoldType" value="2"/>
+				<property name="CustomIcon" value="lightsabres" />
+				<property name="Material" value="Mmetal"/>
+				<property name="RepairTools" value="LazerGem"/>
+				<property name="DegradationBreaksAfter" value="false"/>
+				<property name="SellableToTrader" value="false"/>
+				<property name="SoundJammed" value="ItemNeedsRepair"/>
+				<property name="SoundDestroy" value="metaldestroy1"/>
+				<property name="FuelValue" value="1"/>
+				<property name="Group" value="Ammo/Weapons"/>
+				<property name="ActionSkillGroup" value="Blade Weapons"/>
+				<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+				<property name="RepairExpMultiplier" value="5.5"/>				
+				<property class="Action0">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Sound_start" value="LazerSwoosh"/>
+					<property name="Sphere" value="0.1"/>
+					<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+				</property>
+				<property class="Action1">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Sound_start" value="LazerSwoosh"/>
+					<property name="Sphere" value="0.15"/>
+					<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+					<property name="UsePowerAttackAnimation" value="true"/>
+				</property>
+				<effect_group name="Base Effects">
+					<passive_effect name="MaxRange" operation="base_set" value="2.5"/>
+					<passive_effect name="BlockRange" operation="base_set" value="3"/>
+					<passive_effect name="EntityDamage" operation="base_set" value="150"/> 
+					<passive_effect name="BlockDamage" operation="base_set" value="500"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="0" tags="primary"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="5" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="2000,4000" tier="1,6"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="20" tier="1,6"/>
+					<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+					<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+					<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+					<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="LazerHit"/>
+					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="LazerHit"/>
+				</effect_group>
+				<effect_group name="Power Attack">
+					<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="0" tags="secondary"/>
+					<passive_effect name="StaminaLoss" operation="base_add" value="10" tags="secondary"/>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="1,100" operation="LTE" value="50"/>
+						<requirement name="IsMale" target="self"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="1,100" operation="LTE" value="50"/>
+						<requirement name="IsMale" target="self" invert="true"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="AddJournalEntry" journal="powerAttackTip"/>
+				</effect_group>
+			</item>	
+			<item name="meleeLightSabreBlue">
+				<property name="Tags" value="blunt,melee,weapon,meleeWeapon"/>
+				<property name="Meshfile" value="#@modfolder:Resources/LightSabres.unity3d?LightSabreBlue_X" /> 
+				<property name="Extends" value="meleeLightSabreRed" />
+				<effect_group name="Base Effects">
+					<passive_effect name="MaxRange" operation="base_set" value="2.5"/>
+					<passive_effect name="BlockRange" operation="base_set" value="3"/>
+					<passive_effect name="EntityDamage" operation="base_set" value="150"/> 
+					<passive_effect name="BlockDamage" operation="base_set" value="500"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="0" tags="primary"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="5" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="2000,4000" tier="1,6"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="20" tier="1,6"/>
+					<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+					<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+					<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+					<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="LazerHit"/>
+					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="LazerHit"/>					
+				</effect_group>
+				<effect_group name="Power Attack">
+					<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="0" tags="secondary"/>
+					<passive_effect name="StaminaLoss" operation="base_add" value="10" tags="secondary"/>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="1,100" operation="LTE" value="50"/>
+						<requirement name="IsMale" target="self"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="1,100" operation="LTE" value="50"/>
+						<requirement name="IsMale" target="self" invert="true"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="AddJournalEntry" journal="powerAttackTip"/>
+				</effect_group>				
+			</item>	
+			
+			<item name="meleeLightSabreGreen">
+				<property name="Tags" value="blunt,melee,weapon,meleeWeapon"/>
+				<property name="Meshfile" value="#@modfolder:Resources/LightSabres.unity3d?LightSabreGreen_X" /> 
+				<property name="Extends" value="meleeLightSabreRed" />	
+				<effect_group name="Base Effects">
+					<passive_effect name="MaxRange" operation="base_set" value="2.5"/>
+					<passive_effect name="BlockRange" operation="base_set" value="3"/>
+					<passive_effect name="EntityDamage" operation="base_set" value="150"/> 
+					<passive_effect name="BlockDamage" operation="base_set" value="500"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="0" tags="primary"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="5" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="2000,4000" tier="1,6"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="20" tier="1,6"/>
+					<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+					<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+					<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+					<triggered_effect trigger="onSelfPrimaryActionRayHit" action="PlaySound" sound="LazerHit"/>
+					<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="LazerHit"/>					
+				</effect_group>
+				<effect_group name="Power Attack">
+					<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="0" tags="secondary"/>
+					<passive_effect name="StaminaLoss" operation="base_add" value="10" tags="secondary"/>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="1,100" operation="LTE" value="50"/>
+						<requirement name="IsMale" target="self"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="1,100" operation="LTE" value="50"/>
+						<requirement name="IsMale" target="self" invert="true"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfSecondaryActionStart" action="AddJournalEntry" journal="powerAttackTip"/>
+				</effect_group>				
+			</item>	
+			<item name="LazerGem">
+				<property name="HoldType" value="45"/>
+				<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+				<property name="CustomIcon" value="LazerGem" />
+				<property name="Material" value="Msteel"/>
+				<property name="Stacknumber" value="10"/> 
+				<property name="EconomicValue" value="200"/>
+				<property name="RepairTime" value="1"/>
+				<property name="RepairAmount" value="2000"/>
+				<property name="Group" value="Resources,Ammo/Weapons"/>
+				<property name="CraftingSkillGroup" value="craftSkillGuns"/>
+			</item>			
+			
+		</append>
+</configs>

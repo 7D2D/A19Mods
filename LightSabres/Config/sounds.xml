@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/Sounds">
+		<SoundDataNode name="LazerSwoosh"> <AudioSource name="Sounds/AudioSource_Interact"/>
+		<AudioClip ClipName="#@modfolder:Resources/LightSabres.unity3d?lightsabreswing"/>
+		<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+		
+		<SoundDataNode name="LazerHit"> <AudioSource name="Sounds/AudioSource_Interact"/>
+		<AudioClip ClipName="#@modfolder:Resources/LightSabres.unity3d?lightsabrehit"/>
+		<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+	</append>
+</configs>

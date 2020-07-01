@@ -1,0 +1,53 @@
+<configs>
+	
+		<append xpath="/items">	
+			<item name="bookRM01">
+				<property name="Meshfile" value="#@modfolder:Resources/BetterBooks.unity3d?BookRM01_X" /> <!-- CC 4.0 Licenced model by Anthony Yanez -->
+				<property name="HandMeshfile" value="#@modfolder:Resources/BetterBooks.unity3d?BookRM01_X"/> 
+				<property name="CustomIcon" value="schematicMaster" />
+				<property name="HoldType" value="21"/> 
+				<property name="Material" value="Mpaper"/>
+				<property name="Group" value="Books"/>
+				<property name="SoundDestroy" value="wooddestroy1"/>
+				<property name="CraftingSkillGroup" value="attIntellect"/>
+				<property name="SellableToTrader" value="false"/>
+				<property name="EconomicBundleSize" value="1"/>
+				<property name="EconomicValue" value="5"/>
+				<property name="FuelValue" value="50"/>
+				<property class="Action0">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Sound_start" value="pageturn"/>
+				</property>
+				<property class="Action1">
+					<property name="Class" value="Eat"/>
+					<property name="Consume" value="false"/>
+					<property name="Use_time" value="..."/>
+					<property name="Sound_start" value="pageturn"/>
+				</property> 
+			</item>			
+			<item name="bookWD01">
+				<property name="Meshfile" value="#@modfolder:Resources/BetterBooks.unity3d?BookWD01_X" /> <!-- CC 4.0 Licenced model by Anthony Yanez -->
+				<property name="HandMeshfile" value="#@modfolder:Resources/BetterBooks.unity3d?BookWD01_X"/> 
+				<property name="CustomIcon" value="schematicMaster" />
+				<property name="HoldType" value="21"/> 
+				<property name="Material" value="Mpaper"/>
+				<property name="Group" value="Books"/>
+				<property name="SoundDestroy" value="wooddestroy1"/>
+				<property name="CraftingSkillGroup" value="attIntellect"/>
+				<property name="SellableToTrader" value="false"/>
+				<property name="EconomicBundleSize" value="1"/>
+				<property name="EconomicValue" value="5"/>
+				<property name="FuelValue" value="50"/>
+				<property class="Action0">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Sound_start" value="pageturn"/>
+				</property>
+				<property class="Action1">
+					<property name="Class" value="Eat"/>
+					<property name="Consume" value="false"/>
+					<property name="Use_time" value="..."/>
+					<property name="Sound_start" value="pageturn"/>
+				</property> 
+			</item>					
+		</append>
+</configs>

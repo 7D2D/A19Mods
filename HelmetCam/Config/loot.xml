@@ -1,0 +1,5 @@
+<configs>
+	<append xpath="/lootcontainers/lootgroup[@name='rareBooks']">
+		<item name="modArmorHelmetCamSchematic" />
+	</append>	
+</configs> 

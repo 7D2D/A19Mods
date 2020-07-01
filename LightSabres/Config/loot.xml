@@ -1,0 +1,9 @@
+<configs>
+
+	   <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Electrocutioner']">
+			<item name="meleeLightSabreRed" prob="0.01" />
+			<item name="meleeLightSabreBlue" prob="0.01" />
+			<item name="meleeLightSabreGreen" prob="0.01" />
+	   </append>
+	
+</configs>	

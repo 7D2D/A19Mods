@@ -1,0 +1,79 @@
+<configs>
+
+	<!-- <set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rallypointSphereII_X</set> -->
+	<!--	 <set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rallypointRally_X</set>	-->
+	<!-- <set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rallypoint7Days_X</set> -->
+	<set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rallypointWarning_X </set> 
+	<!-- <set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rallypointCaution_X</set> -->
+
+	<append xpath="/blocks">	
+		<block name="FlagUSA">
+			<property name="Material" value="Mmetal"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="1,5,1"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="OnlySimpleRotations" value="true"/> 
+			<property name="CanPickup" value="true" /> 
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="4,8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="2,5" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="2,5"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="DescriptionKey" value="decorativeBlockGroupDesc"/> 
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagUSA_X" />
+			<property name="CustomIcon" value="FlagUSA" />
+		</block>
+		<block name="FlagRepo">
+			<property name="Extends" value="FlagUSA"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagRepo_X" />
+			<property name="CustomIcon" value="FlagRepo" />
+		</block>
+		<block name="FlagInfection">
+			<property name="Extends" value="FlagUSA"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagInfection_X" />
+			<property name="CustomIcon" value="FlagInfection" />
+		</block> 
+		<block name="FlagRadiation">
+			<property name="Extends" value="FlagUSA"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagRadiation_X" />
+			<property name="CustomIcon" value="FlagRadiation" />
+		</block>
+		<block name="FlagSheldon">
+			<property name="Extends" value="FlagUSA"/>			
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagSheldon_X" />
+			<property name="CustomIcon" value="FlagSheldon" />
+		</block>
+		<block name="FlagGuppy">
+			<property name="Extends" value="FlagUSA"/>			
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagGuppy_X" />
+			<property name="CustomIcon" value="FlagGuppy" />
+		</block>
+		<block name="FlagSphereii">
+			<property name="Extends" value="FlagUSA"/>			
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagSphereii_X" />
+			<property name="CustomIcon" value="FlagSphereii" />
+		</block>
+		<block name="FlagLooted">
+			<property name="Extends" value="FlagUSA"/>			
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagLooted_X" />
+			<property name="CustomIcon" value="FlagLooted" />
+		</block>
+		<block name="FlagXyth">
+			<property name="Extends" value="FlagUSA"/>			
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/Flags.unity3d?FlagXyth_X" />
+			<property name="CustomIcon" value="FlagLooted" />
+		</block>
+	</append>
+</configs>
