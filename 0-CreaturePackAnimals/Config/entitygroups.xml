@@ -1,0 +1,59 @@
+<configs>
+
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
+		<entity name="animalGuppyInsect" prob=".15" />
+	</append>
+
+	<!-- artic fox belongs ONLY in snow biomes -->
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsSnow']">
+		<entity name="animalFox" prob="1" />
+	</append>
+	<!-- artic fox (wrong climate) and seagulls(alcatraz) do not belong in forest biomes -->
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsForest']">
+		<entity name="animalGoat" prob="1" />
+		<entity name="animalRobin" prob="1" />
+		<entity name="animalCrow" prob="1" />
+		<entity name="animalBat" prob="1" />
+		<entity name="animalBats" prob=".25" />
+		<entity name="animalEagle" prob="1" />
+		<entity name="animalWulf" prob="1" />
+		<entity name="animalPug" prob="1" />
+		<entity name="animalBeagle" prob="1" />
+		<entity name="animalWolfhound" prob="1" />
+	</append>
+	<!-- crows (carrion eaters) in burnt and wasteland biomes -->
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsBurntForest']">
+		<entity name="animalCrow" prob="1" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
+		<entity name="animalCrow" prob="1" />
+	</append>
+	<!-- spiders in forest and plains (heavy grasses for camouflage), and also in desert biomes -->
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">
+		<entity name="animalSpider01" prob="0.25"/>
+		<entity name="animalSpider02" prob="0.25" />
+		<entity name="animalSpider03" prob="0.25"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">
+		<entity name="animalSpider01" prob="0.25"/>
+		<entity name="animalSpider02" prob="0.25" />
+		<entity name="animalSpider03" prob="0.25"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='AnimalsAll']">
+		<entity name="animalFox" prob="1" />
+		<entity name="animalGoat" prob="1" />
+		<entity name="animalRobin" prob="1" />
+		<entity name="animalCrow" prob="1" />
+		<entity name="animalBat" prob="1" />
+		<entity name="animalBats" prob=".25" />
+		<entity name="animalSpider01" prob="0.35"/>
+		<entity name="animalSpider02" prob="0.35" />
+		<entity name="animalSpider03" prob="0.35"/>
+		<entity name="animalEagle" prob="1" />
+		<entity name="animalAlcatraz" prob="1" />
+		<entity name="animalWulf" prob="1" />
+		<entity name="animalPug" prob="1" />
+		<entity name="animalBeagle" prob="1" />
+		<entity name="animalWolfhound" prob="1" /> 
+	</append>
+</configs> 

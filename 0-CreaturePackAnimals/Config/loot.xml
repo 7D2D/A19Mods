@@ -1,0 +1,7 @@
+<configs>
+
+    <append xpath="/lootcontainers/lootgroup[@name='commonBooks']">
+<!--		<item name="qc_Strays" count="1"/> -->
+    </append>
+
+</configs>
