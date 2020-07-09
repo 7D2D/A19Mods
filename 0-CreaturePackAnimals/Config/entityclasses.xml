@@ -466,7 +466,7 @@
 			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="Faction" value="animals"/>					
 			<property name="Mass" value="100"/>
-			<property name="Mesh" value="#@modfolder:Resources/guppyInsect.unity3d?guppyInsect.prefab"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyInsect.unity3d?creatureGuppyFlyingInsect"/>
 			<property name="MoveSpeed" value="1"/>
 			<property name="MoveSpeedAggro" value="2.1, 2.1"/>
 			<property name="MaxTurnSpeed" value="190"/>      
