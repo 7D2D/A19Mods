@@ -1,0 +1,273 @@
+<configs>
+
+	<append xpath="/entity_classes" >
+
+		<entity_class name="mechTemplateHostile">
+			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
+			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want mechs to head track  -->
+			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,mech,template"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="ModelType" value="Standard"/>			
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="Parent" value="Animals"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="handDrone"/>
+			 <property name="MapIcon" value="ui_game_symbol_enemy_dot" /> 
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_animal_tracker"/> 
+			<property name="RotateToGround" value="false"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="120"/>			
+			<property name="ExperienceGain" value="230"/>
+			<property name="HandItem" value="handDrone"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="Weight" value="300"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
+			<property name="Faction" value="animals"/>
+			<property name="PhysicsBody" value="RobotRig"/>
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="3"/>
+			<property name="AIPathCostScale" value=".4, .6"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAlive,0"/>
+			<property name="AITask-3" value="ApproachSpot"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityAlive,0,0"/>
+			<property name="AITarget-4" value=""/>
+			<!-- Stealth settings -->
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="30"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value=".5"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="DroneRandom" />
+			<property name="SoundAlert" value="DroneRandom" />
+			<property name="SoundAttack" value="DroneRandom" />
+			<property name="SoundDeath" value="DroneDie" />
+			<property name="SoundHurt" value="DroneRandom" />
+			<property name="SoundSense" value="DroneRandom" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<property name="Immunity" value="sickness;disease;wellness"/>
+			<property name="MaxTurnSpeed" value="280"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="DeadBodyHitPoints" value="800"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="ExperienceGain" value="550"/> 
+			<property name="DeadBodyHitPoints" value="350"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+		</entity_class>
+
+<!--  Drones:  Not currently interactable is A19b154  --> 
+	
+		<entity_class name="droneJunkDrone" >
+			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
+			<property name="Class" value="EntityDrone"/>
+			<property name="Parent" value="NPC"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Tags" value="drone,deployed"/>
+			<property name="SizeScale" value="0.25"/>
+			<property name="Faction" value="none"/>
+<!--			<property name="AvatarController" value="AvatarControllerDummy"/>
+			<property name="PhysicsBody" value="vulture"/>
+			<property name="AIPathCostScale" value="100, 100"/> -->
+			<property name="MapIcon" value="ui_game_symbol_map_player_arrow"/>
+			<property name="NavObject" value="NOjunkDrone" />
+			<property name="TrackerIcon" value="ui_game_symbol_assemble"/>
+			<property name="NPCID" value="NPCjunkDrone"/>
+			<property name="LootListAlive" value="126"/> <!-- used to determine container X/Y size -->
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="ModelType" value="Standard"/>	<!-- <property name="ModelType" value="Custom"/> -->
+			<property name="IsEnemyEntity" value="false"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="WaterMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="droneRustyDrone" extends="droneJunkDrone" >
+			<property name="Tags" value="drone,deployed"/>
+			<property name="Faction" value="none"/>
+		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/>
+		</entity_class>
+		
+		<entity_class name="droneBeeDrone" extends="droneJunkDrone" >
+			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" />
+			<property name="Tags" value="drone,deployed"/>
+			<property name="Faction" value="none"/>
+			<property name="SizeScale" value="1.5"/>
+		</entity_class>	
+		
+<!--  Robots  -->
+		
+		<entity_class name="mechRobot" extends="mechTemplateHostile" >
+			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" /> <!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,mech,mechRobot"/>
+			<property name="PhysicsBody" value="RobotRig"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handRobot"/>
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll on entity, but when both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers.  Set it to true even without a ragdoll but you MUST NOT have an E_Biped_Root tag on the entity or it will NRE  -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/> 
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+			</effect_group>
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+		</entity_class>
+		
+		<entity_class name="mechRobotArmy" extends="mechRobot" >
+			<property name="Tags" value="entity,mech,mechRobotArmy"/>
+			<property name="Faction" value="whiteriver"/>			
+			<property name="HandItem" value="handRobotArmy"/>
+		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RobotArmyMat.unity3d?metal_albedo"/>
+		    <property name="ReplaceMaterial1" value="#@modfolder:Resources/RobotArmyMat.unity3d?paint_albedo"/>
+			<property name="ReplaceMaterial2" value="#@modfolder:Resources/RobotArmyMat.unity3d?rubber_albedo"/>
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+		</entity_class>					
+		
+		<entity_class name="mechSphereI" extends="mechTemplateHostile" >
+			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereI_X" />	<!-- Free CC model by 3DHaupt -->
+			<property name="DeadBodyHitPoints" value="1000"/> 
+			<property name="Tags" value="entity,mech,mechSphereI"/>
+			<property name="Faction" value="whiteriver"/>			
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+		</entity_class> 
+		
+		<entity_class name="mechSphereII" extends="mechTemplateHostile" >
+			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereII_X" />
+			<property name="DeadBodyHitPoints" value="1000"/> 
+			<property name="Tags" value="entity,mechmechSphereII"/>	
+			<property name="Faction" value="whiteriver"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+		</entity_class> 
+		
+		<entity_class name="mechBee" extends="mechTemplateHostile" >
+			<property name="Class" value="EntityHornet"/>
+			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" /> <!--  Free CC model but cant find attribution yet  -->
+			<property name="Tags" value="entity,mech,mechBee"/>
+			<property name="Faction" value="whiteriver"/>			
+			<property name="HandItem" value="handMecBee"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="SightRange" value="70"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SizeScale" value="1.3"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="3"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="3"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="2"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class> 
+		
+		<entity_class name="mechDrone" extends="mechTemplateHostile" >
+			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,mech,mechDrone"/>
+			<property name="Faction" value="whiteriver"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="WaterMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>
+		
+		
+		
+		
+<!--		<entity_class name="mechRecyclingBot" extends="mechTemplateHostile" >
+			<property name="Mesh" value="#@modfolder:Resources/Protectronz.unity3d?ProtectronDark" /> --> <!-- Free CC model by shanonso -->
+<!--			<property name="Tags" value="entity,mech,mechRecyclingBot"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handRobot"/>
+			<property name="HasRagdoll" value="true"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/> 
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+			</effect_group>
+		</entity_class> -->
+	</append>
+</configs>

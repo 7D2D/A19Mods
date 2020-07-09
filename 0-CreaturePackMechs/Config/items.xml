@@ -1,0 +1,182 @@
+<configs>
+	<append xpath="/items">
+		<item name="meleeHandMechTemplate">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="35"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="1.6"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="25"/>
+			</property>
+			<effect_group name="meleeHandMechTemplate" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
+				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>
+		</item>		
+		<item name="handSphereII">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="45"/>
+				<property name="DamageBlock" value="45"/>
+			</property>
+		</item>
+		<item name="handDrone">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="2.0"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="20"/>
+			</property>	
+		</item>		
+		<item name="handRobot">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="35"/>
+				<property name="DamageBlock" value="35"/>
+			</property>		
+		</item>	
+		<item name="handRobotArmy">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="50"/>
+			</property>	
+		</item>			
+		<item name="handMecBee">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="1.0"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+		</item>	
+
+		<item name="gunMechJunkDrone">
+			<property name="Tags" value="turret,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic"/>
+			<property name="DisplayType" value="ranged"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Junk Drone/junkDroneHeld_Prefab.prefab"/>
+			<property name="HoldType" value="67"/>
+			<property name="Material" value="MJunkTurretParts"/> <property name="Weight" value="6"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="EconomicValue" value="700"/>
+			<property name="FuelValue" value="250"/>
+			<property name="UnlockedBy" value="perkBatterUpBaseballBats"/>
+			<property name="ShowQuality" value="true"/>
+			<!--
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Delay" value=".8"/>
+				<property name="Sound_start" value="junkturret_fire"/>
+				<property name="Sound_loop" value="junkturret_fire"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="m60_reload"/>
+				<property name="Particles_muzzle_fire" value="nozzleflash_shotgun"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/>
+				<property name="CrosshairUpAfterShot" value="true"/>
+				<property name="CrosshairOnAim" value="true"/>
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="0,0,0"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			-->
+			<property class="Action1">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="droneJunkDrone"/>
+				<property name="PreviewSize" value="0.25,0.25,0.25"/>
+			</property>
+			<effect_group name="gunBotT3JunkDrone">
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkTurrets"/> <!-- random effective rng -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkTurrets"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkTurrets"/> <!-- tier bonus -->
+
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkTurrets"/> <!-- random DegMax -->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/> <!-- random WeaponHandling -->
+
+
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0" tags="perkTurrets"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0" tags="perkTurrets"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0" tags="perkTurrets"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="0" tags="perkTurrets"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="0" tags="perkTurrets"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value="0" tags="perkTurrets"/>
+
+
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.1,.1" tags="perkTurrets"/> <!-- random APM -->
+				<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122" tags="perkTurrets"/> <!-- random MagazineSize -->
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/> <!-- random WeaponHandling -->
+
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="60"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkTurrets"/>
+
+
+				<passive_effect name="MagazineSize" operation="base_set" value="62" tags="perkTurrets"/>
+				<passive_effect name="MagazineSize" operation="base_add" value="6,30" tier="2,6" tags="perkTurrets"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkTurrets"/>
+
+
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkTurrets"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkTurrets"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkTurrets"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkTurrets"/>
+
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="3" tags="perkTurrets"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3" tags="perkTurrets"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2" tags="perkTurrets"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2" tags="perkTurrets"/>
+
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="0" tags="perkTurrets"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="1" tags="perkTurrets"/>
+
+				<passive_effect name="DegradationMax" operation="base_set" value="250,600" tier="1,6" tags="perkTurrets"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0.35" tags="perkTurrets"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			</effect_group>
+		</item>
+		
+		<item name="gunBotRustyDrone">
+			<property name="Extends" value="gunMechJunkDrone"/>
+			<property class="Action1">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="droneRustyDrone"/>
+			</property>
+		</item>
+		
+		<item name="gunBotBeeDrone">
+			<property name="Extends" value="gunMechJunkDrone"/>
+			<property class="Action1">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="droneBeeDrone"/>
+			</property>
+		</item>
+		
+	</append>
+</configs>
