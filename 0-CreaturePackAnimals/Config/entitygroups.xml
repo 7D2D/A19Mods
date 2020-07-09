@@ -1,8 +1,8 @@
 <configs>
 
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
+<!--	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
 		<entity name="animalGuppyInsect" prob=".15" />
-	</append>
+	</append> -->
 
 	<!-- artic fox belongs ONLY in snow biomes -->
 	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsSnow']">
