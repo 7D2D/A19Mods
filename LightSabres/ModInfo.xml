@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
-	<ModInfo>
-		<Name value="LightSabres" />
-		<Description value="LightSabres Mod" />
-		<Author value="Xyth" />
-		<Version value="2.0" />
-		<Website value="" />
-	</ModInfo>
+  <ModInfo>
+    <Name value="LightSabres" />
+    <Description value="LightSabres Mod" />
+    <Author value="Xyth" />
+    <Version value="19.0.0.1" />
+    <Website value="" />
+  </ModInfo>
 </xml>

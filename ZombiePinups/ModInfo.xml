@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
-	<ModInfo>
-		<Name value="ZombiePinups" />
-		<Description value="Zombie pinup posters of Shecreature http://www.gorestruly.com/author/meg/  Place on walls to brighten up the apocalypse" />
-		<Author value="Xyth" />
-		<Version value="2.0" />
-		<Website value="" />
-	</ModInfo>
+  <ModInfo>
+    <Name value="ZombiePinups" />
+    <Description value="Zombie pinup posters of Shecreature http://www.gorestruly.com/author/meg/  Place on walls to brighten up the apocalypse" />
+    <Author value="Xyth" />
+    <Version value="19.0.0.1" />
+    <Website value="" />
+  </ModInfo>
 </xml>

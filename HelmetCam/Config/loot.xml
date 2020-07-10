@@ -1,5 +1,5 @@
 <configs>
-	<append xpath="/lootcontainers/lootgroup[@name='rareBooks']">
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT0']">
 		<item name="modArmorHelmetCamSchematic" />
 	</append>	
 </configs> 

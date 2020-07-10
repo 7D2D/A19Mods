@@ -1,6 +1,6 @@
 <configs>
 
-    <append xpath="/lootcontainers/lootgroup[@name='commonBooks']">
+    <append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT0']">
 <!--		<item name="qc_Strays" count="1"/> -->
     </append>
 

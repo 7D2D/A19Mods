@@ -23,13 +23,13 @@
 			<item name="modPommelHoundBat"/>
 			<item name="modGripRubberBat"/>		
 	</append>
-		<append xpath="/lootcontainers/lootgroup[@name='schematicsModsCommon']">
+		<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT0']">
 					
 			<item name="modSmallGearBatSchematic"/>
 			<item name="modPommelPantherBatSchematic"/>	
 			<item name="modBarbedBatSchematic"/>
 		</append>
-	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']">
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT1']">
 			<item name="modCrownBatSchematic"/>
 			<item name="modNautilusBatSchematic"/>
 			<item name="modMaceBatSchematic"/>
@@ -46,7 +46,7 @@
 			
 	</append>	
 	
-	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_PummelPete']">
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Melee']">
 		
 		<item name="meleeAluminumBat" prob="0.25" mods="head,sweetspot,effects,grip,pommel" mod_chance=".20"/> 
 		<item name="meleePlainBat" prob="0.65" mods="head,sweetspot,effects,grip,pommel" mod_chance=".20"/> 

@@ -1,6 +1,6 @@
 <configs>
 	
-	<append xpath="/lootcontainers/lootgroup[@name='commonBooks']">
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT0']">
 			<item name="bookRM01" prob="10" />
 			<item name="bookWD01" prob="10" />
 	</append>

@@ -4,5 +4,5 @@
 		<remove xpath="//biome[ starts-with(@name, 'pine_forest')]" />
 		<remove xpath="//biome[ starts-with(@name, 'burnt_forest')]" />
 		<remove xpath="//biome[ starts-with(@name, 'wasteland')]" />
-		<remove xpath="//biome[ starts-with(@name, 'city')]" />
+<!--		<remove xpath="//biome[ starts-with(@name, 'city')]" /> -->
 </configs>

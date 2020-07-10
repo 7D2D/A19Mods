@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
-	<ModInfo>
-		<Name value="CCTV" />
-		<Description value="Adds an 8 camera CCTV system to the game." />
-		<Author value="Xyth" />
-		<Version value="2.0" />
-	</ModInfo>
+  <ModInfo>
+    <Name value="CCTV" />
+    <Description value="Adds an 8 camera CCTV system to the game." />
+    <Author value="Xyth" />
+    <Version value="19.0.0.1" />
+  </ModInfo>
 </xml>
