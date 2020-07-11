@@ -1,42 +1,78 @@
 <configs>
-
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
-		<entity name="animalGuppyInsect" prob=".15" />
+	
+	<append xpath="/entitygroups/entitygroup[@name='AnimalsSmall']">	
+		<entity name="animalFox" prob=".1" />
 	</append>
-
-	<!-- artic fox belongs ONLY in snow biomes -->
-	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsSnow']">
-		<entity name="animalFox" prob="1" />
+	<append xpath="/entitygroups/entitygroup[@name='AnimalsFarm']">	
+		<entity name="animalGoat" />
+		<entity name="animalWolfhound" />
 	</append>
-	<!-- artic fox (wrong climate) and seagulls(alcatraz) do not belong in forest biomes -->
-	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsForest']">
-		<entity name="animalGoat" prob="1" />
-		<entity name="animalRobin" prob="1" />
-		<entity name="animalCrow" prob="1" />
-		<entity name="animalBat" prob="1" />
-		<entity name="animalBats" prob=".25" />
-		<entity name="animalEagle" prob="1" />
-		<entity name="animalWulf" prob="1" />
-		<entity name="animalPug" prob="1" />
-		<entity name="animalBeagle" prob="1" />
-		<entity name="animalWolfhound" prob="1" />
+	<append xpath="/entitygroups/entitygroup[@name='AnimalsDesert']">	
+		<entity name="animalEagle" prob=".1" />
 	</append>
-	<!-- crows (carrion eaters) in burnt and wasteland biomes -->
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">	
+		<entity name="animalSpider01" prob="20"/>
+		<entity name="animalSpider02" prob="20" />
+		<entity name="animalSpider03" prob="20"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsDesert']">	
+		<entity name="animalRobin" prob="10" />
+		<entity name="animalCrow" prob="10" />
+		<entity name="animalEagle" prob="10" />
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">	
+		<entity name="animalFox" prob="10" />
+		<entity name="animalWulf" prob="20" />
+		<entity name="animalWolfhound" prob="10" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsSnow']">	
+		<entity name="animalGoat" prob="10" />
+		<entity name="animalCrow" prob="10" />
+		<entity name="animalEagle" prob="10" />
+		<entity name="animalFox" prob="10" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">	
+		<entity name="animalSpider01" prob="5"/>
+		<entity name="animalSpider02" prob="5" />
+		<entity name="animalSpider03" prob="5"/>
+		<entity name="animalWulf" prob="5" />
+		<entity name="animalPug" prob="5" />
+		<entity name="animalBeagle" prob="5" />
+		<entity name="animalWolfhound" prob="5" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsForest']">	
+		<entity name="animalGoat" prob="5" />
+		<entity name="animalRobin" prob="5" />
+		<entity name="animalCrow" prob="5" />
+		<entity name="animalBat" prob="2.5" />
+		<entity name="animalBats" prob="10" />
+		<entity name="animalEagle" prob="5" />
+	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']">
-		<entity name="animalCrow" prob="1" />
+		<entity name="animalBats" prob="10" />
+		<entity name="animalCrow" prob="5" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
-		<entity name="animalCrow" prob="1" />
+		<entity name="animalBats" prob="20" />
+		<entity name="animalCrow" prob="10" />
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='WolfGroup']">	
+		<entity name="animalWulf" />
 	</append>
-	<!-- spiders in forest and plains (heavy grasses for camouflage), and also in desert biomes -->
-	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">
-		<entity name="animalSpider01" prob="0.25"/>
-		<entity name="animalSpider02" prob="0.25" />
-		<entity name="animalSpider03" prob="0.25"/>
+	<append xpath="/entitygroups/entitygroup[@name='WolfPack']">	
+		<entity name="animalWulf" />
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='VultureGroup']">	
+		<entity name="animalGuppyInsect" />
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">
-		<entity name="animalSpider01" prob="0.25"/>
-		<entity name="animalSpider02" prob="0.25" />
-		<entity name="animalSpider03" prob="0.25"/>
+	<append xpath="/entitygroups/entitygroup[@name='SnakeGroup']">	
+
 	</append>
+	<append xpath="/entitygroups/entitygroup[@name='BoarGroup']">	
+
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='BearGroup']">	
+
+	</append>	
+
 </configs> 
