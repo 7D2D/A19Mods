@@ -1,0 +1,50 @@
+<configs>
+	<append xpath="/buffs">
+
+		<buff name="IsZombie">
+			<stack_type value="ignore"/>
+			<duration value="3.5"/>
+			<effect_group name="IsHuman">
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="0"/> <!-- Value of zero paths the controller to zombie animations  -->
+			</effect_group>
+		</buff>	
+		
+<!--  Future Minstral buffs  -->
+
+		<!--<buff name="PlaySongChoice0">
+			<stack_type value="ignore"/>
+			<duration value="0.1"/>
+			<effect_group name="PlaySong0">
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="PlaySongNum" value="0" duration=".1"/>
+			</effect_group>
+		</buff>	
+		
+		<buff name="PlaySongChoice1">
+			<stack_type value="ignore"/>
+			<duration value="0.1"/>
+			<effect_group name="PlaySong1">
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="PlaySongNum" value="1" duration=".1"/>
+			</effect_group>
+		</buff>		
+		
+		
+		<buff name="PlaySongChoice2">
+			<stack_type value="ignore"/>
+			<duration value="0.1"/>
+			<effect_group name="PlaySong2">
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="PlaySongNum" value="2" duration=".1"/>
+			</effect_group>
+		</buff>	
+		
+		<buff name="smoketest" name_key="Buff Name" description_key="legendaryDesc" tooltip_key="na" icon="ui_game_symbol_skull">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/FrostShield.unity3d?p_FrostShield_X" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectOnEntity" particle="#@modfolder:Resources/FrostShield.unity3d?p_FrostShield_X"/>
+			</effect_group>
+		</buff>	-->
+	
+	</append>
+
+</configs>

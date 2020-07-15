@@ -1,0 +1,1387 @@
+<configs>
+
+<!--	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
+		<entity name="zombieGuppyCreepyCrawly" prob=".1" />
+		<entity name="zombieGuppyInfernalDog" prob=".1" />	
+		<entity name="zombieGuppyInfernalDogBoss" prob=".025" />
+	</append> -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesNight']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".15" />
+		<entity name="zombieSantaFeral" prob=".15" />
+		<entity name="zombieNurseTemplate" prob=".3" />
+		<entity name="zombieNurseTemplateFeral" prob=".15" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+		<entity name="zombieFemaleTutorialFeral" prob=".15" />
+	</insertAfter>
+
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".15" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+		<entity name="zombieBehemoth" prob=".15" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='zombieBoeFeral']" >
+		<entity name="zombieSantaFeral"/>
+		<entity name="zombieNurseTemplateFeral"/>
+		<entity name="zombieFemaleTutorialFeral"/>
+		<entity name="zombieBehemoth" prob=".5" />
+	</insertAfter>
+
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".1" />
+		<entity name="zombieNurseTemplate" prob=".05" />
+		<entity name="zombieFemaleTutorial" prob=".1" />
+	</insertAfter>	
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroup']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".15" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>	
+
+<!-- Military Types  -->	
+	
+<!--	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieSoldierGroup']/entity[@name='zombieSoldier']" >	
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob="1" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob="1" />
+		<entity name="zombieGuppySoldier01" prob="1" />
+		<entity name="zombieGuppySoldier01Crawler" prob="1" />
+		<entity name="zombieGuppySoldier01BulletWound" prob="1" />
+		<entity name="zombieGuppySoldierFemale01" prob="1" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob="1" />
+		<entity name="zombieGuppySoldierLeader" prob="1" />
+	</insertAfter>
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS1']/entity[@name='zombieSoldier']" >	
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob="1" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob="1" />
+		<entity name="zombieGuppySoldier01" prob="1" />
+		<entity name="zombieGuppySoldier01Crawler" prob="1" />
+		<entity name="zombieGuppySoldier01BulletWound" prob="1" />
+		<entity name="zombieGuppySoldierFemale01" prob="1" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob="1" />
+		<entity name="zombieGuppySoldierLeader" prob="1" />
+	</insertAfter>	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS50']/entity[@name='zombieSoldier']" >	
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".8" />
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".1" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".8" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".1" />
+		<entity name="zombieGuppySoldier01" prob=".8" />
+		<entity name="zombieGuppySoldier01Feral" prob=".1" />
+		<entity name="zombieGuppySoldier01Crawler" prob=".8" />
+		<entity name="zombieGuppySoldier01CrawlerFeral" prob=".1" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".8" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".1" />
+		<entity name="zombieGuppySoldierFemale01" prob=".8" />	
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".1" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".8" />
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".1" />
+		<entity name="zombieGuppySoldierLeader" prob=".8" />
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS100']/entity[@name='zombieSoldier']" >	
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".3" />
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".3" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".3" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".3" />
+		<entity name="zombieGuppySoldier01" prob=".3" />
+		<entity name="zombieGuppySoldier01Feral" prob=".3" />
+		<entity name="zombieGuppySoldier01Crawler" prob=".3" />
+		<entity name="zombieGuppySoldier01CrawlerFeral" prob=".3" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".3" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".3" />
+		<entity name="zombieGuppySoldierFemale01" prob=".3" />	
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".3" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".3" />
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".3" />
+		<entity name="zombieGuppySoldierLeader" prob=".3" />
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS200']/entity[@name='zombieSoldier']" >	
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".3" />
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".3" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".3" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".3" />
+		<entity name="zombieGuppySoldier01" prob=".3" />
+		<entity name="zombieGuppySoldier01Feral" prob=".3" />
+		<entity name="zombieGuppySoldier01Crawler" prob=".3" />
+		<entity name="zombieGuppySoldier01CrawlerFeral" prob=".3" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".3" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".3" />
+		<entity name="zombieGuppySoldierFemale01" prob=".3" />	
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".3" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".3" />
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".3" />
+		<entity name="zombieGuppySoldierLeader" prob=".3" />
+		<entity name="zombieGuppySoldierLeaderFeral" prob=".1" />
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS400']/entity[@name='zombieSoldier']" >	
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".2" />
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".8" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".2" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".8" />
+		<entity name="zombieGuppySoldier01" prob=".2" />
+		<entity name="zombieGuppySoldier01Feral" prob=".8" />
+		<entity name="zombieGuppySoldier01Crawler" prob=".2" />
+		<entity name="zombieGuppySoldier01CrawlerFeral" prob=".8" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".2" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".8" />
+		<entity name="zombieGuppySoldierFemale01" prob=".2" />	
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".8" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".2" />
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".8" />
+		<entity name="zombieGuppySoldierLeader" prob=".2" />
+		<entity name="zombieGuppySoldierLeaderFeral" prob=".5" />
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS800']/entity[@name='zombieSoldier']" >	
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".8" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".8" />
+		<entity name="zombieGuppySoldier01Feral" prob=".8" />
+		<entity name="zombieGuppySoldier01CrawlerFeral" prob=".8" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".8" />
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".8" />		
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".8" />
+		<entity name="zombieGuppySoldierLeaderFeral" prob=".8" />
+	</insertAfter>	-->
+	
+<!-- Medical Types-->
+	
+<!--	<insertAfter xpath="/entitygroups/entitygroup[@name='HospitalGroup']/entity[@name='zombieLab']" >	
+		<entity name="zombieGuppyDoctor01" prob="1" />
+		<entity name="zombieGuppyDoctor02" prob="1" />
+		<entity name="zombieGuppyDoctor03" prob="1" />
+		<entity name="zombieGuppyDoctor04Black" prob="1" />
+		<entity name="zombieGuppyDoctorFemale01" prob="1" />
+		<entity name="zombieGuppyDoctorFemale02" prob="1" />	
+	</insertAfter>
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS1']/entity[@name='zombieLab']" >	
+		<entity name="zombieGuppyDoctor01" prob="1" />
+		<entity name="zombieGuppyDoctor02" prob="1" />
+		<entity name="zombieGuppyDoctor03" prob="1" />
+		<entity name="zombieGuppyDoctor04Black" prob="1" />
+		<entity name="zombieGuppyDoctorFemale01" prob="1" />
+		<entity name="zombieGuppyDoctorFemale02" prob="1" />	
+	</insertAfter>	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS50']/entity[@name='zombieLab']" >	
+		<entity name="zombieGuppyDoctor01" prob=".8" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".1" />
+		<entity name="zombieGuppyDoctor02" prob=".8" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".1" />
+		<entity name="zombieGuppyDoctor03" prob=".8" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".1" />
+		<entity name="zombieGuppyDoctor04Black" prob=".8" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".1" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".8" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".1" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".8" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".1" />		
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS100']/entity[@name='zombieLab']" >	
+		<entity name="zombieGuppyDoctor01" prob=".5" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".5" />
+		<entity name="zombieGuppyDoctor02" prob=".5" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".5" />
+		<entity name="zombieGuppyDoctor03" prob=".5" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".5" />
+		<entity name="zombieGuppyDoctor04Black" prob=".5" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".5" />		
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS200']/entity[@name='zombieLab']" >	
+		<entity name="zombieGuppyDoctor01" prob=".5" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".5" />
+		<entity name="zombieGuppyDoctor02" prob=".5" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".5" />
+		<entity name="zombieGuppyDoctor03" prob=".5" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".5" />
+		<entity name="zombieGuppyDoctor04Black" prob=".5" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".5" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".5" />		
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS400']/entity[@name='zombieLab']" >	
+		<entity name="zombieGuppyDoctor01" prob=".1" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".8" />
+		<entity name="zombieGuppyDoctor02" prob=".1" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".8" />
+		<entity name="zombieGuppyDoctor03" prob=".1" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".8" />
+		<entity name="zombieGuppyDoctor04Black" prob=".1" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".8" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".1" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".8" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".1" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".8" />		
+	</insertAfter>		
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS800']/entity[@name='zombieLab']" >	
+		<entity name="zombieGuppyDoctor01Feral" prob=".8" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".8" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".8" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".8" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".8" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".8" />
+	</insertAfter>		
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieHazMatOnlyGroup']/entity[@name='zombieMaleHazmat']" >	
+		<entity name="zombieHazmatFemale01TSBX" prob="0.2"/>
+	</insertAfter> -->
+
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesFeral']/entity[@name='zombieWightFeral']" >	
+		<entity name="zombieSantaFeral"/>
+		<entity name="zombieNurseTemplateFeral"/>
+		<entity name="zombieFemaleTutorialFeral"/>
+	</insertAfter>
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieBadassGroup']/entity[@name='zombieArleneFeral']" >	
+		<entity name="zombieSantaFeral"/>
+		<entity name="zombieNurseTemplateFeral"/>
+		<entity name="zombieFemaleTutorialFeral"/>
+	</insertAfter>	
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />	
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieJoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />	
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteve']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />	
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>
+	
+<!--	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieYo']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBusinessMan']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSkateboarder']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+		
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieArlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieDarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieCheerleader']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieNurse']">
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMaleHazmat']">
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBiker']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieUtilityWorker']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieFatHawaiian']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieFemaleFat']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieFootballPlayer']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+		
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSoldier']">
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".25" />
+		<entity name="zombieGuppySoldier01" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".25" />
+		<entity name="zombieGuppySoldierLeader" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteveCrawler']">
+		<entity name="zombieGuppySoldier01Crawler" prob=".25" />
+		<entity name="zombieGuppy02White" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieJoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteveFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieYoFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBusinessManFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSkateboarderFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+		
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieArleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieDarleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMarleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieNurseFeral']">
+		<entity name="zombieNurseTemplateFeral" prob=".25" />
+		<entity name="zombieFemaleTutorialFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBikerFeral']">
+		<entity name="zombieCopCity02TSBXFeral" prob=".25" />
+		<entity name="zombieCopSwat01TSBXFeral" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBXFeral" prob=".25" />
+		<entity name="zombieSantaFeral" prob=".25" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieFatHawaiianFeral']">
+		<entity name="zombieCopCity02TSBXFeral" prob=".25" />
+		<entity name="zombieCopSwat01TSBXFeral" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBXFeral" prob=".25" />
+		<entity name="zombieSantaFeral" prob=".25" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieFemaleFatFeral']">
+		<entity name="zombieCopCity02TSBXFeral" prob=".25" />
+		<entity name="zombieCopSwat01TSBXFeral" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBXFeral" prob=".25" />
+		<entity name="zombieSantaFeral" prob=".25" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSoldierFeral']">
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".25" />
+		<entity name="zombieGuppySoldier01Feral" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".25" />
+		<entity name="zombieGuppySoldierLeaderFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteveCrawlerFeral']">
+		<entity name="zombieGuppySoldier01CrawlerFeral" prob=".25" />
+		<entity name="zombieGuppy02WhiteFeral" prob=".25" />
+	</insertAfter> -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieBoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieJoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieSteve']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>
+	
+<!--	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieMoe']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieYo']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieBusinessMan']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieSkateboarder']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieArlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieDarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieMarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieCheerleader']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieNurse']">
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieMaleHazmat']">
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieBiker']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieUtilityWorker']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieFatHawaiian']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieFemaleFat']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieFootballPlayer']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieSoldier']">
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".25" />
+		<entity name="zombieGuppySoldier01" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".25" />
+		<entity name="zombieGuppySoldierLeader" prob=".25" />
+	</insertAfter> -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieBoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieJoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />	
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieSteve']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />	
+	</insertAfter>
+	
+<!--	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieMoe']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieYo']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieBusinessMan']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieSkateboarder']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppy04" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieArlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieDarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieMarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieNurse']">
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieUtilityWorker']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieFemaleFat']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieSoldier']">
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".25" />
+		<entity name="zombieGuppySoldier01" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".25" />
+		<entity name="zombieGuppySoldierLeader" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieBoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieJoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieSteveFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieMoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieYoFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieBusinessManFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieSkateboarderFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieArleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieDarleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieMarleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieNurseFeral']">
+		<entity name="zombieNurseTemplateFeral" prob=".25" />
+		<entity name="zombieFemaleTutorialFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieFemaleFatFeral']">
+		<entity name="zombieCopCity02TSBXFeral" prob=".25" />
+		<entity name="zombieCopSwat01TSBXFeral" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBXFeral" prob=".25" />
+		<entity name="zombieSantaFeral" prob=".25" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".25" />
+		<entity name="zombieGuppySoldier01Feral" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".25" />
+		<entity name="zombieGuppySoldierLeaderFeral" prob=".25" />
+	</insertAfter> -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />	
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieJoe']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />	
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieSteve']">
+		<entity name="zombieSanta" prob=".3" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".3" />
+	</insertAfter>
+	
+<!--	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMoe']">
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".25" />
+		<entity name="zombieGuppySoldier01" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".25" />
+		<entity name="zombieGuppySoldierLeader" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieYo']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBusinessMan']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieSkateboarder']">
+		<entity name="zombieFlayed" prob=".25" />
+		<entity name="zombieClown" prob=".25" />
+		<entity name="zombiePrepper" prob=".25" />		
+		<entity name="zombieCoroner" prob=".25" />
+		<entity name="zombieGuppy01Beige" prob=".25" />
+		<entity name="zombieGuppy03Dark" prob=".25" />
+		<entity name="zombieGuppyHungry01Blue" prob=".25" />
+		<entity name="zombieGuppyHungry02Red" prob=".25" />
+		<entity name="zombieGuppyHungry03White" prob=".25" />
+		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
+		<entity name="zombieHoly01MUMPFY" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieArlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieDarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMarlene']">
+		<entity name="zombieGuppyCarmela" prob=".25" />
+		<entity name="zombieJill" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBX" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieNurse']">
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieUtilityWorker']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieFemaleFat']">
+		<entity name="zombieCopCity02TSBX" prob=".25" />
+		<entity name="zombieCopSwat01TSBX" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBX" prob=".25" />
+		<entity name="zombieSanta" prob=".25" />
+		<entity name="zombieGuppyDoctor01" prob=".25" />
+		<entity name="zombieGuppyDoctor02" prob=".25" />
+		<entity name="zombieGuppyDoctor03" prob=".25" />
+		<entity name="zombieGuppyDoctor04Black" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieSoldier']">
+		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".25" />
+		<entity name="zombieGuppySoldier01" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWound" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01Helmet" prob=".25" />
+		<entity name="zombieGuppySoldierLeader" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieFatCop']">
+		<entity name="zombieBehemoth" prob=".1" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieJoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieSteveFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMoeFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieYoFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBusinessManFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieSkateboarderFeral']">
+		<entity name="zombieFlayedFeral" prob=".25" />
+		<entity name="zombieClownFeral" prob=".25" />
+		<entity name="zombiePrepperFeral" prob=".25" />		
+		<entity name="zombieCoronerFeral" prob=".25" />
+		<entity name="zombieGuppy01BeigeFeral" prob=".25" />
+		<entity name="zombieGuppy03DarkFeral" prob=".25" />
+		<entity name="zombieGuppyHungry01BlueFeral" prob=".25" />
+		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
+		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
+		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieArleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieDarleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieMarleneFeral']">
+		<entity name="zombieGuppyCarmelaFeral" prob=".25" />
+		<entity name="zombieJillFeral" prob=".25" />
+		<entity name="zombieHazmatFemale01TSBXFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieNurseFeral']">
+		<entity name="zombieNurseTemplateFeral" prob=".25" />
+		<entity name="zombieFemaleTutorialFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieUtilityWorkerFeral']">
+		<entity name="zombieCopCity02TSBXFeral" prob=".25" />
+		<entity name="zombieCopSwat01TSBXFeral" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBXFeral" prob=".25" />
+		<entity name="zombieSantaFeral" prob=".25" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".25" />
+		<entity name="zombieGuppySoldier01Feral" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".25" />
+		<entity name="zombieGuppySoldierLeaderFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieFemaleFatFeral']">
+		<entity name="zombieCopCity02TSBXFeral" prob=".25" />
+		<entity name="zombieCopSwat01TSBXFeral" prob=".25" />
+		<entity name="zombieCopCityFemale01TSBXFeral" prob=".25" />
+		<entity name="zombieSantaFeral" prob=".25" />
+		<entity name="zombieGuppyDoctor01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor02Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor03Feral" prob=".25" />
+		<entity name="zombieGuppyDoctor04BlackFeral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale01Feral" prob=".25" />
+		<entity name="zombieGuppyDoctorFemale02Feral" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".25" />
+		<entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".25" />
+		<entity name="zombieGuppySoldier01Feral" prob=".25" />
+		<entity name="zombieGuppySoldier01BulletWoundFeral" prob=".25" />
+		<entity name="zombieGuppySoldierFemale01Feral" prob=".25" />		
+		<entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".25" />
+		<entity name="zombieGuppySoldierLeaderFeral" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieFatCopFeral']">
+		<entity name="zombieBehemoth" prob=".25" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieWightFeral']">
+		<entity name="zombieBehemoth" prob=".25" />
+	</insertAfter>	-->
+
+</configs>

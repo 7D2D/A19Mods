@@ -1,0 +1,13 @@
+Key,Source,Context,UsedInMainMenu,NoTranslate,English
+"start",,,,,"Are you the undead?"
+"statement_-1684104497",,,,,"Maybe not but a bar of soap wouldn't kill ya none either."
+"responseID_1595140464",,,,,"No I'm not dead yet."
+"response_-24413466",,,,,"Gee thanks."
+"responseID_-307220871",,,,,"Be safe friend."
+
+qc_FoolsGold,items,Item,New,,FoolsGold Quest
+qc_FoolsGoldDesc,items,Quest - Challenge,,,There are rumors of a great treasure at this location.
+challenge_FoolsGold,Quest,Challenge Info,,,Fools Gold
+challenge_FoolsGold_offer,Quest,Challenge Info,,,"Dear Survivor,\nDont know if the source I got this from is reliable. Just keep in mind it was one of the Dukes guys.\n\nGood Luck, Crazy Jake."
+challenge_FoolsGold_subtitle,Quest,Challenge Info,,,Is this a joke?
+challenge_FoolsGold_completion,Quest,Quest Info,,,Well Done...here are some things I found awhile ago. \nTake it.  

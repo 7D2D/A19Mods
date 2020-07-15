@@ -27,7 +27,6 @@
 			<property name="Mass" value="120"/>			
 			<property name="ExperienceGain" value="230"/>
 			<property name="HandItem" value="handDrone"/>
-			<property name="SurfaceCategory" value="metal"/>
 			<property name="AttackTimeoutDay" value="1.5"/>
 			<property name="AttackTimeoutNight" value="1.4"/>
 			<property name="Weight" value="300"/>
@@ -68,24 +67,27 @@
 			<property name="SoundDeath" value="DroneDie" />
 			<property name="SoundHurt" value="DroneRandom" />
 			<property name="SoundSense" value="DroneRandom" /> 
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
-			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
-			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="1" tag="salvageHarvest"/>
+            <drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceScrapIron" count="3,7" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="MaxTurnSpeed" value="280"/>
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="DeadBodyHitPoints" value="800"/>
+			<property name="DeadBodyHitPoints" value="300"/>
 			<property name="TimeStayAfterDeath" value="300"/>
-			<property name="AttackTimeoutDay" value="1.5"/>
-			<property name="AttackTimeoutNight" value="1.4"/>
 			<property name="CanClimbLadders" value="true"/>
-			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="ExperienceGain" value="550"/> 
-			<property name="DeadBodyHitPoints" value="350"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
@@ -117,6 +119,18 @@
 			<property name="TimeStayAfterDeath" value="3600"/>
 			<property name="ModelType" value="Standard"/>	<!-- <property name="ModelType" value="Custom"/> -->
 			<property name="IsEnemyEntity" value="false"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="1" tag="salvageHarvest"/>
+            <drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceScrapIron" count="3,7" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<effect_group>
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
@@ -127,6 +141,18 @@
 		<entity_class name="droneRustyDrone" extends="droneJunkDrone" >
 			<property name="Tags" value="drone,deployed"/>
 			<property name="Faction" value="none"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="1" tag="salvageHarvest"/>
+            <drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceScrapIron" count="3,7" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>			
 		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/>
 		</entity_class>
 		
@@ -135,6 +161,14 @@
 			<property name="Tags" value="drone,deployed"/>
 			<property name="Faction" value="none"/>
 			<property name="SizeScale" value="1.5"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="1"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="1"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="1"/>
+             <drop event="Destroy" name="resourceScrapIron" count="1"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>			
 		</entity_class>	
 		
 <!--  Robots  -->
@@ -155,11 +189,18 @@
 			<property name="SoundDeath" value="RobotDie" />
 			<property name="SoundHurt" value="RobotRandom" />
 			<property name="SoundSense" value="RobotSense" /> 
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
-			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
-			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="1" tag="salvageHarvest"/>
+            <drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceScrapIron" count="3,7" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>	
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
 			</effect_group>
@@ -176,6 +217,18 @@
 			<property name="ReplaceMaterial2" value="#@modfolder:Resources/RobotArmyMat.unity3d?rubber_albedo"/>
 			<property name="AttackTimeoutDay" value="1.5"/>
 			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="1" tag="salvageHarvest"/>
+            <drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceScrapIron" count="3,7" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>			
 		</entity_class>					
 		
 		<entity_class name="mechSphereI" extends="mechTemplateHostile" >
@@ -183,11 +236,18 @@
 			<property name="DeadBodyHitPoints" value="1000"/> 
 			<property name="Tags" value="entity,mech,mechSphereI"/>
 			<property name="Faction" value="whiteriver"/>			
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
-			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
-			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="1" tag="salvageHarvest"/>
+            <drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceScrapIron" count="3,7" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 			</effect_group>
@@ -195,17 +255,23 @@
 		
 		<entity_class name="mechSphereII" extends="mechTemplateHostile" >
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereII_X" />
-			<property name="DeadBodyHitPoints" value="1000"/> 
 			<property name="Tags" value="entity,mechmechSphereII"/>	
 			<property name="Faction" value="whiteriver"/>			
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 			</effect_group>
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
-			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
-			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+            <drop event="Harvest" name="resourceMetalPipe" count="1" tag="salvageHarvest"/>
+            <drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
+            <drop event="Harvest" name="resourceScrapIron" count="3,7" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 		</entity_class> 
 		
 		<entity_class name="mechBee" extends="mechTemplateHostile" >
@@ -235,6 +301,14 @@
 			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
 			<property name="Tags" value="entity,mech,mechDrone"/>
 			<property name="Faction" value="whiteriver"/>
+			<property name="SurfaceCategory" value="metal"/>
+            <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+            <drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1"/> 
+            <drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="1"/>
+            <drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="1"/> 
+            <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="1"/>
+             <drop event="Destroy" name="resourceScrapIron" count="1"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>				
 			<effect_group>
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>

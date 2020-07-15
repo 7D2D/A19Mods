@@ -1,0 +1,126 @@
+<EntityBuffStarter>
+
+	<append xpath="/entity_classes">	<!-- This bit of Sphereii genius bypasses the warnings if the NPC modlets not loaded  -->
+		<entity_class name="npcDummyTemplate" extends="humanMeleeMaleBanditTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
+			<property name="SoundRandom" value="malehateroam"/>
+			<property name="SoundAlert" value="malehatealert"/>
+			<property name="SoundSense" value="malehatesense"/>
+			<property name="SoundHurt" value="malehatepain"/>
+			<property name="SoundDeath" value="malehatedeath"/>
+			<property name="SoundAttack" value="malehateattack"/>	
+		</entity_class>	
+		<entity_class name="npcTraderDummyTemplate" extends="humanMeleeMaleBanditTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
+			<property name="SoundRandom" value="malehateroam"/>
+			<property name="SoundAlert" value="malehatealert"/>
+			<property name="SoundSense" value="malehatesense"/>
+			<property name="SoundHurt" value="malehatepain"/>
+			<property name="SoundDeath" value="malehatedeath"/>
+			<property name="SoundAttack" value="malehateattack"/>	
+		</entity_class>	
+	</append>
+	
+<!-- New sound system needs to know if character is male or female  -->	
+	
+	
+	<append xpath="//entity_class[starts-with(@name, 'zombieWight')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieBoe')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieFootballPlayer')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieFemaleFat')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieJoe')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieMoe')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieArlene')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieLab')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'legendaryZombieLab')]/property[@name='Tags']/@value">,female</append>		
+	<append xpath="//entity_class[starts-with(@name, 'zombieScreamer')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieDarlene')]/property[@name='Tags']/@value">,female</append>		
+	<append xpath="//entity_class[starts-with(@name, 'zombieMarlene')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieYo')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieSteve')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieBusinessMan')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'legendaryZombieBusinessMan')]/property[@name='Tags']/@value">,male</append>		
+	<append xpath="//entity_class[starts-with(@name, 'zombieSnow')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieSpider')]/property[@name='Tags']/@value">,male</append>			
+	<append xpath="//entity_class[starts-with(@name, 'zombieBurnt')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieNurse')]/property[@name='Tags']/@value">,female</append>			
+	<append xpath="//entity_class[starts-with(@name, 'zombieFatHawaiian')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieFatCop')]/property[@name='Tags']/@value">,male</append>			
+	<append xpath="//entity_class[starts-with(@name, 'zombieMaleHazmat')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieUtilityWorker')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'legendaryZombieUtilityWorker')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieSoldier')]/property[@name='Tags']/@value">,male</append>		
+	<append xpath="//entity_class[starts-with(@name, 'zombieDemolition')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieSkateboarder')]/property[@name='Tags']/@value">,male</append>		
+	<append xpath="//entity_class[starts-with(@name, 'zombieCheerleader')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieOldTimer')]/property[@name='Tags']/@value">,male</append>		
+	<append xpath="//entity_class[starts-with(@name, 'zombieBiker')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieFarmer')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'zombieStripper')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'npcTraderJoel')]/property[@name='Tags']/@value">,male</append>		
+	<append xpath="//entity_class[starts-with(@name, 'npcTraderRekt')]/property[@name='Tags']/@value">,male</append>	
+	<append xpath="//entity_class[starts-with(@name, 'npcTraderBob')]/property[@name='Tags']/@value">,male</append>		
+	<append xpath="//entity_class[starts-with(@name, 'npcTraderHugh')]/property[@name='Tags']/@value">,male</append>		
+	<append xpath="//entity_class[starts-with(@name, 'npcTraderJen')]/property[@name='Tags']/@value">,female</append>	
+	<append xpath="//entity_class[starts-with(@name, 'npcTraderTest')]/property[@name='Tags']/@value">,male</append>		
+	
+<!--  add infection attacks to all zombies  -->
+
+	<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
+		<effect_group name="Infection Attack Buff">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="InfectedAttack"/>
+		</effect_group>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieRegularTemplate']">
+		<effect_group name="Infection Attack Buff">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="InfectedAttack"/>
+		</effect_group>
+	</append>
+
+<!-- Removing the default vanilla sounds from humanoids and zombies to be replaced by new sound system  -->
+
+	<!--<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundRandom')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAlert')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundSense')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundHurt')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundDeath')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAttack')]/@value">...</set> 
+
+	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundRandom')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundAlert')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundSense')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundHurt')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundDeath')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundAttack')]/@value">...</set> 
+
+	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundRandom')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAlert')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundSense')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundHurt')]/@value">...</set> 	
+	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundDeath')]/@value">...</set> 
+	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAttack')]/@value">...</set> -->
+	
+	
+	
+	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundRandom')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAlert')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundSense')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundHurt')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundDeath')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAttack')]"/> 
+
+	<remove xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundRandom')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundAlert')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundSense')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundHurt')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundDeath')]"/> 
+	<remove xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundAttack')]"/> 
+	
+	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundRandom')]" />
+	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAlert')]" />
+	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundSense')]" />
+	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundHurt')]" />	
+	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundDeath')]" />
+	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAttack')]" />	
+		
+</EntityBuffStarter>

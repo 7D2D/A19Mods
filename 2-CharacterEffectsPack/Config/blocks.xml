@@ -1,0 +1,5 @@
+﻿<configs>
+
+	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedZombieFeatures']/property[@name='RandomWalk']/@value">false</set>
+	
+</configs>

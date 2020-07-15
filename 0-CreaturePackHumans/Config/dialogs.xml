@@ -1,0 +1,20 @@
+<!--Created using the 7 Days To Dialog Application-->
+
+<!-- These are here for testing purposes and are not currently used -->
+
+<configs>
+  <append xpath="/dialogs">
+    <dialog id="AFarmerSurvivor" startstatementid="start">
+      <statement id="start" text="start">
+        <response_entry id="responseID_1595140464" ref_text="No, I'm not dead yet." />
+        <response_entry id="responseID_-307220871" ref_text="Be safe, friend." />
+      </statement>
+      <statement id="statement_-1684104497" text="statement_-1684104497">
+        <response_entry id="response_-24413466" ref_text="Gee, thanks." />
+      </statement>
+      <response id="responseID_1595140464" text="responseID_1595140464" nextstatementid="statement_-1684104497" />
+      <response id="response_-24413466" text="response_-24413466" nextstatementid="start" />
+      <response id="responseID_-307220871" text="responseID_-307220871" />
+    </dialog>
+  </append>
+</configs>

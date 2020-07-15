@@ -1,0 +1,532 @@
+<EffectsBuffs>
+<!-- Start of Buff Sound System Buffs (Human/Infected/zombie)(Male/Female) (Individuals)-->
+	<append xpath="/buffs">
+		<buff name="NPCSoundSys"><stack_type value="replace"/><damage_type value="bloodloss"/><duration value="0"/><update_rate value="3"/>
+			<!-- IsHuman Sounds (Female) 
+			1) Human NPC Sounds: Roaming/Idle.
+			2) Human NPC sounds: When attacking.
+			3) Human NPC sounds: Dies.
+			-->
+			<!--  Calculation; Random sound played every [(update_rate) * (CVarCompare match chance)] so every 3 seconds, there is a 2/10 chance of a random sound or on average one sound every 15 seconds  -->
+			<effect_group name="RndmSoundPlayRandomizer"> 
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RndmSoundPlay" operation="set" value="randomint(1,11)"/>
+			</effect_group>
+			
+	<!--  Default Human Sound System  -->			
+			
+			<effect_group name="IsHumanSounds">
+				<!-- Male Random Roaming Sounds -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player1stamina">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+					<requirement name="EntityTagCompare" tags="male"/>
+					<requirement name="!EntityTagCompare" tags="voice"/>
+					<requirement name="HasBuff" buff="IsHuman"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player1stamina">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+					<requirement name="EntityTagCompare" tags="male"/>
+					<requirement name="!EntityTagCompare" tags="voice"/>
+					<requirement name="HasBuff" buff="IsHuman"/>
+				</triggered_effect>
+				<!-- Female Random Roaming Sounds -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player2stamina">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+					<requirement name="EntityTagCompare" tags="female"/>
+					<requirement name="!EntityTagCompare" tags="voice"/>
+					<requirement name="HasBuff" buff="IsHuman"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player2stamina">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+					<requirement name="EntityTagCompare" tags="female"/>
+					<requirement name="!EntityTagCompare" tags="voice"/>
+					<requirement name="HasBuff" buff="IsHuman"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- IsHuman [Male] Sounds for: Attacking/Hurt/Died -->
+			<effect_group name="IsHumanMaleSounds">
+				<requirement name="HasBuff" buff="IsHuman"/>
+				<requirement name="EntityTagCompare" tags="male"/>
+				<requirement name="!EntityTagCompare" tags="voice"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="player1powerattack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="player1painlg"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player1death"/>	
+			</effect_group>
+			<effect_group name="IsHumanFemaleSounds">
+				<requirement name="HasBuff" buff="IsHuman"/>
+				<requirement name="EntityTagCompare" tags="female"/>
+				<requirement name="!EntityTagCompare" tags="voice"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="player2powerattack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="player2painlg"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player2death"/>	
+			</effect_group>
+			
+	<!--  Default Infected Sound System  -->					
+			
+			
+			<!-- IsInfected Entity Sounds -->
+			<!-- Infected Male Random Roaming Sounds -->
+			<effect_group name="IsInfectedFemaleSounds">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player1stamina">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="IsInfectedFemaleSounds">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiemaleroam">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- Infected Female Random Roaming Sounds -->
+			<effect_group name="IsInfectedFemaleSounds">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player2stamina">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="IsInfectedFemaleSounds">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiefemaleroam">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- Infected [Male] Sounds for: Attacking/ Hurt/ Died -->
+			<effect_group name="IsInfectedMaleSounds">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="player1powerattack">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="player1painlg">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player1death3">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- Infected [Female] Sounds for: Attacking/ Hurt/ Died -->
+			<effect_group name="IsInfectedFemaleSounds">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="player2powerattack">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="player2painlg">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player2death3">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+			</effect_group>
+			
+	<!--  Default Zombie Sound System  -->					
+			
+			
+			<!-- IsZombie Sounds [Male/Female] -->
+			<!-- Zombie Male Random Roaming Sounds -->
+			<effect_group name="IsZombieMaleSounds">
+				<requirement name="HasBuff" buff="IsZombie"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiemaleroam">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiemalesense">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- Zombie Female Random Roaming Sounds -->
+			<effect_group name="IsZombieFemaleSounds">
+				<requirement name="HasBuff" buff="IsZombie"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiefemaleroam">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiefemalesense">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- Infected [Male] Sounds for: Attacking/ Hurt/ Died -->
+			<effect_group name="IsZombieMaleSounds">
+				<requirement name="HasBuff" buff="IsZombie"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="zombiemaleattack">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="zombiemalepain">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="zombiemaledeath">
+					<requirement name="EntityTagCompare" tags="male"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- Infected [Female] Sounds for: Attacking/ Hurt/ Died -->
+			<effect_group name="IsZombieFemaleSounds">
+				<requirement name="HasBuff" buff="IsZombie"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="zombiefemaleattack">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="zombiefemalepain">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="zombiefemaledeath">
+					<requirement name="EntityTagCompare" tags="female"/>
+				</triggered_effect>
+			</effect_group>
+			
+	<!--  Special Human Character Sound Subsystem> -->
+		<!--  Harley Quinn  Sounds  -->	
+			<effect_group name="IsHumanHarley">
+				<requirement name="HasBuff" buff="IsHuman"/>
+				<requirement name="EntityTagCompare" tags="voice"/>
+				<requirement name="EntityTagCompare" tags="harley"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="HarleyRandom">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player2stamina">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="HarleyAttack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="HarleyHurt"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="HarleyDie"/>	
+			</effect_group>	
+			<effect_group name="IsInfectedHarley">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<requirement name="EntityTagCompare" tags="voice"/>
+				<requirement name="EntityTagCompare" tags="harley"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="HarleyRandom">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="HarleyInfected">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="HarleyAttack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="HarleyHurt"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="HarleyDie"/>	
+			</effect_group>	
+		<!--  Ranger  Sounds  -->	
+			<effect_group name="IsHumanRanger">
+				<requirement name="HasBuff" buff="IsHuman"/>
+				<requirement name="EntityTagCompare" tags="voice"/>
+				<requirement name="EntityTagCompare" tags="ranger"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player1stamina">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="RangerRandom">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="RangerAttack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="RangerHurt"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player1death3"/>	
+			</effect_group>	
+			<effect_group name="IsInfectedRanger">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<requirement name="EntityTagCompare" tags="voice"/>
+				<requirement name="EntityTagCompare" tags="ranger"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="RangerRandom">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiemaleroam">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="RangerAttack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="RangerHurt"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player1death3"/>	
+			</effect_group>		
+		<!--  Gurlz  Sounds  -->	
+			<effect_group name="IsHumanGurl">
+				<requirement name="HasBuff" buff="IsHuman"/>
+				<requirement name="EntityTagCompare" tags="voice"/>
+				<requirement name="EntityTagCompare" tags="gurl"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="player2stamina">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="GurlzRandom">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="GurlzAttack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="GurlzHurt"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player2death3"/>	
+			</effect_group>	
+			<effect_group name="IsInfectedGurl">
+				<requirement name="HasBuff" buff="IsInfected"/>
+				<requirement name="EntityTagCompare" tags="voice"/>
+				<requirement name="EntityTagCompare" tags="gurl"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="GurlzRandom">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="4"/>	
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" target="self" sound="zombiefemaleroam">
+					<requirement name="CVarCompare" cvar="RndmSoundPlay" operation="Equals" value="8"/>	
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="GurlzAttack"/>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="GurlzHurt"/>	
+				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="player2death3"/>	
+			</effect_group>		
+		</buff> 
+	</append>
+<!-- End of Buff Sound System Buffs (Male/Female) <update_rate value="3"/>-->
+
+	<append xpath="/buffs">
+		<buff name="IsHuman">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<requirement name="NotHasBuff" buff="IsZombie"/>
+			<requirement name="NotHasBuff" buff="IsInfected"/>
+			<!-- IsHuman Animator set to "0" for zombie 
+				 Set WalkType to "7"
+			-->
+						<!--<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"/> might need that -->
+			<effect_group name="IsHuman">
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="NPCSoundSys" />
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetFloat" property="IVar" value="0.0" duration="1"/>
+			</effect_group>
+<!--				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="InfectedStageCvar" operation="set" value="0"/>	-->		
+			<effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveParticleEffectFromEntity" particle="p_Flies0_X" />
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveParticleEffectFromEntity" particle="p_Flies_X" />
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveParticleEffectFromEntity" particle="p_Flies2_X" />
+            </effect_group>
+			
+			<!-- Establish "HumanWalkTypes" Cvar. Set randomint(#,#) to any range you want.
+				 If you want to test a specific effect_group like:"(Normal Walk 7B)" set randomint(1,1) to
+				 always pick that effect_group (which is set to WVar 1)
+				  *If you don't want to test any: Set randomint to (0,0) or any number pther than what you have set in the range.*
+			-->
+			<effect_group name="CvarHumanWalkTypes">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="HumanWalkTypes" operation="set" value="randomint(0,4)"/>
+			</effect_group>
+			<!-- Change WVar to Value "0" --> 
+			<!-- Default walktypes are always 0, so for non walktype 7, WVar is ignored for now--><!-- for now only walktype 7 has "styles" -->
+			<effect_group name="(Normal Walk 7A)"> 
+				<requirement name="CVarCompare" cvar="HumanWalkTypes" operation="Equals" value="0"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="0"/> 
+			</effect_group>
+			<!-- Change WVar to Value "1" --> 
+			<effect_group name="(Normal Walk 7B)">
+				<requirement name="CVarCompare" cvar="HumanWalkTypes" operation="Equals" value="1"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="1"/>
+			</effect_group>
+			<!-- Change WVar to Value "2" --> 
+			<effect_group name="(Drunk Walk 7C)">
+				<requirement name="CVarCompare" cvar="HumanWalkTypes" operation="Equals" value="2"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="2"/>
+			</effect_group>
+			<effect_group name="(Injured Leg Walk 7D)">
+				<requirement name="CVarCompare" cvar="HumanWalkTypes" operation="Equals" value="3"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="3"/>
+			</effect_group>	
+			<effect_group name="(Happy Walk 7E)">
+				<requirement name="CVarCompare" cvar="HumanWalkTypes" operation="Equals" value="4"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="4"/>
+			</effect_group>
+			
+
+		</buff>
+	</append>
+	<!-- Uncomment <duration="25200"/> and <update_rate="3600"/> and comment out the others when doing a full test -->
+	<append xpath="/buffs">
+		<buff name="IsInfected" icon="ui_game_symbol_radiation" icon_color="75,255,125" hidden="false"><stack_type value="replace"/><!--<duration value="25200"/>--><duration value="0"/><!--<update_rate value="3600"/>--><update_rate value="15"/>
+			<!-- Remove Buff "IsHuman".
+				 Set Animator "IsHuman" to Value="1". 
+				 Establish "InfectedStageCvar" value="0" 
+			-->
+			<effect_group name="Intital stage 0">
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="IsHuman"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="InfectedStageCvar" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetFloat" property="IVar" value="0.0" duration="1"/>
+			</effect_group>
+			<!-- Every Update Rate adds 1 to "InfectedStageCvar" which correspond to stage levels -->
+			<effect_group name="InfectedStageAdd">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="InfectedStageCvar" operation="add" value="1"/>
+			</effect_group>
+			<!-- See if Infected stage Cvar equals 1 -->
+			<effect_group name="Infected_Stage1">
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.125" duration="1"/>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0.95"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0.95"/>
+			</effect_group>
+			<!-- See if Infected stage Cvar equals 2 -->
+			<effect_group name="Infected_Stage2">
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.25" duration="1"/>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0.9"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0.9"/>
+			</effect_group>
+			<!-- See if Infected stage Cvar equals 3 -->
+			<effect_group name="Infected_Stage3">
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.375" duration="1"/>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0.85"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0.85"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Fly.unity3d?p_Flies0_X" local_offset="0,1.5,0.0" local_rotation="0,0,0" parent_transform="Origin"/>
+			</effect_group>
+			<!-- See if Infected stage Cvar equals 4 -->
+			<effect_group name="Infected_Stage4">
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.5" duration="1"/>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0.8"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0.8"/>
+			</effect_group>
+			<!-- See if Infected stage Cvar equals 5 -->
+			<effect_group name="Infected_Stage5">
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.625" duration="1"/>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0.75"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0.75"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Bugs.unity3d?p_Flies_X" local_offset="0,1.1,0.3" local_rotation="0,0,0" parent_transform="Origin"/>	
+			</effect_group>
+			<!-- See if Infected stage Cvar equals 6 -->
+			<effect_group name="Infected_Stage6">
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="6"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.75" duration="1"/>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0.7"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0.7"/>
+			</effect_group>
+			<!-- See if Infected stage Cvar equals 7 -->
+			<effect_group name="Infected_Stage7">
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="7"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.875" duration="1"/>
+				<passive_effect name="RunSpeed" operation="perc_set" value="0.65"/>
+				<passive_effect name="WalkSpeed" operation="perc_set" value="0.65"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Bugs.unity3d?p_Flies2_X" local_offset="0,0.5,0.3" local_rotation="0,0,0" parent_transform="Origin"/>
+			</effect_group>
+			<!-- Uncomment to buff "IsZombie" Buff -->
+			<effect_group name="Infected_Zombie_Change">
+				<requirement name="!EntityTagCompare" tags="player"/>						 
+				<requirement name="!EntityTagCompare" tags="zombie"/>						 
+				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="GTE" value="8"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="IsZombie" />
+			</effect_group>
+		</buff>
+	</append>
+	<append xpath="/buffs">
+		<buff name="IsZombie" icon="ui_game_symbol_radiation" icon_color="0,0,125" hidden="false"><stack_type value="ignore"/><duration value="0"/><update_rate value="2"/>
+			<!-- IsHuman Animator set to "0" for zombie 
+				 IVar set to "1"
+				 Remove Buff "IsInfected".
+				 Add Buff "InfectedAttack".
+			-->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="IsInfected" />
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="InfectedAttack" />
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="DeathDrop">
+					<requirement name="!EntityTagCompare" tags="zombie"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="CVarCompare" cvar="HasFactions" operation="Equals" value="1"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="ChangeFactionSDX, Mods" value="undead" /> <!--Core must be loaded  -->
+			</effect_group> 
+			<effect_group name="IsZombie">
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetFloat" property="IVar" value="1"/>
+<!--				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"/> works, but ranged still shoot and hit -->
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTrigger" property="MovementTrigger" value="true" duration="1" />	
+			</effect_group>
+			<!-- Establish "ZombieWalkTypes" Cvar.  Same process as above on humans -->
+			<effect_group name="CvarZombieWalkTypes">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ZombieWalkTypes" operation="set" value="randomint(0,1)"/>
+			</effect_group>
+			<!-- Change WVar to Value "0" --> 
+			<effect_group name="(Normal Walk 7A )">
+				<requirement name="CVarCompare" cvar="ZombieWalkTypes" operation="Equals" value="0"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="0"/>
+			</effect_group>
+			<!-- Change WVar to Value "1" --> 
+			<effect_group name="(Guppy Walk 7B)">
+				<requirement name="CVarCompare" cvar="ZombieWalkTypes" operation="Equals" value="1"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="1"/>
+			</effect_group>
+			<!-- Change WVar to Value "2" --> 
+			<effect_group name="(none)">
+				<requirement name="CVarCompare" cvar="ZombieWalkTypes" operation="Equals" value="2"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="WVar" value="2"/>
+			</effect_group>
+			
+			<!-- Attack Types -->
+			<!-- Establish "ZombieAttackTypes" Cvar. Same process as above on humans-->
+			<effect_group name="CvarZombieAttackTypes">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="ZombieAttackTypes" operation="set" value="randomint(0,0)"/> <!-- not hooked up -->
+			</effect_group>
+			<!-- Change WVar to Value "0" --> 
+			<effect_group name="(AttackA)">
+				<requirement name="CVarCompare" cvar="ZombieAttackTypes" operation="Equals" value="0"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="AVar" value="0"/>
+			</effect_group>
+			<!-- Change WVar to Value "1" --> 
+			<effect_group name="(AttackB)">
+				<requirement name="CVarCompare" cvar="ZombieAttackTypes" operation="Equals" value="1"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="AVar" value="1"/>
+			</effect_group>
+			<!-- Change WVar to Value "2" --> 
+			<effect_group name="(AttackC)">
+				<requirement name="CVarCompare" cvar="ZombieAttackTypes" operation="Equals" value="2"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="AVar" value="2"/>
+			</effect_group>
+		</buff> 
+	</append>
+	
+	<!-- IsInfected Buff Companion Buffs -->
+	<append xpath="/buffs">
+		<!-- Makes NPC Ragdoll for 10 seconds -->
+		<buff name="DeathDrop"><stack_type value="ignore"/><duration value="2"/>
+			<effect_group name="Ragdoll">
+				<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="10"/>
+			</effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="player2death">
+				<requirement name="EntityTagCompare" tags="female"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="player1death">
+				<requirement name="EntityTagCompare" tags="male"/>
+			</triggered_effect>
+		</buff> 
+	</append>
+	
+	<append xpath="/buffs">
+		<!-- When humans or NPC's turn into a zombie they get this buff and can infect others -->
+		<buff name="InfectedAttack" icon="ui_game_symbol_radiation" icon_color="125,0,0" hidden="false"><stack_type value="ignore"/><duration value="0"/><update_rate value="2"/>
+			<!-- Establish InfectChance Cvar (1-10).
+				 randomint value, can be adjusted to any value range you want.
+			-->
+			<effect_group name="Infection Attack Buff">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="InfectChance" operation="set" value="randomint(1,11)"/> <!-- 10% chance per hit, set to 1,1 for testing  -->
+			</effect_group>
+			<!-- Bassed off of the update rate. Every 2 seconds will roll to see if randomint value="1". 
+				 If so: will buff humans and other NPCS with the "IsInfected" Buff, and the player with buffInfectionCatch.
+				 If does not Equals "1" will not.
+				 The Equals value can be any number you want, but if set to check against "0" or GT "10" will not buff
+			-->
+			<effect_group name="Infection Attack Buff Human">
+				<requirement name="CVarCompare" cvar="InfectChance" operation="Equals" value="1"/>
+               <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="IsInfected">
+                    <requirement name="EntityTagCompare" target="other" tags="human"/>
+                </triggered_effect>
+			</effect_group>	
+			<effect_group name="Infection Attack Buff NPC">
+                <requirement name="CVarCompare" cvar="InfectChance" operation="Equals" value="1"/>
+                <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="IsInfected">
+                    <requirement name="EntityTagCompare" target="other" tags="npc"/>
+                </triggered_effect>
+            </effect_group>    
+<!--			<effect_group name="Infection Attack Buff Player">
+				<requirement name="CVarCompare" cvar="InfectChance" operation="Equals" value="1"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInfectionFlysOnly"/>
+					<requirement name="EntityTagCompare" target="other" tags="player"/>
+                </triggered_effect>
+			</effect_group>	-->
+		</buff> 
+	</append>
+
+</EffectsBuffs>

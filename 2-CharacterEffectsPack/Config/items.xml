@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Items> 
+
+	<append xpath="/items">
+		<item name="BeZombieSchematic">
+			<property name="Extends" value="schematicMaster" />
+			<property name="DescriptionKey" value="BeZombieSchematicDesc" />
+			<property name="CreativeMode" value="Player" />
+			<property name="CustomIcon" value="schematicMaster" />
+			<!--<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="Necro" />
+			</effect_group>-->
+			<effect_group name="Change Entity">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="BeZombie" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				</triggered_effect>
+			</effect_group>
+		</item>   
+		<item name="BeHumanSchematic">
+			  <property name="Extends" value="schematicMaster" />
+			  <property name="DescriptionKey" value="BeHumanSchematicDesc" />
+			  <property name="CreativeMode" value="Player" />
+			  <property name="CustomIcon" value="schematicMaster" />
+			<effect_group name="Change Entity">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="BeHuman" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="BeHuman" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="human"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="BeHuman" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="npc"/>
+			   </triggered_effect>  
+			</effect_group>		  
+		</item>  
+			  
+			<item name="BeInfectedSchematic">
+			  <property name="Extends" value="schematicMaster" />
+			  <property name="DescriptionKey" value="BeInfectedSchematicDesc" />
+			  <property name="CreativeMode" value="Player" />
+			  <property name="CustomIcon" value="schematicMaster" />		  
+			<effect_group name="Change Entity">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="BeInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="BeInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="human"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="BeInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="npc"/>
+			   </triggered_effect>  
+			</effect_group>	
+		</item>
+	</append>
+
+	<append xpath="/items">
+		<item name="IsInfected4PlayerSchematic">
+			<property name="Extends" value="schematicMaster" />
+			<property name="DescriptionKey" value="BeZombieSchematicDesc" />
+			<property name="CreativeMode" value="Player" />
+			<property name="CustomIcon" value="schematicMaster" />
+			<property name="CustomIconTint" value="#ffffff"/>
+			<effect_group name="Player Infect">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="IsInfected" duration="1"/>	
+			</effect_group>
+		</item>    
+	</append>
+
+	<append xpath="/items">
+		<item name="IsInfected4NPCSchematic">
+			<property name="Extends" value="schematicMaster" />
+			<property name="DescriptionKey" value="BeZombieSchematicDesc" />
+			<property name="CreativeMode" value="Player" />
+			<property name="CustomIcon" value="schematicMaster" />
+			<property name="CustomIconTint" value="#069274"/>
+			<effect_group name="Humanoid Infect">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="IsInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="npc"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="IsInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="human"/>
+				</triggered_effect>
+			</effect_group>
+		</item>    
+	</append>
+
+	<append xpath="/items">
+		<item name="IsInfected4ZombiesSchematic">
+			<property name="Extends" value="schematicMaster" />
+			<property name="DescriptionKey" value="BeZombieSchematicDesc" />
+			<property name="CreativeMode" value="Player" />
+			<property name="CustomIcon" value="schematicMaster" />
+			<property name="CustomIconTint" value="#e50000"/>
+			<effect_group name="Zombie Infect">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="IsInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				</triggered_effect>
+			</effect_group>
+		</item>    
+	</append>
+
+	<append xpath="/items">
+		<item name="IsInfectedCure">
+			<property name="Extends" value="schematicMaster" />
+			<property name="DescriptionKey" value="BeZombieSchematicDesc" />
+			<property name="CreativeMode" value="Player" />
+			<property name="CustomIcon" value="schematicMaster" />
+			<property name="CustomIconTint" value="#5a7ec0"/>
+			<effect_group name="Cure Character Infection">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="selfAOE" range="5" buff="IsInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="human"/> 
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="IsHuman" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="human"/> 
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="selfAOE" range="5" buff="IsInfected" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="npc"/> 
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="5" buff="IsHuman" duration="1">
+					<requirement name="EntityTagCompare" target="other" tags="npc"/> 
+				</triggered_effect>	
+			</effect_group>
+			<effect_group name="Self Cure">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="IsInfected" duration="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="IsHuman" duration="1"/>
+			</effect_group>
+		</item>    
+	</append>
+	<append xpath="/items">
+		<item name="IsInfected4ZombieStage5Schematic"> <!--  once infected, this will speed up the infection to stage 5  -->
+			<property name="Extends" value="schematicMaster" />
+			<property name="DescriptionKey" value="BeZombieSchematicDesc" />
+			<property name="CreativeMode" value="Player" />
+			<property name="CustomIcon" value="schematicMaster" />
+			<property name="CustomIconTint" value="#ffcb15"/>
+			<effect_group name="Stage5">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="selfAOE" range="5" cvar="InfectedStageCvar" operation="set" value="5">
+					<requirement name="EntityTagCompare" target="other" tags="human"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="selfAOE" range="5" cvar="InfectedStageCvar" operation="set" value="5">
+					<requirement name="EntityTagCompare" target="other" tags="npc"/>
+				</triggered_effect>
+			</effect_group>
+		</item>    
+	</append>
+	
+<!-- append Cure Bandage -->	
+	
+	<append xpath="/items">
+		<item name="IsInfectedMedBandage">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="medical"/>
+			<property name="HoldType" value="64"/>
+			<property name="Meshfile" value="#Other/Items?Health/bandage.fbx"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="drugAntibiotics"/>
+			<property name="CustomIconTint" value="#5a7ec0"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Stacknumber" value="10"/> <!-- STK medical -->
+			<property name="FuelValue" value="1"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Science,Medical,Basics"/>
+			<property name="DescriptionKey" value="medicalBandageDesc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_bandage"/>
+				<property name="UseAnimation" value="false"/> 
+			</property> 
+			<property class="Action1">
+				<property name="Class" value="UseOther"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_bandage"/>
+				<property name="UseAnimation" value="false"/>
+			</property> 
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="other" buff="IsInfected"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="other" buff="IsHuman" />
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="IsInfected"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="IsHuman" />
+			</effect_group>
+		</item>    
+	</append>
+</Items>

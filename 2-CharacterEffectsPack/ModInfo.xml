@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="2-CharacterEffectsPack" />
+    <Description value="A collection of interesting extensions and effects for custom characters" />
+    <Author value="Tin/Xyth" />
+    <Version value="19.0.1.05" />
+    <Website value="" />
+  </ModInfo>
+  <DMT>
+    <dependencies />
+    <conflicts />
+  </DMT>
+</xml>

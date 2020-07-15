@@ -1,0 +1,56 @@
+<configs>
+
+    <append xpath="/quests">	
+	
+<!--	<quest id="challenge_FoolsGold">
+		<property name="name_key" value="challenge_FoolsGold" />
+		<property name="subtitle_key" value="challenge_FoolsGold_subtitle" />
+		<property name="description_key" value="challenge_FoolsGold_offer" />
+		<property name="icon" value="ui_game_symbol_zombie" />
+		<property name="repeatable" value="true" />
+		<property name="shareable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="offer_key" value="challenge_FoolsGold_offer" />
+		<property name="completion_key" value="challenge_FoolsGold_completion" />
+		<property name="difficulty" value="medium" />
+		<property name="completiontype" value="TurnIn" />
+
+		<objective type="RandomGoto" value="200-600" phase="1">
+			<property name="completion_distance" value="50" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create" />
+			<property name="phase" value="2" />
+		</objective>
+
+		<action type="SpawnEnemy" id="humanRaiderPest" value="2" phase="3" />
+		<action type="SpawnEnemy" id="humanRaiderMoto" value="2" phase="3" />
+		<action type="SpawnEnemy" id="humanRaiderSlugger" value="2" phase="3" />
+		<objective type="AnimalKill" id="humanRaiderPest" value="1" phase="3" />
+		<objective type="AnimalKill" id="humanRaiderMoto" value="1" phase="3" />
+		<objective type="AnimalKill" id="humanRaiderSlugger" value="1" phase="3" />
+		
+		<action type="SpawnEnemy" id="humanRaiderFlamer" value="2" phase="4" />
+		<action type="SpawnEnemy" id="humanRaiderGina" value="2" phase="4" />
+		<action type="SpawnEnemy" id="humanRaiderHedy" value="2" phase="4" />
+
+		<objective type="AnimalKill" id="humanRaiderFlamer" value="1" phase="4" />
+		<objective type="AnimalKill" id="humanRaiderGina" value="1" phase="4" />
+		<objective type="AnimalKill" id="humanRaiderHedy" value="1" phase="4" />
+
+		
+		<objective type="Goto" id="trader" value="10" phase="5" />
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="6" />
+		</objective>
+
+		<reward type="Exp" value="15000" />
+		<reward type="Item" id="casinoCoin" value="2000-5000" />
+		<reward type="LootItem" id="groupQuestRanged" value="1" isfixed="true"/>
+		<reward type="LootItem" id="groupQuestMelee,groupQuestArmor" value="1" ischosen="true"/>
+	</quest> -->
+</append>
+
+</configs>

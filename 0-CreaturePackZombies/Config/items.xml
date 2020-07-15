@@ -1,0 +1,131 @@
+<configs>
+	<append xpath="/items">
+
+<!--   For testing  -->	
+
+		<item name="ZombieW7WalkStyle0Schematic">
+		  <property name="Extends" value="schematicMaster" />
+		  <property name="DescriptionKey" value="BeHumanSchematicDesc" />
+		  <property name="CreativeMode" value="Player" />
+		  <property name="CustomIcon" value="schematicMaster" />
+		<effect_group name="Change Entity">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChanger0" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChanger0" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="human"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChanger0" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="npc"/>
+		   </triggered_effect>  
+		</effect_group>		  
+		  
+	</item>  
+		  
+		<item name="ZombieW7WalkStyle0blend1Schematic">
+		  <property name="Extends" value="schematicMaster" />
+		  <property name="DescriptionKey" value="BeInfectedSchematicDesc" />
+		  <property name="CreativeMode" value="Player" />
+		  <property name="CustomIcon" value="schematicMaster" />		  
+		<effect_group name="Change Entity">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChangerB" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChangerB" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="human"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChangerB" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="npc"/>
+		   </triggered_effect>  
+		</effect_group>	
+
+	</item>
+		
+	<item name="ZombieW7WalkStyle1Schematic">
+		  <property name="Extends" value="schematicMaster" />
+		  <property name="DescriptionKey" value="BeZombieSchematicDesc" />
+		  <property name="CreativeMode" value="Player" />
+		  <property name="CustomIcon" value="schematicMaster" />
+		<effect_group name="Change Entity">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChanger1" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChanger1" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="human"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="15" buff="ZombieW7WalkStyleChanger1" duration="3.5">
+				<requirement name="EntityTagCompare" target="other" tags="npc"/>
+		   </triggered_effect>  
+		</effect_group>		  
+	</item>	
+
+<!-- Hands - Strange as it may seem, in A19 its the holdtype that syncs the attacks in combination with the animation speed on the attack animations and blends.  I think its the Raycast variable but that needs verification.  Maybe we can add new hold types for tuning? I'm using existing ones but those don't have a moving raycast, so custom might be better.  Please let me know if that works if you want to help -->
+
+		<item name="meleeHandZombie001">
+			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>	
+		
+		<item name="meleeHandZombie002"> 
+			<property name="Extends" value="meleeHandZombie02"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>
+		<item name="meleeHandZombieFeral2">
+			<property name="Extends" value="meleeHandZombieFeral"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>	
+		
+		<item name="meleeHandZombie02Feral2"> 
+			<property name="Extends" value="meleeHandZombie02Feral"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>		
+		<item name="meleeHandZombieBurning2">
+			<property name="Extends" value="meleeHandZombieBurning"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>	
+		
+		<item name="meleeHandZombieBurningFeral2"> 
+			<property name="Extends" value="meleeHandZombieBurningFeral"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>		
+		<item name="meleeHandZombieBurningCrawler2">
+			<property name="Extends" value="meleeHandZombieBurningCrawler"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>	
+		
+		<item name="meleeHandZombieCop2"> 
+			<property name="Extends" value="meleeHandZombieCop"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>		
+		
+		<item name="meleeHandZombieBehemoth">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="500"/>
+				<property name="DamageBlock" value="2000"/>
+				<property name="Range" value="4"/>
+				<property name="Sphere" value="3"/>
+				<property name="Block_range" value="5"/>
+			</property>
+			<effect_group name="meleeHandZombie002" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+			</effect_group>
+		</item>
+ 	</append>	  
+</configs>

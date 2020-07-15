@@ -1,0 +1,45 @@
+<configs>
+  <append xpath="/buffs">
+
+ <!-- Unity default is zero (0) for the property IsHuman.  Changing this value with a buff will change the animations from human to zombie.  Infected isnt implemented yet, and is same as human  -->
+ 
+
+		<!-- IsHuman Animator set to "0" (Unity default) for zombie 
+				 Set WalkType to "7"
+		-->
+
+		<buff name="IsHuman">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group name="IsHuman"> <!-- This sets the IsHuman value to 2 which is the parameter INT value used to path to only human animations  -->
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2"/>
+			</effect_group>
+		</buff>	
+		
+		<buff name="UseFactions"> <!-- This sets the UseFactions switch to false incase its a vanilla only game.   -->
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group name="UseFactions">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="HasFactions" operation="set" value="0"/>				
+			</effect_group>
+		</buff>	
+
+<!--  Prevent bandits class characters from getting near trader POIs  -->
+
+		<buff name="buffTraderTrigger" hidden="true">
+				<stack_type value="replace"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" buff="buffInfection04" target_tags="bandit,survivor"/>
+				</effect_group>
+		</buff>
+			
+		<buff name="buffTraderRagdollNPC" hidden="true" icon="ui_game_symbol_medical"> <!-- Not used, but funny to watch  -->
+			<stack_type value="ignore"/>
+			<duration value="3"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="3" target_tags="bandit,survivor"/>
+			</effect_group>
+		</buff>  
+	</append>
+</configs>
