@@ -8,6 +8,7 @@
 			3) Human NPC sounds: Dies.
 			-->
 			<!--  Calculation; Random sound played every [(update_rate) * (CVarCompare match chance)] so every 3 seconds, there is a 2/10 chance of a random sound or on average one sound every 15 seconds  -->
+			<requirement name="!EntityTagCompare" tags="player"/>
 			<effect_group name="RndmSoundPlayRandomizer"> 
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RndmSoundPlay" operation="set" value="randomint(1,11)"/>
 			</effect_group>
@@ -272,6 +273,7 @@
 		<buff name="IsHuman">
 			<stack_type value="ignore"/>
 			<duration value="0"/>
+			<requirement name="!EntityTagCompare" tags="player"/>
 			<requirement name="NotHasBuff" buff="IsZombie"/>
 			<requirement name="NotHasBuff" buff="IsInfected"/>
 			<!-- IsHuman Animator set to "0" for zombie 
@@ -333,6 +335,7 @@
 				 Set Animator "IsHuman" to Value="1". 
 				 Establish "InfectedStageCvar" value="0" 
 			-->
+			<requirement name="!EntityTagCompare" tags="player"/>
 			<effect_group name="Intital stage 0">
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="IsHuman"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="1"/>
@@ -418,6 +421,7 @@
 				 Remove Buff "IsInfected".
 				 Add Buff "InfectedAttack".
 			-->
+			<requirement name="!EntityTagCompare" tags="player"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="IsInfected" />
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="InfectedAttack" />
