@@ -1,53 +1,41 @@
 <configs>
 	
 	<append xpath="/entitygroups/entitygroup[@name='AnimalsSmall']">	
-		<entity name="animalFox" prob=".1" />
+		<entity name="animalFox" />
+		<entity name="animalRobin" />
+		<entity name="animalCrow" />
+		<entity name="animalEagle" />
+		<entity name="animalPug" prob=".25" />
+		<entity name="animalBeagle" prob=".25" />
+		<entity name="animalBat" prob=".25" />
+		<entity name="animalBats" prob="1" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='AnimalsFarm']">	
 		<entity name="animalGoat" />
 		<entity name="animalWolfhound" />
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='AnimalsDesert']">	
-		<entity name="animalEagle" prob=".1" />
+	<append xpath="/entitygroups/entitygroup[@name='WildGameForest']">		
+		<entity name="animalGoat" prob="1" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">	
 		<entity name="animalSpider01" prob="20"/>
 		<entity name="animalSpider02" prob="20" />
-		<entity name="animalSpider03" prob="20"/>
+		<entity name="animalSpider03" prob="20"/> 
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsDesert']">	
-		<entity name="animalRobin" prob="10" />
-		<entity name="animalCrow" prob="10" />
-		<entity name="animalEagle" prob="10" />
-	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">	
 		<entity name="animalFox" prob="10" />
 		<entity name="animalWulf" prob="20" />
 		<entity name="animalWolfhound" prob="10" />
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsSnow']">	
-		<entity name="animalGoat" prob="10" />
-		<entity name="animalCrow" prob="10" />
-		<entity name="animalEagle" prob="10" />
-		<entity name="animalFox" prob="10" />
-	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">	
-		<entity name="animalSpider01" prob="5"/>
-		<entity name="animalSpider02" prob="5" />
-		<entity name="animalSpider03" prob="5"/>
-		<entity name="animalWulf" prob="5" />
-		<entity name="animalPug" prob="5" />
-		<entity name="animalBeagle" prob="5" />
-		<entity name="animalWolfhound" prob="5" />
+		<entity name="animalSpider01" prob="3"/>
+		<entity name="animalSpider02" prob="3" />
+		<entity name="animalSpider03" prob="3"/> 
+		<entity name="animalWulf" prob="3" />
+		<entity name="animalPug" prob="3" />
+		<entity name="animalBeagle" prob="3" />
+		<entity name="animalWolfhound" prob="3" />
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsForest']">	
-		<entity name="animalGoat" prob="5" />
-		<entity name="animalRobin" prob="5" />
-		<entity name="animalCrow" prob="5" />
-		<entity name="animalBat" prob="2.5" />
-		<entity name="animalBats" prob="10" />
-		<entity name="animalEagle" prob="5" />
-	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']">
 		<entity name="animalBats" prob="10" />
 		<entity name="animalCrow" prob="5" />
@@ -55,6 +43,9 @@
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
 		<entity name="animalBats" prob="20" />
 		<entity name="animalCrow" prob="10" />
+		<entity name="animalSpider01" prob="10"/>
+		<entity name="animalSpider02" prob="10" />
+		<entity name="animalSpider03" prob="10"/> 
 	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='WolfGroup']">	
 		<entity name="animalWulf" />
