@@ -29,7 +29,7 @@
 
 		<entity_class name="humanMeleeMaleTemplate"> <!-- If you want to make a bandit without spawning in weapons, use this template  -->
 			<property name="EntityType" value="Player"/>
-			<property name="Tags" value="entity,male,human,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
+			<property name="Tags" value="entity,cp,male,human,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="HideInSpawnMenu" value="true"/> <!-- A19  -->
@@ -189,7 +189,7 @@
 		
 		<entity_class name="humanMeleeFemaleTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Class" value="EntityBandit"/>
-			<property name="Tags" value="entity,female,human,melee"/>
+			<property name="Tags" value="entity,cp,female,human,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
@@ -211,7 +211,7 @@
 		
 		<entity_class name="humanRangedMaleTemplate" extends="humanMeleeMaleTemplate"> 	<!-- If you want to make a ranged bandit without spawning in weapons, use this template  -->
 			<property name="Class" value="EntityBandit"/>
-			<property name="Tags" value="entity,male,human,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
@@ -239,7 +239,7 @@
 		
 		<entity_class name="humanRangedFemaleTemplate" extends="humanRangedMaleTemplate">
 			<property name="Class" value="EntityBandit"/>
-			<property name="Tags" value="entity,female,human,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
@@ -262,28 +262,28 @@
 		<!--  Bandit Sleeper templates, not doing survivors as its fine if they sleep when player is near  -->
 		
 		<entity_class name="humanMeleeMaleSleeperTemplate" extends="humanMeleeMaleTemplate">
-			<property name="Tags" value="entity,male,human,melee,sleeper"/>
+			<property name="Tags" value="entity,cp,male,human,melee,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class>	<!--  Without this edit, sleeping bandits will not wake up when players are near.  -->
 		
 		<entity_class name="humanMeleeFemaleSleeperTemplate" extends="humanMeleeFemaleTemplate">
-			<property name="Tags" value="entity,female,human,melee,sleeper"/>
+			<property name="Tags" value="entity,cp,female,human,melee,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class>			
 		
 		<entity_class name="humanRangedMaleSleeperTemplate" extends="humanRangedMaleTemplate">
-			<property name="Tags" value="entity,male,human,ranged,sleeper"/>
+			<property name="Tags" value="entity,cp,male,human,ranged,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class>	
 		
 		<entity_class name="humanRangedFemaleSleeperTemplate" extends="humanRangedFemaleTemplate">
-			<property name="Tags" value="entity,female,human,ranged,sleeper"/>
+			<property name="Tags" value="entity,cp,female,human,ranged,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
@@ -294,7 +294,7 @@
 		
 			
 		<entity_class name="humanMeleeMaleBanditTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this template  -->
-			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -304,7 +304,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedMaleBanditTemplate" extends="humanRangedMaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this template  -->
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -314,7 +314,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeFemaleBanditTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this template  -->
-			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -324,7 +324,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedFemaleBanditTemplate" extends="humanRangedFemaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this template  -->
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -334,7 +334,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanMeleeMaleSurvivorTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a melee survivor, use this template  -->
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -356,7 +356,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedMaleSurvivorTemplate" extends="humanRangedMaleTemplate"> <!-- If you want to make a ranged survivor, use this template  -->
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -379,7 +379,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeMaleSurvivorTimidTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a cowardly survivor, use this template  -->
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -401,7 +401,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeFemaleSurvivorTemplate" extends="humanMeleeFemaleTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -423,7 +423,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedFemaleSurvivorTemplate" extends="humanRangedFemaleTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -446,7 +446,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeFemaleSurvivorTimidTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a cowardly survivor, use this template  -->
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -474,7 +474,7 @@
 	
 <!--		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
-			<property name="Tags" value="entity,male,human,trader,melee"/>
+			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 
 			<property name="HideInSpawnMenu" value="true"/>
@@ -520,7 +520,7 @@
 
 		<entity_class name="humanRangedMaleTraderTemplate" extends="humanMeleeMaleTraderTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
-			<property name="Tags" value="entity,male,human,trader,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,trader,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>	
 			<property name="Faction" value="whiteriver"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -554,7 +554,7 @@
 		<!-- Eve  -->
 
 		<entity_class name="humanEveBanditClub" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
@@ -564,7 +564,7 @@
 		</entity_class>
 
 		<entity_class name="humanEveBanditKnife" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -574,7 +574,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditSMG" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -585,7 +585,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditAK47" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -596,7 +596,7 @@
 		</entity_class>
 		
 		<entity_class name="humanEveBanditHunter" extends="humanRangedFemaleBanditTemplate"> 
-            <property name="Tags" value="entity,female,human,bandit,ranged"/>
+            <property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
@@ -607,7 +607,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanEveBanditPistol" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -618,7 +618,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanEveBanditXBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -628,7 +628,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
@@ -639,7 +639,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanEveBanditShotty" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>			
@@ -651,7 +651,7 @@
 		<!--  Farmer Frankie (Bandit Evil Twin -->
 
 		<entity_class name="humanFarmerBanditClub" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -662,7 +662,7 @@
 		</entity_class>
 		
 		<entity_class name="humanFarmerBanditKnife" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -672,7 +672,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerBanditSMG" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -683,7 +683,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerBanditAK47" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -694,7 +694,7 @@
 		</entity_class>
 		
 		<entity_class name="humanFarmerBanditHunter" extends="humanRangedMaleBanditTemplate"> 
-            <property name="Tags" value="entity,male,human,bandit,ranged"/>
+            <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
@@ -705,7 +705,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanFarmerBanditPistol" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -716,7 +716,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanFarmerBanditXBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -726,7 +726,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerBanditBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
@@ -737,7 +737,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanFarmerBanditShotty" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>			
@@ -749,7 +749,7 @@
 		<!--  Rifleman/Cowboy  -->
 		
 		<entity_class name="humanCowboyBanditClub" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -760,7 +760,7 @@
 		</entity_class>
 		
 		<entity_class name="humanCowboyBanditKnife" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="7"/>
@@ -770,7 +770,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanCowboyBanditSMG" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -781,7 +781,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanCowboyBanditAK47" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>	
 			<property name="WalkType" value="6"/> 
@@ -792,7 +792,7 @@
 		</entity_class>
 		
 		<entity_class name="humanCowboyBanditHunter" extends="humanRangedMaleBanditTemplate"> 
-            <property name="Tags" value="entity,male,human,bandit,ranged"/>
+            <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>	
             <property name="WalkType" value="6"/> 
@@ -803,7 +803,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanCowboyBanditPistol" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -814,7 +814,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanCowboyBanditXBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -824,7 +824,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanCowboyBanditBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>		
 			<property name="WalkType" value="3"/> 
@@ -835,7 +835,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanCowboyBanditShotty" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>		
 			<property name="WalkType" value="6"/>			
@@ -847,7 +847,7 @@
 		<!--  Harley Redux Harley self extends do to the custom sounds to simplify all the override that happen if the NPC sound system from the CharacterEffects Pack is also loaded  --> 
 		
 		<entity_class name="humanHarleyBanditClub" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="7"/>
@@ -872,7 +872,7 @@
 		</entity_class>
 
 		<entity_class name="humanHarleyBanditKnife" extends="humanHarleyBanditClub"> 
-			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="7"/>
@@ -882,7 +882,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanHarleyBanditSMG" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -908,7 +908,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanHarleyBanditAK47" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="6"/> 
@@ -919,7 +919,7 @@
 		</entity_class>
 		
 		<entity_class name="humanHarleyBanditHunter" extends="humanHarleyBanditSMG"> 
-            <property name="Tags" value="entity,female,human,bandit,ranged"/>
+            <property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
             <property name="WalkType" value="6"/> 
@@ -930,7 +930,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanHarleyBanditPistol" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -941,7 +941,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanHarleyBanditXBow" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>		
 			<property name="WalkType" value="6"/> 
@@ -951,7 +951,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanHarleyBanditBow" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="3"/> 
@@ -962,7 +962,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanHarleyBanditShotty" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="6"/>			
@@ -979,7 +979,7 @@
 		<!-- Melee  -->
 
 		<entity_class name="humanBakerBanditChefKnife" extends="humanMeleeMaleTemplate">
-			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll_X"/> <!-- Free Model from Liam Pickford via sketchfab, Rigged in Mixamo -->
 			<!-- Retexturing Index: Materials : 0 Body, 1 Hair -->
@@ -989,7 +989,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanJoelBanditChefKnife" extends="humanMeleeMaleTemplate">
-			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/>
 			<property name="Mass" value="150"/> 
@@ -998,7 +998,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanHarleyBanditSlugger" extends="humanMeleeFemaleTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,melee,harley,voice"/> <!--  Harley has her own voice sounds, shes also a test case for the NPC sound system  -->
+			<property name="Tags" value="entity,cp,female,human,bandit,melee,harley,voice"/> <!--  Harley has her own voice sounds, shes also a test case for the NPC sound system  -->
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn_X"/>  <!-- Textures by Mumpfy  -->
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
@@ -1028,7 +1028,7 @@
 		<!-- Ranged folks that have a weapon already attached so spawning in another looks bad  -  Not working yet -->
 		
 <!--		<entity_class name="humanRifleManBanditNoHatNoMesh" extends="humanRangedMaleBanditTemplate">
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?RifleManNoPack_X"/>
 			<property name="WalkType" value="6"/> 
@@ -1040,14 +1040,14 @@
 	
 		
 <!--		<entity_class name="humanHeavyGuyBandit" extends="humanRangedMaleTemplate">
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="PushFactor" value="20"/>
 			<property name="RightHandJointName" value="Muzzle" />
 			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
 			<property name="HandItem" value="gunBanditPumpShotgun"/> 
 		</entity_class> 
 		<entity_class name="humanFatAshBandit" extends="humanRangedMaleTemplate">
-			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="PushFactor" value="20"/>
 			<property name="Mesh" value="#@modfolder:Resources/FatAsh.unity3d?AshBandit_X"/> 
 			<property name="Mass" value="200"/>
@@ -1075,7 +1075,7 @@
 		<!--  Farmer Frankie (Good Guy Twin) -->
 
 		<entity_class name="humanFarmerSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1086,7 +1086,7 @@
 		</entity_class>
 		
 		<entity_class name="humanFarmerSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -1097,7 +1097,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1108,7 +1108,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -1119,7 +1119,7 @@
 		</entity_class>
 		
 		<entity_class name="humanFarmerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
@@ -1130,7 +1130,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanFarmerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1141,7 +1141,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanFarmerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>
@@ -1152,7 +1152,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerSurvivorBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
@@ -1163,7 +1163,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanFarmerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>
@@ -1176,7 +1176,7 @@
 		<!--  The Baker Boy  -->
 		
 		<entity_class name="humanBakerSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1187,7 +1187,7 @@
 		</entity_class>
 		
 		<entity_class name="humanBakerSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -1198,7 +1198,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanBakerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1209,7 +1209,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanBakerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/> 
@@ -1220,7 +1220,7 @@
 		</entity_class>
 		
 		<entity_class name="humanBakerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
             <property name="WalkType" value="6"/> 
@@ -1231,7 +1231,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanBakerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1242,7 +1242,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanBakerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/>
@@ -1253,7 +1253,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanBakerSurvivorBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
@@ -1264,7 +1264,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanBakerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/>
@@ -1277,7 +1277,7 @@
 		<!-- Nurse Nancy  -->
 
 		<entity_class name="humanNurseSurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1288,7 +1288,7 @@
 		</entity_class>
 		
 		<entity_class name="humanNurseSurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="7"/>
@@ -1299,7 +1299,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorSMG" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1310,7 +1310,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorAK47" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/> 
@@ -1321,7 +1321,7 @@
 		</entity_class>
 		
 		<entity_class name="humanNurseSurvivorHunter" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
             <property name="WalkType" value="6"/> 
@@ -1332,7 +1332,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanNurseSurvivorPistol" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1343,7 +1343,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanNurseSurvivorXBow" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/>
@@ -1354,7 +1354,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorBow" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="3"/> 
@@ -1365,7 +1365,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanNurseSurvivorShotty" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/>
@@ -1379,7 +1379,7 @@
 		<!--  Sample Sleepers for Testing.  If someone want to extend this group, send me the updated xml -->
 
 		<entity_class name="humanEveBanditSleeperKnife" extends="humanMeleeFemaleSleeperTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,melee,sleeper"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,melee,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -1389,7 +1389,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditSleeperSMG" extends="humanRangedFemaleSleeperTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged,sleeper"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="6"/> 
@@ -1400,7 +1400,7 @@
 		</entity_class>	
 
 		<entity_class name="humanFarmerBanditSleeperKnife" extends="humanMeleeMaleSleeperTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,melee,sleeper"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -1410,7 +1410,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerBanditSleeperSMG" extends="humanRangedMaleSleeperTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged,sleeper"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> 
@@ -1421,7 +1421,7 @@
 		</entity_class>	
 
 		<entity_class name="humanCowboyBanditSleeperKnife" extends="humanMeleeMaleSleeperTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,melee,sleeper"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,melee,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="7"/>
@@ -1431,7 +1431,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanCowboyBanditSleeperSMG" extends="humanRangedMaleSleeperTemplate"> 
-			<property name="Tags" value="entity,male,human,bandit,ranged,sleeper"/>
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="6"/> 
@@ -1444,7 +1444,7 @@
 		<!--  Adding in Harley to show alternative configuration for custom voice characters, but there are upstream edits needed for NPCs so don't do this normally  -->
 
 		<entity_class name="humanHarleyBanditSleeperPistol" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,female,human,bandit,ranged,sleeper"/>
+			<property name="Tags" value="entity,cp,female,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="2"/> 
@@ -1456,7 +1456,7 @@
 		</entity_class>		
 
 		<entity_class name="humanHarleyBanditSleeperSlugger" extends="humanHarleyBanditSlugger"> 
-			<property name="Tags" value="entity,female,human,bandit,melee,sleeper,harley,voice"/> 
+			<property name="Tags" value="entity,cp,female,human,bandit,melee,sleeper,harley,voice"/> 
 			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn_X"/>  
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
@@ -1471,7 +1471,7 @@
 			
 <!--		<entity_class name="humanJoelTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
-			<property name="Tags" value="entity,male,human,trader,melee"/>
+			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 
 			<property name="PhysicsBody" value="traderStandard"/>
@@ -1490,7 +1490,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanWeaponsTrader" extends="humanRangedMaleTraderTemplate">
-			<property name="Tags" value="entity,male,human,npc,trader,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,npc,trader,ranged"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?RifleManAll_X"/> 
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
@@ -1505,7 +1505,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanHeavyTrader" extends="humanRangedMaleTraderTemplate">
-			<property name="Tags" value="entity,male,human,trader,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,trader,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
@@ -1521,7 +1521,7 @@
 			<property name="NPCID" value="traderHeavy"/>
 		</entity_class>
 		<entity_class name="humanBakerTrader" extends="humanMeleeMaleTraderTemplate">
-			<property name="Tags" value="entity,male,human,trader,melee"/>
+			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdollPack_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>

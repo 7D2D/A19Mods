@@ -23,7 +23,7 @@
 
 		<entity_class name="zombieRegularTemplate">
 			<property name="EntityType" value="Zombie"/> <!-- This one decides for scoring -->
-			<property name="Tags" value="entity,male,zombie,walker,melee,template"/>  <!-- entity/sex/type/role/attacktype: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
+			<property name="Tags" value="entity,cp,male,zombie,walker,melee,template"/>  <!-- entity/sex/type/role/attacktype: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="LookAtAngle" value="60"/> <!-- A19  -->
 			<!-- Mesh and class properties -->
@@ -38,7 +38,7 @@
 			<property name="Weight" value="70"/>
 			<property name="PhysicsBody" value="zombieStandard"/>
 			<property name="Faction" value="undead"/>
-			<property name="Tags" value="entity,male,zombie,walker"/>
+			<property name="Tags" value="entity,cp,male,zombie,walker"/>
 			<property name="IsEnemyEntity" value="true"/>
 			<!-- <property name="MapIcon" value="ui_game_symbol_enemy_dot" /> -->
 			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
@@ -165,13 +165,13 @@
 		
 		<entity_class name="zombieRegularAltTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,male,zombie,walker,template,alt"/> <!-- Zombies will attack other zombies if hit by them  -->
+			<property name="Tags" value="entity,cp,male,zombie,walker,template,alt"/> <!-- Zombies will attack other zombies if hit by them  -->
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
 		</entity_class> 
 			
 		<entity_class name="zombieBruteTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,male,zombie,walker,template"/>
+			<property name="Tags" value="entity,cp,male,zombie,walker,template"/>
 			<property name="Mesh" value="Zombies/zombieStandardHawaiianRagdoll"/>
 			<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
 			<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
@@ -199,7 +199,7 @@
 
 		<entity_class name="zombieBossTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,male,zombie,walker,feral,template"/>
+			<property name="Tags" value="entity,cp,male,zombie,walker,feral,template"/>
 			<property name="Mesh" value="Zombies/zombieStandardFeralRagdoll"/>
 			<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
 			<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
@@ -227,7 +227,7 @@
 
 		<entity_class name="zombieCopTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,male,zombie,walker,template"/>
+			<property name="Tags" value="entity,cp,male,zombie,walker,template"/>
 			<property name="Mesh" value="Zombies/zombieStandardCopRagdoll"/>
 			<property name="Class" value="EntityZombieCop"/>
 			<property name="WalkType" value="1"/>
@@ -285,7 +285,7 @@
 		
 <!--		<entity_class name="zombieAnimalTemplate" >
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Tags" value="entity,cp,animal,hostile,template"/>
 			<property name="Mesh" value="#@modfolder:Resources/guppyCreepyCrawly.unity3d?guppyCreepyCrawly.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="Prefab" value="NPC"/>
@@ -377,7 +377,7 @@
 <!--  Xyths Zombies  -->	
 
 		<entity_class name="zombieSanta" extends="zombieBruteTemplate"> <!-- Thanks to MaxFox for this guys texture and the encouragement to crack this method.  -->
-			<property name="Tags" value="entity,male,zombie,brute"/> <!-- Use a tag to pick the hand effect you want, see items.xml -->
+			<property name="Tags" value="entity,cp,male,zombie,brute"/> <!-- Use a tag to pick the hand effect you want, see items.xml -->
 			<property name="Faction" value="undead"/>			
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/ZombieSanta.unity3d?zombieStandardSantaRagdoll_X"/> <!-- Model ripped from base game, Rig from base game  -->
@@ -386,7 +386,7 @@
 		</entity_class>
 		
 		<entity_class name="zombieSantaFeral" extends="zombieSanta">
-			<property name="Tags" value="entity,male,zombie,walker,feral"/>
+			<property name="Tags" value="entity,cp,male,zombie,walker,feral"/>
 			<property name="Faction" value="undead"/>				
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
@@ -402,7 +402,7 @@
 		</entity_class>
 		
 		<entity_class name="zombieNurseTemplate" extends="zombieRegularTemplate">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/ZombieNurseTemplate.unity3d?zombieStandardNurseRagdoll_X"/> <!-- Model/texture ripped from base game, Rig from base game  -->
@@ -417,7 +417,7 @@
 		</entity_class>
 				
 		<entity_class name="zombieNurseTemplateFeral" extends="zombieNurseTemplate">
-			<property name="Tags" value="entity,female,zombie,walker,feral"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,feral"/>
 			<property name="Faction" value="undead"/>				
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
@@ -433,7 +433,7 @@
 		</entity_class>
 		
 		<entity_class name="zombieFemaleTutorial" extends="zombieNurseTemplate">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/zombieTestFemale.unity3d?zombieTestFemale_X"/> 
@@ -447,7 +447,7 @@
 		</entity_class>
 		
 		<entity_class name="zombieFemaleTutorialFeral" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,feral"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,feral"/>
 			<property name="Faction" value="undead"/>				
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
@@ -465,41 +465,41 @@
 <!--  For testing walktypes and tuning  -->		
 		
 		<entity_class name="zombieFemaleTutorialT1" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="WalkType" value="1"/>
 		</entity_class>		
 		<entity_class name="zombieFemaleTutorialT2" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="WalkType" value="2"/>
 		</entity_class>				
 		<entity_class name="zombieFemaleTutorialT3" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="WalkType" value="3"/>
 		</entity_class>				
 		<entity_class name="zombieFemaleTutorialT4" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,normal"/>
 			<property name="RotateToGround" value="true"/>
 			<property name="WalkType" value="4"/>
 		</entity_class>				
 		<entity_class name="zombieFemaleTutorialT5" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="WalkType" value="5"/>
 		</entity_class>				
 		<entity_class name="zombieFemaleTutorialT6" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="WalkType" value="6"/>
 		</entity_class>				
 		<entity_class name="zombieFemaleTutorialT8" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="WalkType" value="8"/>
 		</entity_class>	
 		<entity_class name="zombieFemaleTutorialT9" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="WalkType" value="9"/>
 		</entity_class>
 
 		<entity_class name="zombieBehemoth" extends="zombieBruteTemplate">
-			<property name="Tags" value="entity,male,zombie,walker,normal"/>
+			<property name="Tags" value="entity,cp,male,zombie,walker,normal"/>
 			<property name="Prefab" value="NPC4m"/> 
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
@@ -543,7 +543,7 @@
 
 <!--		<entity_class name="zombieStig" extends="zombieRegularTemplate">
 		
-			<property name="Tags" value="entity,male,zombie,normal"/>
+			<property name="Tags" value="entity,cp,male,zombie,normal"/>
 			<property name="Mesh" value="#@modfolder:Resources/zombieStig.unity3d?zombieStig_X"/> 
 			<property name="WalkType" value="7"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>

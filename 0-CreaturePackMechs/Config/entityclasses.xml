@@ -6,7 +6,7 @@
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want mechs to head track  -->
 			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
-			<property name="Tags" value="entity,mech,template"/>
+			<property name="Tags" value="entity,cp,mech,template"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="ModelType" value="Standard"/>			
 			<property name="Prefab" value="NPC"/>
@@ -108,16 +108,16 @@
 			<property name="Tags" value="drone,deployed"/>
 			<property name="SizeScale" value="0.25"/>
 			<property name="Faction" value="none"/>
-<!--			<property name="AvatarController" value="AvatarControllerDummy"/>
+			<property name="AvatarController" value="AvatarControllerDummy"/>
 			<property name="PhysicsBody" value="vulture"/>
-			<property name="AIPathCostScale" value="100, 100"/> -->
+			<property name="AIPathCostScale" value="100, 100"/> 
 			<property name="MapIcon" value="ui_game_symbol_map_player_arrow"/>
 			<property name="NavObject" value="NOjunkDrone" />
 			<property name="TrackerIcon" value="ui_game_symbol_assemble"/>
 			<property name="NPCID" value="NPCjunkDrone"/>
-			<property name="LootListAlive" value="126"/> <!-- used to determine container X/Y size -->
+			<property name="LootListAlive" value="139"/> <!-- used to determine container X/Y size -->
 			<property name="TimeStayAfterDeath" value="3600"/>
-			<property name="ModelType" value="Standard"/>	<!-- <property name="ModelType" value="Custom"/> -->
+			<property name="ModelType" value="Custom"/>	<!-- <property name="ModelType" value="Custom"/> -->
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="SurfaceCategory" value="metal"/>
             <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
@@ -175,7 +175,7 @@
 		
 		<entity_class name="mechRobot" extends="mechTemplateHostile" >
 			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" /> <!-- Free CC model by Willy Decarpentrie -->
-			<property name="Tags" value="entity,mech,mechRobot"/>
+			<property name="Tags" value="entity,cp,mech,mechRobot"/>
 			<property name="PhysicsBody" value="RobotRig"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
@@ -209,7 +209,7 @@
 		</entity_class>
 		
 		<entity_class name="mechRobotArmy" extends="mechRobot" >
-			<property name="Tags" value="entity,mech,mechRobotArmy"/>
+			<property name="Tags" value="entity,cp,mech,mechRobotArmy"/>
 			<property name="Faction" value="whiteriver"/>			
 			<property name="HandItem" value="handRobotArmy"/>
 		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RobotArmyMat.unity3d?metal_albedo"/>
@@ -234,7 +234,7 @@
 		<entity_class name="mechSphereI" extends="mechTemplateHostile" >
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereI_X" />	<!-- Free CC model by 3DHaupt -->
 			<property name="DeadBodyHitPoints" value="1000"/> 
-			<property name="Tags" value="entity,mech,mechSphereI"/>
+			<property name="Tags" value="entity,cp,mech,mechSphereI"/>
 			<property name="Faction" value="whiteriver"/>			
 			<property name="SurfaceCategory" value="metal"/>
             <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
@@ -255,7 +255,7 @@
 		
 		<entity_class name="mechSphereII" extends="mechTemplateHostile" >
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereII_X" />
-			<property name="Tags" value="entity,mechmechSphereII"/>	
+			<property name="Tags" value="entity,cp,mechmechSphereII"/>	
 			<property name="Faction" value="whiteriver"/>			
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
@@ -277,7 +277,7 @@
 		<entity_class name="mechBee" extends="mechTemplateHostile" >
 			<property name="Class" value="EntityHornet"/>
 			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" /> <!--  Free CC model but cant find attribution yet  -->
-			<property name="Tags" value="entity,mech,mechBee"/>
+			<property name="Tags" value="entity,cp,mech,mechBee"/>
 			<property name="Faction" value="whiteriver"/>			
 			<property name="HandItem" value="handMecBee"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
@@ -299,7 +299,7 @@
 		
 		<entity_class name="mechDrone" extends="mechTemplateHostile" >
 			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
-			<property name="Tags" value="entity,mech,mechDrone"/>
+			<property name="Tags" value="entity,cp,mech,mechDrone"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="SurfaceCategory" value="metal"/>
             <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
@@ -321,7 +321,7 @@
 		
 <!--		<entity_class name="mechRecyclingBot" extends="mechTemplateHostile" >
 			<property name="Mesh" value="#@modfolder:Resources/Protectronz.unity3d?ProtectronDark" /> --> <!-- Free CC model by shanonso -->
-<!--			<property name="Tags" value="entity,mech,mechRecyclingBot"/>
+<!--			<property name="Tags" value="entity,cp,mech,mechRecyclingBot"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
 			<property name="HasRagdoll" value="true"/> 
