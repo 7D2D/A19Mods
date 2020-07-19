@@ -9,7 +9,7 @@
 		<entity_class name="animalTemplateHostileWalking" >
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="Tags" value="entity,cp,animal,hostile,template"/>
-			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?ArcticFox_X"/>
 			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want animals to head track  -->
 			<property name="ModelType" value="Standard"/>
 			<property name="Prefab" value="NPC"/>
@@ -36,7 +36,7 @@
 			<property name="Mass" value="40"/>
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="true"/> 			
-			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?ArcticFox_X"/>
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
@@ -164,7 +164,7 @@
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="Class" value="EntityHornet"/>
 			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want animals to head track  -->			
-			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Robin_X" />
 			<property name="Tags" value="entity,cp,animal,timid,template"/>
 			<property name="Faction" value="animals"/>
 			<property name="SurfaceCategory" value="organic"/>
@@ -215,7 +215,7 @@
 		<entity_class name="animalTemplateHostileFlying" extends="animalTemplateTimidFlying">
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="Class" value="EntityHornet"/>
-			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Robin_X" />
 			<property name="Tags" value="entity,cp,animal,hostile,template"/>
 			<property name="Faction" value="animals"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
@@ -242,7 +242,7 @@
 			<property name="RootMotion" value="false"/>
 			<property name="PhysicsBody" value="ArcticFox"/>
 			<property name="IsEnemyEntity" value="true"/> 			
-			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?ArcticFox_X"/>
 			<property name="HandItem" value="meleeHandAnimalFox"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
@@ -283,7 +283,7 @@
 			<property name="RagdollOnDeathChance" value="0"/>
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="false"/> 
-			<property name="Mesh" value="#@modfolder:Resources/Goat.unity3d?Goat_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Goat_X"/>
 			<property name="HandItem" value="meleeHandAnimalGoat"/>					
 			<property name="SoundRandom" value="GoatBell"/>
 			<property name="SoundAlert" value="GoatBaah"/>
@@ -305,7 +305,7 @@
 			</effect_group>
 		</entity_class>	
 		<entity_class name="animalSpider01" extends="animalTemplateHostileWalking">
-			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider01_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider01_X"/>
 			<property name="Tags" value="entity,cp,animal,perkAT05,animalSpider01"/>
 			<property name="Faction" value="animals"/>
 			<property name="Prefab" value="NPC"/>
@@ -343,17 +343,17 @@
 		</entity_class>		
 		<entity_class name="animalSpider02" extends="animalSpider01">
 			<property name="Tags" value="entity,cp,animal,hostile,animalSpider02"/>
-			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider02_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider02_X"/>
 		</entity_class>	
 		<entity_class name="animalSpider03" extends="animalSpider01">
 			<property name="Tags" value="entity,cp,animal,hostile,animalSpider03"/>
-			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider03_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider03_X"/>
 		</entity_class>	
 		
 <!-- Flying Things  -->
 
 		<entity_class name="animalRobin" extends="animalTemplateTimidFlying" >
-			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Robin_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalRobin"/>
 			<property name="Faction" value="animals"/>
 			<property name="HandItem" value="meleeHandAnimalRobin"/>
@@ -379,7 +379,7 @@
 			</effect_group>
 		</entity_class> 		
 		<entity_class name="animalCrow" extends="animalTemplateTimidFlying">
-			<property name="Mesh" value="#@modfolder:Resources/Crow.unity3d?Crow_X" />
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Crow_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalCrow"/>
 			<property name="Faction" value="animals"/>
 			<property name="SoundRandomTime" value="10.0"/>
@@ -392,7 +392,7 @@
 			<property name="SoundGiveUp" value="CrowRandom"/>			
 		</entity_class>
 		<entity_class name="animalBat" extends="animalTemplateTimidFlying">
-			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bat_X" />
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Bat_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalBat"/>
 			<property name="Faction" value="animals"/>		
 			<property name="SoundRandomTime" value="10.0"/>
@@ -405,7 +405,7 @@
 			<property name="SoundGiveUp" value="BatRandom"/>				
 		</entity_class> 
 		<entity_class name="animalBats" extends="animalTemplateTimidFlying"> <!-- has a particle of...Bats!  -->
-			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bats_X" />	
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Bats_X" />	
 			<property name="Tags" value="entity,cp,animal,timid,animalBats"/>
 			<property name="Faction" value="animals"/>		
 			<property name="SoundRandomTime" value="10.0"/>
@@ -418,7 +418,7 @@
 			<property name="SoundGiveUp" value="BatRandom"/>				
 		</entity_class> 
 		<entity_class name="animalEagle" extends="animalTemplateTimidFlying">
-			<property name="Mesh" value="#@modfolder:Resources/Eagle.unity3d?Eagle_X" />
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Eagle_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalEagle"/>
 			<property name="Faction" value="animals"/>					
 			<property name="SoundRandomTime" value="10.0"/>
@@ -439,7 +439,7 @@
 			</effect_group>
 		</entity_class>
 		<entity_class name="animalAlcatraz" extends="animalTemplateTimidFlying">
-			<property name="Mesh" value="#@modfolder:Resources/Alcatraz.unity3d?Alcatraz_X" />
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Alcatraz_X" />
 			<property name="Tags" value="entity,cp,animal,timid,animalAlcatraz"/>
 			<property name="Faction" value="animals"/>					
 			<property name="SoundRandomTime" value="10.0"/>
@@ -466,7 +466,7 @@
 			<property name="Tags" value="entity,cp,animal,hostile"/>
 			<property name="Faction" value="animals"/>					
 			<property name="Mass" value="100"/>
-			<property name="Mesh" value="#@modfolder:Resources/guppyInsect.unity3d?creatureGuppyFlyingInsect"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?creatureGuppyFlyingInsect"/>
 			<property name="MoveSpeed" value="1"/>
 			<property name="MoveSpeedAggro" value="2.1, 2.1"/>
 			<property name="MaxTurnSpeed" value="190"/>      
@@ -507,7 +507,7 @@
 			<property name="RagdollOnDeathChance" value="0"/>
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="false"/> 
-			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?WolfhoundDark"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?WolfhoundDark"/>
 			<property name="HandItem" value="meleeHandAnimalDireWolf"/>					
 			<property name="SoundRandom" value="wolfroam"/>
 			<property name="SoundAlert" value="wolfalert"/>
@@ -529,7 +529,7 @@
 		</entity_class>	
 
 		<entity_class name="animalBeagle" extends="animalWolfhound">
-			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?BeagleDark"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?BeagleDark"/>
 			<property name="Tags" value="entity,cp,animal,hostile"/>
 			<property name="Faction" value="animals"/>					
 			<property name="HandItem" value="meleeHandAnimalFox"/>					
@@ -553,7 +553,7 @@
 		</entity_class>	
 
 		<entity_class name="animalPug" extends="animalWolfhound">
-			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?PugDark"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?PugDark"/>
 			<property name="Tags" value="entity,cp,animal,hostile"/>
 			<property name="Faction" value="animals"/>	
 			<property name="Weight" value="20"/>
@@ -578,7 +578,7 @@
 		</entity_class>	
 
 		<entity_class name="animalWulf" extends="animalWolfhound">
-			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?WolfDark"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?WolfDark"/>
 			<property name="Tags" value="entity,cp,animal,hostile"/>
 			<property name="Faction" value="animals"/>				
 			<property name="HandItem" value="meleeHandAnimalDireWolf"/>					

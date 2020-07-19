@@ -1,0 +1,9 @@
+﻿<configs>
+	<append xpath="/blocks" >
+		<block name="LoadBlockZombies" > <!--  Preloads the entire bundle  -->
+			<property name="Extends" value="faucet02"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/XythZombies.unity3d?Cube_X"/>
+		</block>
+	</append>
+</configs>

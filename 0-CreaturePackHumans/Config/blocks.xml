@@ -1,6 +1,14 @@
 ﻿<configs>
 	<append xpath="/blocks" >
- 
+	
+	
+	<block name="LoadBlockHumans" >
+		<property name="Extends" value="faucet02"/>
+		<property name="Shape" value="ModelEntity" />
+		<property name="Model" value="#@modfolder:Resources/XythHumans.unity3d?Cube_X"/>
+	</block>
+	
+
 <!--		<block name="DeadNurseBlock">
 			<property name="CustomIcon" value="sleeperWolfAnimal" />
 			<property name="DescriptionKey" value="DFbabyWolfMaleDesc"/> 

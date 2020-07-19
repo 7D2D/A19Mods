@@ -30,7 +30,7 @@
 		<entity_class name="humanMeleeMaleTemplate"> <!-- If you want to make a bandit without spawning in weapons, use this template  -->
 			<property name="EntityType" value="Player"/>
 			<property name="Tags" value="entity,cp,male,human,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="HideInSpawnMenu" value="true"/> <!-- A19  -->
 			<property name="ModelType" value="Standard"/>
@@ -476,7 +476,7 @@
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?JoelRagdoll_X"/> 
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="PhysicsBody" value="traderStandard"/>
 			<property name="PainResistPerHit" value=".65"/>
@@ -524,7 +524,7 @@
 			<property name="HideInSpawnMenu" value="true"/>	
 			<property name="Faction" value="whiteriver"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?RifleManAll_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManAll_X"/> 
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="Muzzle" />
@@ -556,7 +556,7 @@
 		<entity_class name="humanEveBanditClub" extends="humanMeleeFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>
@@ -566,7 +566,7 @@
 		<entity_class name="humanEveBanditKnife" extends="humanMeleeFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
@@ -576,7 +576,7 @@
 		<entity_class name="humanEveBanditSMG" extends="humanRangedFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -587,7 +587,7 @@
 		<entity_class name="humanEveBanditAK47" extends="humanRangedFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
@@ -598,7 +598,7 @@
 		<entity_class name="humanEveBanditHunter" extends="humanRangedFemaleBanditTemplate"> 
             <property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
             <property name="RightHandJointName" value="Gunjoint" />  
             <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
@@ -609,7 +609,7 @@
 		<entity_class name="humanEveBanditPistol" extends="humanRangedFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -620,7 +620,7 @@
 		<entity_class name="humanEveBanditXBow" extends="humanRangedFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
@@ -630,7 +630,7 @@
 		<entity_class name="humanEveBanditBow" extends="humanRangedFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
 			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
@@ -641,7 +641,7 @@
 		<entity_class name="humanEveBanditShotty" extends="humanRangedFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
@@ -653,7 +653,7 @@
 		<entity_class name="humanFarmerBanditClub" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
@@ -664,7 +664,7 @@
 		<entity_class name="humanFarmerBanditKnife" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
@@ -674,7 +674,7 @@
 		<entity_class name="humanFarmerBanditSMG" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -685,7 +685,7 @@
 		<entity_class name="humanFarmerBanditAK47" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
@@ -696,7 +696,7 @@
 		<entity_class name="humanFarmerBanditHunter" extends="humanRangedMaleBanditTemplate"> 
             <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
             <property name="RightHandJointName" value="Gunjoint" />  
             <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
@@ -707,7 +707,7 @@
 		<entity_class name="humanFarmerBanditPistol" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -718,7 +718,7 @@
 		<entity_class name="humanFarmerBanditXBow" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
@@ -728,7 +728,7 @@
 		<entity_class name="humanFarmerBanditBow" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
 			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
@@ -739,7 +739,7 @@
 		<entity_class name="humanFarmerBanditShotty" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
@@ -751,7 +751,7 @@
 		<entity_class name="humanCowboyBanditClub" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
@@ -762,7 +762,7 @@
 		<entity_class name="humanCowboyBanditKnife" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
@@ -772,7 +772,7 @@
 		<entity_class name="humanCowboyBanditSMG" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -783,7 +783,7 @@
 		<entity_class name="humanCowboyBanditAK47" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>	
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
@@ -794,7 +794,7 @@
 		<entity_class name="humanCowboyBanditHunter" extends="humanRangedMaleBanditTemplate"> 
             <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>	
             <property name="WalkType" value="6"/> 
             <property name="RightHandJointName" value="Gunjoint" />  
             <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
@@ -805,7 +805,7 @@
 		<entity_class name="humanCowboyBanditPistol" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -816,7 +816,7 @@
 		<entity_class name="humanCowboyBanditXBow" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>			
 			<property name="WalkType" value="6"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
@@ -826,7 +826,7 @@
 		<entity_class name="humanCowboyBanditBow" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>		
 			<property name="WalkType" value="3"/> 
 			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
@@ -837,7 +837,7 @@
 		<entity_class name="humanCowboyBanditShotty" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>		
 			<property name="WalkType" value="6"/>			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
@@ -849,7 +849,7 @@
 		<entity_class name="humanHarleyBanditClub" extends="humanMeleeFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
@@ -874,7 +874,7 @@
 		<entity_class name="humanHarleyBanditKnife" extends="humanHarleyBanditClub"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
@@ -884,7 +884,7 @@
 		<entity_class name="humanHarleyBanditSMG" extends="humanRangedFemaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -910,7 +910,7 @@
 		<entity_class name="humanHarleyBanditAK47" extends="humanHarleyBanditSMG"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
@@ -921,7 +921,7 @@
 		<entity_class name="humanHarleyBanditHunter" extends="humanHarleyBanditSMG"> 
             <property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
             <property name="WalkType" value="6"/> 
             <property name="RightHandJointName" value="Gunjoint" />  
             <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
@@ -932,7 +932,7 @@
 		<entity_class name="humanHarleyBanditPistol" extends="humanHarleyBanditSMG"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -943,7 +943,7 @@
 		<entity_class name="humanHarleyBanditXBow" extends="humanHarleyBanditSMG"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>		
 			<property name="WalkType" value="6"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
@@ -953,7 +953,7 @@
 		<entity_class name="humanHarleyBanditBow" extends="humanHarleyBanditSMG"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="3"/> 
 			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
@@ -964,7 +964,7 @@
 		<entity_class name="humanHarleyBanditShotty" extends="humanHarleyBanditSMG"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="6"/>			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
@@ -981,7 +981,7 @@
 		<entity_class name="humanBakerBanditChefKnife" extends="humanMeleeMaleTemplate">
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll_X"/> <!-- Free Model from Liam Pickford via sketchfab, Rigged in Mixamo -->
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll_X"/> <!-- Free Model from Liam Pickford via sketchfab, Rigged in Mixamo -->
 			<!-- Retexturing Index: Materials : 0 Body, 1 Hair -->
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
@@ -991,7 +991,7 @@
 		<entity_class name="humanJoelBanditChefKnife" extends="humanMeleeMaleTemplate">
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?JoelRagdoll_X"/>
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
 			<property name="HandItem" value="meleeBanditKnifeIron"/>
@@ -999,7 +999,7 @@
 		
 		<entity_class name="humanHarleyBanditSlugger" extends="humanMeleeFemaleTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,melee,harley,voice"/> <!--  Harley has her own voice sounds, shes also a test case for the NPC sound system  -->
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn_X"/>  <!-- Textures by Mumpfy  -->
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn_X"/>  <!-- Textures by Mumpfy  -->
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
 			<property name="HandItem" value="meleeHarleyBat"/>
@@ -1030,7 +1030,7 @@
 <!--		<entity_class name="humanRifleManBanditNoHatNoMesh" extends="humanRangedMaleBanditTemplate">
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?RifleManNoPack_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManNoPack_X"/>
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunMicroPistol,ammoNPC9mmBulletBall"/>
@@ -1077,7 +1077,7 @@
 		<entity_class name="humanFarmerSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
@@ -1088,7 +1088,7 @@
 		<entity_class name="humanFarmerSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
@@ -1099,7 +1099,7 @@
 		<entity_class name="humanFarmerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -1110,7 +1110,7 @@
 		<entity_class name="humanFarmerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
@@ -1121,7 +1121,7 @@
 		<entity_class name="humanFarmerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
             <property name="RightHandJointName" value="Gunjoint" />  
             <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
@@ -1132,7 +1132,7 @@
 		<entity_class name="humanFarmerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -1143,7 +1143,7 @@
 		<entity_class name="humanFarmerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>
 			<property name="RightHandJointName" value="Gunjoint" />  			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
@@ -1154,7 +1154,7 @@
 		<entity_class name="humanFarmerSurvivorBow" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
 			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
@@ -1165,7 +1165,7 @@
 		<entity_class name="humanFarmerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>
 			<property name="RightHandJointName" value="Gunjoint" />  			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
@@ -1178,7 +1178,7 @@
 		<entity_class name="humanBakerSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
@@ -1189,7 +1189,7 @@
 		<entity_class name="humanBakerSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
@@ -1200,7 +1200,7 @@
 		<entity_class name="humanBakerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -1211,7 +1211,7 @@
 		<entity_class name="humanBakerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
@@ -1222,7 +1222,7 @@
 		<entity_class name="humanBakerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
             <property name="WalkType" value="6"/> 
             <property name="RightHandJointName" value="Gunjoint" />  
             <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
@@ -1233,7 +1233,7 @@
 		<entity_class name="humanBakerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -1244,7 +1244,7 @@
 		<entity_class name="humanBakerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/>
 			<property name="RightHandJointName" value="Gunjoint" />  			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
@@ -1255,7 +1255,7 @@
 		<entity_class name="humanBakerSurvivorBow" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>			
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
 			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
@@ -1266,7 +1266,7 @@
 		<entity_class name="humanBakerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/>
 			<property name="RightHandJointName" value="Gunjoint" />  			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
@@ -1279,7 +1279,7 @@
 		<entity_class name="humanNurseSurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
@@ -1290,7 +1290,7 @@
 		<entity_class name="humanNurseSurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
@@ -1301,7 +1301,7 @@
 		<entity_class name="humanNurseSurvivorSMG" extends="humanRangedFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -1312,7 +1312,7 @@
 		<entity_class name="humanNurseSurvivorAK47" extends="humanRangedFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
@@ -1323,7 +1323,7 @@
 		<entity_class name="humanNurseSurvivorHunter" extends="humanRangedFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
             <property name="WalkType" value="6"/> 
             <property name="RightHandJointName" value="Gunjoint" />  
             <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
@@ -1334,7 +1334,7 @@
 		<entity_class name="humanNurseSurvivorPistol" extends="humanRangedFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -1345,7 +1345,7 @@
 		<entity_class name="humanNurseSurvivorXBow" extends="humanRangedFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/>
 			<property name="RightHandJointName" value="Gunjoint" />  			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
@@ -1356,7 +1356,7 @@
 		<entity_class name="humanNurseSurvivorBow" extends="humanRangedFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>		
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="3"/> 
 			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
@@ -1367,7 +1367,7 @@
 		<entity_class name="humanNurseSurvivorShotty" extends="humanRangedFemaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/>
 			<property name="RightHandJointName" value="Gunjoint" />  			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
@@ -1381,7 +1381,7 @@
 		<entity_class name="humanEveBanditSleeperKnife" extends="humanMeleeFemaleSleeperTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,melee,sleeper"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
@@ -1391,7 +1391,7 @@
 		<entity_class name="humanEveBanditSleeperSMG" extends="humanRangedFemaleSleeperTemplate"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -1402,7 +1402,7 @@
 		<entity_class name="humanFarmerBanditSleeperKnife" extends="humanMeleeMaleSleeperTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee,sleeper"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
@@ -1412,7 +1412,7 @@
 		<entity_class name="humanFarmerBanditSleeperSMG" extends="humanRangedMaleSleeperTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -1423,7 +1423,7 @@
 		<entity_class name="humanCowboyBanditSleeperKnife" extends="humanMeleeMaleSleeperTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee,sleeper"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="7"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
@@ -1433,7 +1433,7 @@
 		<entity_class name="humanCowboyBanditSleeperSMG" extends="humanRangedMaleSleeperTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?CowboyBasic_X"/>
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -1446,7 +1446,7 @@
 		<entity_class name="humanHarleyBanditSleeperPistol" extends="humanHarleyBanditSMG"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>	
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="2"/> 
 			<property name="RightHandJointName" value="RightWeapon" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
@@ -1457,7 +1457,7 @@
 
 		<entity_class name="humanHarleyBanditSleeperSlugger" extends="humanHarleyBanditSlugger"> 
 			<property name="Tags" value="entity,cp,female,human,bandit,melee,sleeper,harley,voice"/> 
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn_X"/>  
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn_X"/>  
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
 			<property name="HandItem" value="meleeHarleyBat"/>
@@ -1473,7 +1473,7 @@
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?JoelRagdoll_X"/> 
 			<property name="PhysicsBody" value="traderStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="SightRange" value="50"/>
@@ -1492,7 +1492,7 @@
 		<entity_class name="humanWeaponsTrader" extends="humanRangedMaleTraderTemplate">
 			<property name="Tags" value="entity,cp,male,human,npc,trader,ranged"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?RifleManAll_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManAll_X"/> 
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="Muzzle" />
@@ -1523,7 +1523,7 @@
 		<entity_class name="humanBakerTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdollPack_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdollPack_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightWeapon" />

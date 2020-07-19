@@ -380,7 +380,7 @@
 			<property name="Tags" value="entity,cp,male,zombie,brute"/> <!-- Use a tag to pick the hand effect you want, see items.xml -->
 			<property name="Faction" value="undead"/>			
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieSanta.unity3d?zombieStandardSantaRagdoll_X"/> <!-- Model ripped from base game, Rig from base game  -->
+			<property name="Mesh" value="#@modfolder:Resources/XythZombies.unity3d?zombieStandardSantaRagdoll_X"/> <!-- Model ripped from base game, Rig from base game  -->
 			<property name="WalkType" value="1"/> 
 			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
 		</entity_class>
@@ -405,7 +405,7 @@
 			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/ZombieNurseTemplate.unity3d?zombieStandardNurseRagdoll_X"/> <!-- Model/texture ripped from base game, Rig from base game  -->
+			<property name="Mesh" value="#@modfolder:Resources/XythZombies.unity3d?zombieStandardNurseRagdoll_X"/> <!-- Model/texture ripped from base game, Rig from base game  -->
 			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
 			<property name="PhysicsBody" value="zombieStandard"/>
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
@@ -436,7 +436,7 @@
 			<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/zombieTestFemale.unity3d?zombieTestFemale_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythZombies.unity3d?zombieTestFemale_X"/> 
 			<!-- Retexturing Index: N/A -->
 			<property name="RootMotion" value="true"/>
 			<property name="HasRagdoll" value="true"/>
@@ -507,7 +507,7 @@
 			<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
 			<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
 			<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/> 
-			<property name="Mesh" value="#@modfolder:Resources/Behemoth.unity3d?BehemothRagdoll_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythZombies.unity3d?BehemothRagdoll_X"/> 
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="WalkType" value="9"/>
