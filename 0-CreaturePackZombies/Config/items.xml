@@ -1,6 +1,21 @@
 <configs>
 	<append xpath="/items">
-
+	
+		<item name="ZombieEntityLoadingHack">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/XythZombies.unity3d?zombieTestFemale_X"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/XythZombies.unity3d?zombieTestFemale_X"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+	
 <!--   For testing  -->	
 
 		<item name="ZombieW7WalkStyle0Schematic">

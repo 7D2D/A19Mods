@@ -1030,12 +1030,12 @@
 <!--		<entity_class name="humanRifleManBanditNoHatNoMesh" extends="humanRangedMaleBanditTemplate">
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManNoPack_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManNoHatPack_X"/>
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="Gunjoint" />  
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunMicroPistol,ammoNPC9mmBulletBall"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunMicroPistol,ammoNPC9mmBulletBall"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunMicroPistol,ammoNPC9mmBulletBall"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHidden,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHidden,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHidden,ammoNPC762mmBulletBall"/> 
 		</entity_class> -->
 	
 		
