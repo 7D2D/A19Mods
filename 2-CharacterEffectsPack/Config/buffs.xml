@@ -541,7 +541,7 @@
 				<requirement name="CVarCompare" cvar="InfectChance" operation="Equals" value="1"/>
                <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="IsInfected">
                     <requirement name="EntityTagCompare" target="other" tags="human"/>
-					<requirement name="!EntityTagCompare" tags="player"/>
+					<requirement name="!EntityTagCompare" target="other" tags="player"/>
                 </triggered_effect>
 			</effect_group>	
 			<effect_group name="Infection Attack Buff NPC">
