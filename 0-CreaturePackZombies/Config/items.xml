@@ -87,6 +87,13 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/>
 		</item>
+
+		<item name="meleeHandZombieStrong2">
+			<property name="Extends" value="meleeHandZombieStrong"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/>
+		</item>
+		
 		<item name="meleeHandZombieFeral2">
 			<property name="Extends" value="meleeHandZombieFeral"/>
 			<property name="CreativeMode" value="None"/>
