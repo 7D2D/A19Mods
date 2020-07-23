@@ -171,7 +171,7 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>
 			<effect_group name="SelfMedicate Effects">
-				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value=".25"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>				
 			<effect_group name="IsHuman"> <!-- This activates the IsHuman Buff which sets an animator parameter value to path to only human animations  -->

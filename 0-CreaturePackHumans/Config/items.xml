@@ -48,6 +48,7 @@
 			<property name="Group" value="Ammo/Weapons,Basics"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
 			<property name="HoldType" value="2"/>
+			<property name="Candrop" value="false"/>
 			<property name="Material" value="Mwood"/>
 			<property name="RepairTools" value="resourceWood"/>
 			<property name="SoundDestroy" value="wooddestroy1"/>
@@ -85,12 +86,13 @@
 			<property name="DisplayType" value="meleeKnife"/>
 			<property name="HoldType" value="36"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
+			<property name="Candrop" value="false"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="RepairTools" value="resourceRepairKit"/>
 			<property name="Degradation" value="99999" param1="true"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="FuelValue" value="100"/>
-			<property name="EconomicValue" value="350"/>
+			<property name="EconomicValue" value="1"/>
 			<property name="SoundDestroy" value="wooddestroy1"/>
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
@@ -123,6 +125,7 @@
 			<property name="DisplayType" value="melee"/>
 			<property name="Group" value="Ammo/Weapons,Basics"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
+			<property name="Candrop" value="false"/>
 			<property name="HoldType" value="2"/>
 			<property name="Material" value="Mwood"/>
 			<property name="RepairTools" value="resourceWood"/>
