@@ -196,7 +196,7 @@
 			<property name="SoundAttack" value=""/>
 			<property name="SoundSense" value=""/>
 			<property name="SoundGiveUp" value=""/>
-			<property name="AIPathCostScale" value="100, 100"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="Wander"/>
 			<property name="AITask-2" value=""/>
 			<property name="Immunity" value="sickness;disease;wellness"/> 
@@ -221,8 +221,8 @@
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="HandItem" value="meleeHandAnimalBear"/>
 			<property name="IsEnemyEntity" value="true"/>
-			<property name="MaxViewAngle" value="180"/>
-			<property name="SightRange" value="70"/>
+			<property name="MaxViewAngle" value="240"/>
+			<property name="SightRange" value="90"/>
 			<property name="MoveSpeed" value="1"/>
 			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
 			<property name="MaxTurnSpeed" value="190"/>
@@ -462,18 +462,18 @@
 		
 <!--  Hostile Flyers  -->		
 		
-		<entity_class name="animalGuppyInsect" extends="animalTemplateHostileFlying"> <!-- no layer 1 yet, left in for testing -->
-			<property name="Tags" value="entity,cp,animal,hostile"/>
+		<entity_class name="animalGuppyInsect" extends="animalTemplateHostileFlying"> 
+			<property name="Tags" value="entity,cp,animal,hostile,animalGuppyInsect"/>
 			<property name="Faction" value="animals"/>					
 			<property name="Mass" value="100"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?creatureGuppyFlyingInsect"/>
 			<property name="MoveSpeed" value="1"/>
 			<property name="MoveSpeedAggro" value="2.1, 2.1"/>
+			<property name="MaxViewAngle" value="360"/>
 			<property name="MaxTurnSpeed" value="190"/>      
 			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
 			<property name="ExperienceGain" value="250"/>
 			<property name="DeadBodyHitPoints" value="100"/>
-			<property name="SightRange" value="70"/>
 			<property name="SoundRandomTime" value="5.0"/>
 			<property name="SoundRandom" value="animalhornetroam" />
 			<property name="SoundAlert" value="animalhornetalert"/>

@@ -39,13 +39,15 @@
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']">
 		<entity name="animalBats" prob="10" />
 		<entity name="animalCrow" prob="5" />
+		<entity name="animalGuppyInsect" prob="5"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
-		<entity name="animalBats" prob="20" />
+		<entity name="animalBats" prob="10" />
 		<entity name="animalCrow" prob="10" />
 		<entity name="animalSpider01" prob="10"/>
 		<entity name="animalSpider02" prob="10" />
-		<entity name="animalSpider03" prob="10"/> 
+		<entity name="animalSpider03" prob="10"/>
+		<entity name="animalGuppyInsect" prob="15"/>
 	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='WolfGroup']">	
 		<entity name="animalWulf" />
@@ -54,7 +56,7 @@
 		<entity name="animalWulf" />
 	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='VultureGroup']">	
-		<entity name="animalGuppyInsect" />
+		
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='SnakeGroup']">	
 
