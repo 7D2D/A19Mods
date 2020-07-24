@@ -375,27 +375,13 @@
 		</entity_class>	-->		
 		
 <!-- Gans Zombies -->
-	<entity_class name="zombieRekt" extends="zombieTemplateMale">
-		<property name="SizeScale" value="1.08"/>
-		<property name="Tags" value="entity,zombie,walker"/>
+	<entity_class name="zombieRekt" extends="zombieRegularTemplate">
+		<property name="Tags" value="entity,cp,male,zombie,walker"/>
 		<property name="Mesh" value="#@modfolder:Resources/GPZombies.unity3d?zombieRekt_Gan"/>
-		<property name="AvatarController" value="AvatarZombie01Controller"/>
-		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
-		<property name="ModelType" value="Standard"/>
-		<property name="WalkType" value="1"/>
 		<property name="Mass" value="210"/>
 		<property name="Weight" value="70"/>
-		<property name="PushFactor" value="20"/>
-		<property name="RootMotion" value="true"/>
-		<property name="HasDeathAnim" value="true"/>
-		<property name="HasRagdoll" value="true"/>
-
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+		<property name="Faction" value="undead"/>
+		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
 
 		<property name="HandItem" value="meleeHandZombieStrong2"/>
 		<property name="JumpMaxDistance" value="1.4, 1.5"/>
@@ -408,8 +394,9 @@
 	</entity_class>
 
 	<entity_class name="zombieRektFeral" extends="zombieRekt">
-		<property name="Tags" value="entity,zombie,walker,feral"/>
+		<property name="Tags" value="entity,cp,male,zombie,walker,feral"/>
 		<property name="ReplaceMaterial3" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
+		<property name="Faction" value="undead"/>
 
 		<property name="DismemberMultiplierHead" value=".7"/>
 		<property name="DismemberMultiplierArms" value=".7"/>
@@ -429,8 +416,9 @@
 	</entity_class>
 
 	<entity_class name="zombieRektRadiated" extends="zombieRektFeral">
-		<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+		<property name="Tags" value="entity,cp,male,zombie,walker,feral,radiated"/>
 		<property name="ReplaceMaterial0" value="#@modfolder:Resources/GPZombies.unity3d?TraderRekt_rad.mat"/>
+		<property name="Faction" value="undead"/>
 
 		<property name="DismemberMultiplierHead" value=".4"/>
 		<property name="DismemberMultiplierArms" value=".4"/>
@@ -446,27 +434,13 @@
 		</effect_group>
 	</entity_class>
 
-	<entity_class name="zombieHugh" extends="zombieTemplateMale">
-		<property name="SizeScale" value="1.08"/>
-		<property name="Tags" value="entity,zombie,walker"/>
+	<entity_class name="zombieHugh" extends="zombieRegularTemplate">
+		<property name="Tags" value="entity,cp,male,zombie,walker"/>
 		<property name="Mesh" value="#@modfolder:Resources/GPZombies.unity3d?zombieHugh_Gan"/>
-		<property name="AvatarController" value="AvatarZombie01Controller"/>
-		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
-		<property name="ModelType" value="Standard"/>
-		<property name="WalkType" value="1"/>
 		<property name="Mass" value="210"/>
 		<property name="Weight" value="70"/>
-		<property name="PushFactor" value="20"/>
-		<property name="RootMotion" value="true"/>
-		<property name="HasDeathAnim" value="true"/>
-		<property name="HasRagdoll" value="true"/>
-
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+		<property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
 
 		<property name="HandItem" value="meleeHandZombieStrong2"/>
 		<property name="JumpMaxDistance" value="1.4, 1.5"/>
@@ -479,8 +453,9 @@
 	</entity_class>
 
 	<entity_class name="zombieHughFeral" extends="zombieHugh">
-		<property name="Tags" value="entity,zombie,walker,feral"/>
+		<property name="Tags" value="entity,cp,male,zombie,walker,feral"/>
 		<property name="ReplaceMaterial4" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
+		<property name="Faction" value="undead"/>
 
 		<property name="DismemberMultiplierHead" value=".7"/>
 		<property name="DismemberMultiplierArms" value=".7"/>
@@ -500,8 +475,9 @@
 	</entity_class>
 
 	<entity_class name="zombieHughRadiated" extends="zombieHughFeral">
-		<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+		<property name="Tags" value="entity,cp,male,zombie,walker,feral,radiated"/>
 		<property name="ReplaceMaterial0" value="#@modfolder:Resources/GPZombies.unity3d?TraderHugh_rad.mat"/>
+		<property name="Faction" value="undead"/>
 
 		<property name="DismemberMultiplierHead" value=".4"/>
 		<property name="DismemberMultiplierArms" value=".4"/>
@@ -517,55 +493,18 @@
 		</effect_group>
 	</entity_class>
 
-	<entity_class name="zombieWhiteClown" extends="zombieTemplateMale">
-		<property name="SizeScale" value="0.9"/>
-		<property name="Tags" value="entity,zombie,walker"/>
+	<entity_class name="zombieWhiteClown" extends="zombieRegularTemplate">
+		<property name="Tags" value="entity,cp,male,zombie,walker"/>
 		<property name="Mesh" value="#@modfolder:Resources/GPZombies.unity3d?whiteclown_n_hallin"/>
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
-		<property name="AvatarController" value="AvatarZombie01Controller"/>
+		<property name="Faction" value="undead"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
-		<property name="ModelType" value="Standard"/>
-		<property name="WalkType" value="2"/>
-		<property name="RootMotion" value="true"/>
-		<property name="HasDeathAnim" value="true"/>
-		<property name="AIPathCostScale" value=".4, .4"/>
-
-		<!-- Gameplay -->
-		<property name="HandItem" value="meleeHandZombie001"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="125"/>
-			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-		</effect_group>
 	</entity_class>
 
-	<entity_class name="zombieGirl" extends="zombieTemplateMale">
-		<property name="SizeScale" value="0.9"/>
-		<property name="Tags" value="entity,zombie,walker"/>
+	<entity_class name="zombieGirl" extends="zombieNurseTemplate">
+		<property name="Tags" value="entity,cp,female,zombie,walker,normal"/>
 		<property name="Mesh" value="#@modfolder:Resources/GPZombies.unity3d?zombiegirl_w_kurniawan"/>
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
-		<property name="AvatarController" value="AvatarZombie01Controller"/>
+		<property name="Faction" value="undead"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
-		<property name="ModelType" value="Standard"/>
-		<property name="WalkType" value="3"/>
-		<property name="RootMotion" value="true"/>
-		<property name="HasDeathAnim" value="true"/>
-		<property name="AIPathCostScale" value=".4, .4"/>
-
-		<property name="HandItem" value="meleeHandZombie001"/>
-		<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="125"/>
-			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-		</effect_group>
 	</entity_class>
 
 <!--  Xyths Zombies  -->	
