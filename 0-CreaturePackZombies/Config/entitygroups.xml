@@ -1,5 +1,6 @@
 <configs>
 
+	
 <!--	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
 		<entity name="zombieGuppyCreepyCrawly" prob=".1" />
 		<entity name="zombieGuppyInfernalDog" prob=".1" />	
@@ -38,7 +39,7 @@
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/entity[@name='zombieBoe']" >
 		<entity name="zombieSanta" prob=".1" />
 		<entity name="zombieNurseTemplate" prob=".05" />
-		<entity name="zombieFemaleTutorial" prob=".1" />
+		<entity name="zombieFemaleTutorial" prob=".15" />
 	</insertAfter>	
 	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroup']/entity[@name='zombieBoe']" >
@@ -1383,5 +1384,18 @@
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieWightFeral']">
 		<entity name="zombieBehemoth" prob=".25" />
 	</insertAfter>	-->
+	
+	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieFemaleTutorial' and @prob='.3']]">
+        <entity name="zombieRekt" prob=".3" />
+        <entity name="zombieHugh" prob=".3"/>
+		<entity name="zombieWhiteClown" prob=".3"/>
+		<entity name="zombieGirl" prob=".3" />
+    </append> 
+	
+	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieFemaleTutorialFeral' and @prob='.15']]">
+        <entity name="zombieRektFeral" prob=".15" />
+        <entity name="zombieHughFeral" prob=".15" />
+    </append> 
+	
 
 </configs>
