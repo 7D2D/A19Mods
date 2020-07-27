@@ -10,11 +10,421 @@
 			<property name="DropMeshfile"  value="#@modfolder:Resources/XythZombies.unity3d?zombieTestFemale_X"/>
 			<property name="Material" value="MresourceScrapIron"/>
 			<property name="Weight" value="1"/>
-			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="Stacknumber" value="1"/> 
 			<property name="EconomicValue" value="1"/>
 			<property name="EconomicBundleSize" value="1000"/>
 			<property name="Group" value="Resources"/>
 		</item>
+		
+		<item name="ZombieEntityLoadingHackGP">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/GPZombies.unity3d?zombieRekt_Gan"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/GPZombies.unity3d?zombieRekt_Gan"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		
+		<item name="ZombieEntityLoadingHackGuppy01">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyAbonimation.unity3d?zombieGuppyAbonimation"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyAbonimation.unity3d?zombieGuppyAbonimation"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy02">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyAlma.unity3d?zombieGuppyAlma"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyAlma.unity3d?zombieGuppyAlma"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy03">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyBaldCop.unity3d?zombieGuppyBaldCop"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyBaldCop.unity3d?zombieGuppyBaldCop"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy04">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyBaldMan.unity3d?zombieGuppyBaldMan"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyBaldMan.unity3d?zombieGuppyBaldMan"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy05">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyBeatCop.unity3d?zombieGuppyBeatCop"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyBeatCop.unity3d?zombieGuppyBeatCop"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy06">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyBelle.unity3d?zombieGuppyBelle"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyBelle.unity3d?zombieGuppyBelle"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+<!--		<item name="ZombieEntityLoadingHackGuppy07">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyBilly.unity3d?zombieGuppyBilly"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyBilly.unity3d?zombieGuppyBilly"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+<!--		<item name="ZombieEntityLoadingHackGuppy08">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyBiomechanicalWight.unity3d?zombieGuppyBiomechanicalWight"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyBiomechanicalWight.unity3d?zombieGuppyBiomechanicalWight"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+<!--		<item name="ZombieEntityLoadingHackGuppy09">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyBob.unity3d?zombieGuppyBob"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyBob.unity3d?zombieGuppyBob"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+		<item name="ZombieEntityLoadingHackGuppy10">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyCarmela.unity3d?zombieGuppyCarmela"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyCarmela.unity3d?zombieGuppyCarmela"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+
+<!--		<item name="ZombieEntityLoadingHackGuppy11">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyCheerleader.unity3d?zombieGuppyCheerleader"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyCheerleader.unity3d?zombieGuppyCheerleader"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+		<item name="ZombieEntityLoadingHackGuppy12">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyClot.unity3d?zombieGuppyClot"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyClot.unity3d?zombieGuppyClot"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+<!--		<item name="ZombieEntityLoadingHackGuppy13">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyHungryGeorge.unity3d?zombieGuppyHungryGeorge"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyHungryGeorge.unity3d?zombieGuppyHungryGeorge"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+		<item name="ZombieEntityLoadingHackGuppy14">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyHungryJeff.unity3d?zombieGuppyHungryJeff"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyHungryJeff.unity3d?zombieGuppyHungryJeff"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+<!---		<item name="ZombieEntityLoadingHackGuppy15">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyHungryScott.unity3d?zombieGuppyHungryScott"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyHungryScott.unity3d?zombieGuppyHungryScott"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+		<item name="ZombieEntityLoadingHackGuppy16">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyKennethClown.unity3d?zombieGuppyKennethClown"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyKennethClown.unity3d?zombieGuppyKennethClown"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy17">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyLucy.unity3d?zombieGuppyLucy"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyLucy.unity3d?zombieGuppyLucy"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy18">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyNurse.unity3d?zombieGuppyNurse"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyNurse.unity3d?zombieGuppyNurse"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy19">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyOldManZombie.unity3d?zombieGuppyOldManZombie"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyOldManZombie.unity3d?zombieGuppyOldManZombie"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy20">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyPest.unity3d?zombieGuppyPest"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyPest.unity3d?zombieGuppyPest"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy21">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyPete.unity3d?zombieGuppyPete"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyPete.unity3d?zombieGuppyPete"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy22">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyPoliceRalph.unity3d?zombieGuppyPoliceRalph"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyPoliceRalph.unity3d?zombieGuppyPoliceRalph"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy23">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyRoland.unity3d?zombieGuppyRoland"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyRoland.unity3d?zombieGuppyRoland"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy24">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppySecurityGuard.unity3d?zombieGuppySecurityGuard"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppySecurityGuard.unity3d?zombieGuppySecurityGuard"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+		<item name="ZombieEntityLoadingHackGuppy25">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppySeth.unity3d?zombieGuppySeth"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppySeth.unity3d?zombieGuppySeth"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+<!--		<item name="ZombieEntityLoadingHackGuppy26">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyStripper.unity3d?zombieGuppyStripper"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyStripper.unity3d?zombieGuppyStripper"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+<!--		<item name="ZombieEntityLoadingHackGuppy27">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyThorton.unity3d?zombieGuppyThorton"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyThorton.unity3d?zombieGuppyThorton"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	-->
+		<item name="ZombieEntityLoadingHackGuppy28">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/zombieGuppyGermanCosplay.unity3d?zombieGuppyGermanCosplay"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/zombieGuppyGermanCosplay.unity3d?zombieGuppyGermanCosplay"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>	
+
 	
 <!--   For testing  -->	
 

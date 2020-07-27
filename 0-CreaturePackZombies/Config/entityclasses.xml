@@ -539,6 +539,7 @@
 		</entity_class>		
 		
 <!-- Gans Zombies -->
+
 	<entity_class name="zombieRekt" extends="zombieRegularTemplate">
 		<property name="Tags" value="entity,cp,male,zombie,walker"/>
 		<property name="Mesh" value="#@modfolder:Resources/GPZombies.unity3d?zombieRekt_Gan"/>
@@ -670,8 +671,233 @@
 		<property name="Faction" value="undead"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
 	</entity_class>		
-		
 
+
+<!-- Guppy Zombies :  Those commented out have resourse bundles larger than 40 Megs for the sake of the potatos but feel free to use them if you have the VRam  Those are not preadded to groups so you need to do that too if you want them in game. -->    
+
+    <entity_class name="zombieGuppyAbonimation" extends="zombieBruteTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyAbonimation.unity3d?zombieGuppyAbonimation"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyAlma" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyAlma.unity3d?zombieGuppyAlma"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyBaldCop" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyBaldCop.unity3d?zombieGuppyBaldCop"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyBaldMan" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyBaldMan.unity3d?zombieGuppyBaldMan"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.2"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyBeatCop" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyBeatCop.unity3d?zombieGuppyBeatCop"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyBelle" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyBelle.unity3d?zombieGuppyBelle"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+<!--    <entity_class name="zombieGuppyBilly" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyBilly.unity3d?zombieGuppyBilly"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class> -->
+
+ <!--   <entity_class name="zombieGuppyBiomechanicalWight" extends="zombieBossTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyBiomechanicalWight.unity3d?zombieGuppyBiomechanicalWight"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.2"/> 
+    </entity_class> -->
+
+<!--    <entity_class name="zombieGuppyBob" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyBob.unity3d?zombieGuppyBob"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class> -->
+
+    <entity_class name="zombieGuppyCarmela" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyCarmela.unity3d?zombieGuppyCarmela"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+<!--    <entity_class name="zombieGuppyCheerleader" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyCheerleader.unity3d?zombieGuppyCheerleader"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.1"/> 
+    </entity_class> -->
+
+    <entity_class name="zombieGuppyClot" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyClot.unity3d?zombieGuppyClot"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.2"/> 
+    </entity_class>
+
+<!--    <entity_class name="zombieGuppyHungryGeorge" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyHungryGeorge.unity3d?zombieGuppyHungryGeorge"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class> -->
+
+    <entity_class name="zombieGuppyHungryJeff" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyHungryJeff.unity3d?zombieGuppyHungryJeff"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+<!--    <entity_class name="zombieGuppyHungryScott" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyHungryScott.unity3d?zombieGuppyHungryScott"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class> -->
+
+    <entity_class name="zombieGuppyKennethClown" extends="zombieBruteTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyKennethClown.unity3d?zombieGuppyKennethClown"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.2"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyLucy" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyLucy.unity3d?zombieGuppyLucy"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyNurse" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyNurse.unity3d?zombieGuppyNurse"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyOldManZombie" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyOldManZombie.unity3d?zombieGuppyOldManZombie"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyPest" extends="zombieBruteTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyPest.unity3d?zombieGuppyPest"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyPete" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyPete.unity3d?zombieGuppyPete"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyPoliceRalph" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyPoliceRalph.unity3d?zombieGuppyPoliceRalph"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppyRoland" extends="zombieBruteTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyRoland.unity3d?zombieGuppyRoland"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppySecurityGuard" extends="zombieBruteTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppySecurityGuard.unity3d?zombieGuppySecurityGuard"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>
+
+    <entity_class name="zombieGuppySeth" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppySeth.unity3d?zombieGuppySeth"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.1"/> 
+    </entity_class>
+	
+    <entity_class name="zombieGuppyGermanCosplay" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyGermanCosplay.unity3d?zombieGuppyGermanCosplay"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class>	
+
+<!--    <entity_class name="zombieGuppyStripper" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyStripper.unity3d?zombieGuppyStripper"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1.1"/> 
+    </entity_class> -->
+
+<!--    <entity_class name="zombieGuppyThorton" extends="zombieRegularTemplate">
+        <property name="Tags" value="entity,cp,male,zombie,walker"/>
+        <property name="Mesh" value="#@modfolder:Resources/zombieGuppyThorton.unity3d?zombieGuppyThorton"/>
+        <property name="Faction" value="undead"/>
+        <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+        <property name="SizeScale" value="1"/> 
+    </entity_class> -->
 
 <!-- Testing  -->
 
