@@ -1,5 +1,5 @@
 <configs>
-	
+
 	<append xpath="/entitygroups/entitygroup[@name='AnimalsSmall']">	
 		<entity name="animalFox" />
 		<entity name="animalRobin" />
@@ -26,6 +26,7 @@
 		<entity name="animalFox" prob="10" />
 		<entity name="animalWulf" prob="20" />
 		<entity name="animalWolfhound" prob="10" />
+		<entity name="animalSnowSwarm_X" prob="10"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">	
 		<entity name="animalSpider01" prob="3"/>
@@ -47,7 +48,8 @@
 		<entity name="animalSpider01" prob="10"/>
 		<entity name="animalSpider02" prob="10" />
 		<entity name="animalSpider03" prob="10"/>
-		<entity name="animalGuppyInsect" prob="15"/>
+		<entity name="animalGuppyInsect" prob="10"/>
+		<entity name="animalBloodFlySwarm_X" prob="10"/>
 	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='WolfGroup']">	
 		<entity name="animalWulf" />

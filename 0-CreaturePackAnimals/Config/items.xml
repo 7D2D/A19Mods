@@ -41,7 +41,7 @@
 			<property name="HoldType" value="35"/>
 			<property class="Action0">
 				<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
-				<property name="Range" value="1.4"/>
+				<property name="Range" value="1.8"/>
 				<property name="DamageEntity" value="19"/>
 				<property name="DamageBlock" value="9"/>
 			</property>
@@ -77,6 +77,87 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="false"/>
 		</item> <!-- no Attack0, no attack -->
+		
+		<item name="meleeHandSnowstorm">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="35"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="3.0"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Buff" value="buffFrostbite"/> 
+			</property>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+		<item name="meleeHandBloodFly">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="35"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="1.0"/>
+				<property name="DamageEntity" value="5"/>
+				<property name="DamageBlock" value="5"/>
+				<property name="Buff" value="buffInjuryBleeding"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Delay" value="0.5"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoProjectileBloodFlyVomit"/>
+				<property name="Sound_warning" value="hulkvomitwarning"/>
+				<property name="Sound_start" value="hulkvomitattack"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+				<passive_effect name="MaxRange" operation="base_set" value="50"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value="0.2" tags="buffInjuryBleeding"/>
+			</effect_group>
+		</item>
+
+		<item name="ammoProjectileBloodFlyVomit">
+			<property name="Meshfile" value="Items/Weapons/Ranged/Vomit/vomitBulbPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="12"/>
+				<property name="Explosion.ParticleIndex" value="7"/>
+				<property name="Velocity" value="13"/>
+				<property name="FlyTime" value="6"/>
+				<property name="LifeTime" value="8"/>
+				<property name="CollisionRadius" value="0.5"/>
+				<property name="Buff" value="buffInjuryBleeding"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value="0.20" tags="buffInjuryBleeding"/>
+			</effect_group>
+		</item>		
+		
+		
+		
+		
+		
+		
+		
 		
 <!-- DarkStarDragon Quests		-->
 

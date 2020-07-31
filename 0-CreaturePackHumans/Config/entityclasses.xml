@@ -11,6 +11,17 @@
 
 <!-- RightHandJointNames:  Melee uses RightWeapon, Rifles and xbow uses Gunjoint (dues to the offset), Bow uses LeftWeapon, Pistols use RightHand, on Unity Attached ranged weapons use Muzzle or whatever name of the child object added to the business end of the gun where you want the particle to emerge from. -->
 
+	<!-- Edits vanilla zombies so the attack bandits and survivors  -->
+
+
+	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetAsTargetIfHurt']/@data">,EntityAnimalStag,EntityBandit,EntitySurvivor</append>
+	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetNearestEntityAsTarget']/@data">,EntityEnemyAnimal,0,0,EntityAnimalStag,0,0,EntityBandit,0,0,EntitySurvivor,0,0</append>
+	<append xpath="//entity_class[@name='zombieSpider']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+	<append xpath="//entity_class[@name='zombieFatCop']/property[@value='ApproachAndAttackTarget']/@data">,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+	<append xpath="//entity_class[@name='zombieDemolition']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+
+	<!-- Adds a buff to the traders in POIs so they kill bandits and survivors before the NRE when entering the trader protected zone  -->
 
 	<append xpath="/entity_classes/entity_class[@name='npcTraderTemplate']">
 		<effect_group name="Backaway or Die bandit">
@@ -178,7 +189,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsHuman"/>		
 			</effect_group>	
 			<effect_group name="UseFactions"> <!-- This activates thr Usefactions Buff which tells the game not to use DMT faction classes  -->
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UseFactions"/>		
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UseFactionsNo"/>		
 			</effect_group>	
 			<!--<effect_group name="ragtestforNREs">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ragtest"/>		
@@ -467,12 +478,7 @@
 			<property name="AITarget-4" value=""/>
 		</entity_class>	
 		
-	
-		
-		
-		
-	
-<!--		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
+		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -518,7 +524,7 @@
 			<property name="AITarget-4" value=""/> 
 		</entity_class> 
 
-		<entity_class name="humanRangedMaleTraderTemplate" extends="humanMeleeMaleTraderTemplate">
+<!--		<entity_class name="humanRangedMaleTraderTemplate" extends="humanMeleeMaleTraderTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,cp,male,human,trader,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>	
@@ -1464,12 +1470,10 @@
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class> 
 
-
-
-<!-- Wandering Traders: Wandering Traders are invunerable to damage, and wont stop to chat so trade quick.  Wandering Traders are working perfectly when using the DMT NPC version.  They have backpacks -->
+<!-- Wandering Traders: Wandering Traders are invunerable to damage, and wont stop to chat so trade quick.  Wandering Traders are working perfectly when using the DMT NPC version. -->
 
 			
-<!--		<entity_class name="humanJoelTrader" extends="humanMeleeMaleTraderTemplate">
+		<entity_class name="humanJoelTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -1489,7 +1493,7 @@
 			<property name="NPCID" value="traderJoel"/>
 		</entity_class> 
 		
-		<entity_class name="humanWeaponsTrader" extends="humanRangedMaleTraderTemplate">
+<!--		<entity_class name="humanWeaponsTrader" extends="humanRangedMaleTraderTemplate">
 			<property name="Tags" value="entity,cp,male,human,npc,trader,ranged"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManAll_X"/> 

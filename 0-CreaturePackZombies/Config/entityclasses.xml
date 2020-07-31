@@ -1,11 +1,13 @@
 <configs>
 
+<!--	Moved to the HumanPack, as that makes more sense  
+
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetAsTargetIfHurt']/@data">,EntityAnimalStag,EntityBandit,EntitySurvivor</append>
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetNearestEntityAsTarget']/@data">,EntityEnemyAnimal,0,0,EntityAnimalStag,0,0,EntityBandit,0,0,EntitySurvivor,0,0</append>
 	<append xpath="//entity_class[@name='zombieSpider']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
 	<append xpath="//entity_class[@name='zombieFatCop']/property[@value='ApproachAndAttackTarget']/@data">,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
-	<append xpath="//entity_class[@name='zombieDemolition']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+	<append xpath="//entity_class[@name='zombieDemolition']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append> -->
 
 
 	<!-- <append xpath="/entity_classes/entity_class[starts-with(@name, 'zombieTemplateMale')]" >
@@ -157,11 +159,22 @@
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="noTeethNoInfection" operation="set" value="1">
 					<requirement name="HasBuff" buff="buffBrawlerNoTeeth"/></triggered_effect>
 			</effect_group>
-			<effect_group name="IsZombie">
-				<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="IsZombie"/>		
+			<effect_group name="IsZombie"> <!-- <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="IsZombie"/>	Broken in B173  -->	
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsZombie"/>		
 			</effect_group>			
-			
 		</entity_class>
+		
+		<entity_class name="zombieRegularFemaleTemplate" extends="zombieRegularTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,cp,female,zombie,walker,template"/> 
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+		</entity_class> 
+		
 		
 		<entity_class name="zombieRegularAltTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
@@ -195,7 +208,7 @@
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
-		</entity_class>   
+		</entity_class>  
 
 		<entity_class name="zombieBossTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
@@ -374,8 +387,10 @@
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>	-->		
 		
-<!--  Xyths Zombies  -->	
 
+		
+<!--  Xyth's zombies  -->		
+		
 		<entity_class name="zombieSanta" extends="zombieBruteTemplate"> <!-- Thanks to MaxFox for this guys texture and the encouragement to crack this method.  -->
 			<property name="Tags" value="entity,cp,male,zombie,brute"/> <!-- Use a tag to pick the hand effect you want, see items.xml -->
 			<property name="Faction" value="undead"/>			
@@ -683,13 +698,13 @@
         <property name="SizeScale" value="1"/> 
     </entity_class>
 
-    <entity_class name="zombieGuppyAlma" extends="zombieRegularTemplate">
+<!--    <entity_class name="zombieGuppyAlma" extends="zombieRegularTemplate"> 
         <property name="Tags" value="entity,cp,male,zombie,walker"/>
         <property name="Mesh" value="#@modfolder:Resources/zombieGuppyAlma.unity3d?zombieGuppyAlma"/>
         <property name="Faction" value="undead"/>
         <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
         <property name="SizeScale" value="1"/> 
-    </entity_class>
+    </entity_class> -->  <!--  bad hair reference  -->
 
     <entity_class name="zombieGuppyBaldCop" extends="zombieRegularTemplate">
         <property name="Tags" value="entity,cp,male,zombie,walker"/>

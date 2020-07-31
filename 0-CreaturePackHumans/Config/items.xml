@@ -556,8 +556,9 @@
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>	<!--  required or it will drop an Uber gun that never needs reloading  -->		
-			<property name="Meshfile" value="#@modfolder:Resources/MicroPistol.unity3d?XYTHHumanPistol.prefab"/>
+			<property name="Candrop" value="false"/>		
+<!--			<property name="Meshfile" value="#@modfolder:Resources/MicroPistol.unity3d?XYTHHumanPistol.prefab"/> -->
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
 			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="weapon_jam"/>
@@ -569,7 +570,7 @@
 			<property name="Group" value="Ammo/Weapons"/>
 			<property name="EconomicValue" value="0"/>
 			<property name="ShowQuality" value="true"/>
-			<property name="AutoReload" value="true"/> <!-- required  -->
+			<property name="AutoReload" value="true"/> 
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
 				<property name="Auto_fire" value="true" /> 
@@ -588,14 +589,14 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/> 
 				<passive_effect name="MaxRange" operation="base_set" value="40"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> <!-- Bullets per shot  -->
-				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> 
+				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>	
@@ -754,7 +755,7 @@
 			</effect_group>
 		</item>
 		
-<!-- Hands  -->
+<!-- Hands for characters that dont spawn weapons. -->
 
 		<item name="meleeHandHumanTemplate">
 			<property name="Extends" value="meleeHandMaster"/>

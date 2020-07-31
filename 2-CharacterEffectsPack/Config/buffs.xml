@@ -299,6 +299,7 @@
 			<stack_type value="ignore"/>
 			<duration value="0"/>
 			<requirement name="!EntityTagCompare" tags="player"/>
+			<requirement name="!EntityTagCompare" tags="animal"/>
 			<requirement name="NotHasBuff" buff="IsZombie"/>
 			<requirement name="NotHasBuff" buff="IsInfected"/>
 			<!-- IsHuman Animator set to "0" for zombie 
@@ -361,6 +362,7 @@
 				 Establish "InfectedStageCvar" value="0" 
 			-->
 			<requirement name="!EntityTagCompare" tags="player"/>
+			<requirement name="!EntityTagCompare" tags="animal"/>
 			<effect_group name="Intital stage 0">
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="IsHuman"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="1"/>
@@ -447,6 +449,7 @@
 				 Add Buff "InfectedAttack".
 			-->
 			<requirement name="!EntityTagCompare" tags="player"/>
+			<requirement name="!EntityTagCompare" tags="animal"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="IsInfected" />
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="InfectedAttack" />

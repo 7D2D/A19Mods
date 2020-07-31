@@ -152,7 +152,6 @@
         <entity name="zombieHugh" prob=".3"/>
 		<entity name="zombieWhiteClown" prob=".3"/>
 		<entity name="zombieGirl" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
         <entity name="zombieGuppyBaldCop" prob=".3"/>
 		<entity name="zombieGuppyBaldMan" prob=".3"/>
 		<entity name="zombieGuppyBeatCop" prob=".3" />

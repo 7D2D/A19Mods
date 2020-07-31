@@ -16,14 +16,20 @@
 			</effect_group>
 		</buff>	
 		
-		<buff name="UseFactions"> <!-- This sets the UseFactions switch to false incase its a vanilla only game.   -->
+		<buff name="UseFactionsNo"> <!-- This sets the UseFactions switch to false incase its a vanilla only game.   -->
 			<stack_type value="ignore"/>
 			<duration value="0"/>
 			<effect_group name="UseFactions">
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="HasFactions" operation="set" value="0"/>				
 			</effect_group>
 		</buff>	
-
+		<buff name="UseFactionsYes"> <!-- This sets the UseFactions switch to true for NPCs.   -->
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group name="UseFactions">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="HasFactions" operation="set" value="1"/>				
+			</effect_group>
+		</buff>	
 <!--  Prevent bandits class characters from getting near trader POIs  -->
 
 		<buff name="buffTraderTrigger" hidden="true">

@@ -83,11 +83,15 @@
 			<property name="SoundGiveUp" value=""/>
 			<property name="ExperienceGain" value="200"/>
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-			</effect_group>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>	
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
 			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
@@ -230,8 +234,77 @@
 				<passive_effect name="HealthMax" operation="base_set" value="100"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
-		</entity_class> 			
-			
+		</entity_class> 
+
+
+<!--  Xyth Swarms  -->		
+	
+		<entity_class name="animalSnowSwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="hostile"/>
+			<property name="Class" value="EntityHornet" />
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="true" /> <!-- not really true, but a useful lie.  Either rootmotion or ragdoll MUST be true, or no attack animations on dedi  -->
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="earth"/>
+			<property name="Mass" value="10"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?SnowSwarm2_X" /> 
+			<property name="HandItem" value="meleeHandSnowstorm" />
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1200" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
+			<property name="Buffs" value="buffSnowSwarm"/>		 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+			<property name="MoveSpeed" value=".2"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 
+		</entity_class> 
+		<entity_class name="animalBloodFlySwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="insect,hostile"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?Swarm_X" /> 
+			<property name="HandItem" value="meleeHandBloodFly" />
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="true" /> 
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="earth"/>
+			<property name="Mass" value="10"/>
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1200" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="10"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+			<property name="MoveSpeed" value=".2"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 			
+		</entity_class> 
+
+		<!--  Xyth normal animals  -->	
+		
 		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
 			<property name="Tags" value="entity,cp,animal,perkAT05,animalFox"/>
 			<property name="Faction" value="animals"/>
@@ -344,10 +417,22 @@
 		<entity_class name="animalSpider02" extends="animalSpider01">
 			<property name="Tags" value="entity,cp,animal,hostile,animalSpider02"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider02_X"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
 		</entity_class>	
 		<entity_class name="animalSpider03" extends="animalSpider01">
 			<property name="Tags" value="entity,cp,animal,hostile,animalSpider03"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider03_X"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
 		</entity_class>	
 		
 <!-- Flying Things  -->
@@ -389,7 +474,12 @@
 			<property name="SoundDeath" value="CrowAttack"/>
 			<property name="SoundAttack" value="CrowAttack"/>
 			<property name="SoundSense" value="CrowRandom"/>
-			<property name="SoundGiveUp" value="CrowRandom"/>			
+			<property name="SoundGiveUp" value="CrowRandom"/>	
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
 		</entity_class>
 		<entity_class name="animalBat" extends="animalTemplateTimidFlying">
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Bat_X" />
@@ -402,7 +492,12 @@
 			<property name="SoundDeath" value=""/>
 			<property name="SoundAttack" value="BatRandom"/>
 			<property name="SoundSense" value="BatRandom"/>
-			<property name="SoundGiveUp" value="BatRandom"/>				
+			<property name="SoundGiveUp" value="BatRandom"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
 		</entity_class> 
 		<entity_class name="animalBats" extends="animalTemplateTimidFlying"> <!-- has a particle of...Bats!  -->
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Bats_X" />	
@@ -415,7 +510,12 @@
 			<property name="SoundDeath" value=""/>
 			<property name="SoundAttack" value="BatRandom"/>
 			<property name="SoundSense" value="BatRandom"/>
-			<property name="SoundGiveUp" value="BatRandom"/>				
+			<property name="SoundGiveUp" value="BatRandom"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>			
 		</entity_class> 
 		<entity_class name="animalEagle" extends="animalTemplateTimidFlying">
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Eagle_X" />
