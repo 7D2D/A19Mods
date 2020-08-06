@@ -40,7 +40,7 @@
 
 		<entity_class name="humanMeleeMaleTemplate"> <!-- If you want to make a bandit without spawning in weapons, use this template  -->
 			<property name="EntityType" value="Player"/>
-			<property name="Tags" value="entity,cp,male,human,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
+			<property name="Tags" value="entity,male,human,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="HideInSpawnMenu" value="true"/> <!-- A19  -->
@@ -101,7 +101,7 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntitySurvivor,EntityEnemyAnimal"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/> 
-			<property name="AITarget-4" value=""/> 
+			<property name="AITarget-4" value=""/> 	
 			<property name="WalkType" value="7"/>
 			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
 			<property name="SoundStamina" value="Player_Male/player1stamina"/>
@@ -182,7 +182,7 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>
 			<effect_group name="SelfMedicate Effects">
-				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value=".25"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value=".1"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>				
 			<effect_group name="IsHuman"> <!-- This activates the IsHuman Buff which sets an animator parameter value to path to only human animations  -->
@@ -200,7 +200,7 @@
 		
 		<entity_class name="humanMeleeFemaleTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Class" value="EntityBandit"/>
-			<property name="Tags" value="entity,cp,female,human,melee"/>
+			<property name="Tags" value="entity,female,human,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
@@ -222,7 +222,7 @@
 		
 		<entity_class name="humanRangedMaleTemplate" extends="humanMeleeMaleTemplate"> 	<!-- If you want to make a ranged bandit without spawning in weapons, use this template  -->
 			<property name="Class" value="EntityBandit"/>
-			<property name="Tags" value="entity,cp,male,human,ranged"/>
+			<property name="Tags" value="entity,male,human,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
@@ -250,7 +250,7 @@
 		
 		<entity_class name="humanRangedFemaleTemplate" extends="humanRangedMaleTemplate">
 			<property name="Class" value="EntityBandit"/>
-			<property name="Tags" value="entity,cp,female,human,ranged"/>
+			<property name="Tags" value="entity,female,human,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
@@ -273,28 +273,28 @@
 		<!--  Bandit Sleeper templates, not doing survivors as its fine if they sleep when player is near  -->
 		
 		<entity_class name="humanMeleeMaleSleeperTemplate" extends="humanMeleeMaleTemplate">
-			<property name="Tags" value="entity,cp,male,human,melee,sleeper"/>
+			<property name="Tags" value="entity,male,human,melee,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class>	<!--  Without this edit, sleeping bandits will not wake up when players are near.  -->
 		
 		<entity_class name="humanMeleeFemaleSleeperTemplate" extends="humanMeleeFemaleTemplate">
-			<property name="Tags" value="entity,cp,female,human,melee,sleeper"/>
+			<property name="Tags" value="entity,female,human,melee,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class>			
 		
 		<entity_class name="humanRangedMaleSleeperTemplate" extends="humanRangedMaleTemplate">
-			<property name="Tags" value="entity,cp,male,human,ranged,sleeper"/>
+			<property name="Tags" value="entity,male,human,ranged,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class>	
 		
 		<entity_class name="humanRangedFemaleSleeperTemplate" extends="humanRangedFemaleTemplate">
-			<property name="Tags" value="entity,cp,female,human,ranged,sleeper"/>
+			<property name="Tags" value="entity,female,human,ranged,sleeper"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
@@ -305,7 +305,7 @@
 		
 			
 		<entity_class name="humanMeleeMaleBanditTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this template  -->
-			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Tags" value="entity,male,human,bandit,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -315,7 +315,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedMaleBanditTemplate" extends="humanRangedMaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this template  -->
-			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Tags" value="entity,male,human,bandit,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -325,7 +325,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeFemaleBanditTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this template  -->
-			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -335,7 +335,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedFemaleBanditTemplate" extends="humanRangedFemaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this template  -->
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
@@ -345,7 +345,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanMeleeMaleSurvivorTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a melee survivor, use this template  -->
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -367,7 +367,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedMaleSurvivorTemplate" extends="humanRangedMaleTemplate"> <!-- If you want to make a ranged survivor, use this template  -->
-			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -390,7 +390,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeMaleSurvivorTimidTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a cowardly survivor, use this template  -->
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -412,7 +412,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeFemaleSurvivorTemplate" extends="humanMeleeFemaleTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -434,7 +434,7 @@
 		</entity_class>	
 
 		<entity_class name="humanRangedFemaleSurvivorTemplate" extends="humanRangedFemaleTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -457,7 +457,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanMeleeFemaleSurvivorTimidTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a cowardly survivor, use this template  -->
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
@@ -480,7 +480,7 @@
 		
 		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
-			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
+			<property name="Tags" value="entity,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?JoelRagdoll_X"/> 
 			<property name="HideInSpawnMenu" value="true"/>
@@ -496,6 +496,7 @@
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>
 			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
 			<property name="LootListAlive" value="62"/>
 			<property name="NPCID" value="traderJoel"/>
 			<property name="SoundHurt" value="Player_Male/player1painlg"/>
@@ -526,7 +527,7 @@
 
 <!--		<entity_class name="humanRangedMaleTraderTemplate" extends="humanMeleeMaleTraderTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
-			<property name="Tags" value="entity,cp,male,human,trader,ranged"/>
+			<property name="Tags" value="entity,male,human,trader,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>	
 			<property name="Faction" value="whiteriver"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -560,7 +561,7 @@
 		<!-- Eve  -->
 
 		<entity_class name="humanEveBanditClub" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
@@ -570,7 +571,7 @@
 		</entity_class>
 
 		<entity_class name="humanEveBanditKnife" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -580,7 +581,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditSMG" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -591,7 +592,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditAK47" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -602,7 +603,7 @@
 		</entity_class>
 		
 		<entity_class name="humanEveBanditHunter" extends="humanRangedFemaleBanditTemplate"> 
-            <property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+            <property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
@@ -613,7 +614,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanEveBanditPistol" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -624,7 +625,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanEveBanditXBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -634,7 +635,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
@@ -645,7 +646,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanEveBanditShotty" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>			
@@ -853,7 +854,7 @@
 		<!--  Harley Redux Harley self extends do to the custom sounds to simplify all the override that happen if the NPC sound system from the CharacterEffects Pack is also loaded  --> 
 		
 		<entity_class name="humanHarleyBanditClub" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="7"/>
@@ -878,7 +879,7 @@
 		</entity_class>
 
 		<entity_class name="humanHarleyBanditKnife" extends="humanHarleyBanditClub"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,melee"/>
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="7"/>
@@ -888,7 +889,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanHarleyBanditSMG" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -914,7 +915,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanHarleyBanditAK47" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="6"/> 
@@ -925,7 +926,7 @@
 		</entity_class>
 		
 		<entity_class name="humanHarleyBanditHunter" extends="humanHarleyBanditSMG"> 
-            <property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+            <property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
             <property name="WalkType" value="6"/> 
@@ -936,7 +937,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanHarleyBanditPistol" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -947,7 +948,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanHarleyBanditXBow" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>		
 			<property name="WalkType" value="6"/> 
@@ -957,7 +958,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanHarleyBanditBow" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="3"/> 
@@ -968,7 +969,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanHarleyBanditShotty" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="6"/>			
@@ -1283,7 +1284,7 @@
 		<!-- Nurse Nancy  -->
 
 		<entity_class name="humanNurseSurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1294,7 +1295,7 @@
 		</entity_class>
 		
 		<entity_class name="humanNurseSurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="7"/>
@@ -1305,7 +1306,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorSMG" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1316,7 +1317,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorAK47" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/> 
@@ -1327,7 +1328,7 @@
 		</entity_class>
 		
 		<entity_class name="humanNurseSurvivorHunter" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
             <property name="WalkType" value="6"/> 
@@ -1338,7 +1339,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanNurseSurvivorPistol" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1349,7 +1350,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanNurseSurvivorXBow" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/>
@@ -1360,7 +1361,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorBow" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="3"/> 
@@ -1371,7 +1372,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanNurseSurvivorShotty" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/>
@@ -1385,7 +1386,7 @@
 		<!--  Sample Sleepers for Testing.  If someone want to extend this group, send me the updated xml -->
 
 		<entity_class name="humanEveBanditSleeperKnife" extends="humanMeleeFemaleSleeperTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,melee,sleeper"/>
+			<property name="Tags" value="entity,female,human,bandit,melee,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="7"/>
@@ -1395,7 +1396,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanEveBanditSleeperSMG" extends="humanRangedFemaleSleeperTemplate"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged,sleeper"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
 			<property name="WalkType" value="6"/> 
@@ -1450,7 +1451,7 @@
 		<!--  Adding in Harley to show alternative configuration for custom voice characters, but there are upstream edits needed for NPCs so don't do this normally  -->
 
 		<entity_class name="humanHarleyBanditSleeperPistol" extends="humanHarleyBanditSMG"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,ranged,sleeper"/>
+			<property name="Tags" value="entity,female,human,bandit,ranged,sleeper"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn2_X"/>	
 			<property name="WalkType" value="2"/> 
@@ -1462,7 +1463,7 @@
 		</entity_class>		
 
 		<entity_class name="humanHarleyBanditSleeperSlugger" extends="humanHarleyBanditSlugger"> 
-			<property name="Tags" value="entity,cp,female,human,bandit,melee,sleeper,harley,voice"/> 
+			<property name="Tags" value="entity,female,human,bandit,melee,sleeper,harley,voice"/> 
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HarleyQuinn_X"/>  
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
@@ -1475,7 +1476,7 @@
 			
 		<entity_class name="humanJoelTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
-			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
+			<property name="Tags" value="entity,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?JoelRagdoll_X"/> 
 			<property name="PhysicsBody" value="traderStandard"/>
@@ -1494,7 +1495,7 @@
 		</entity_class> 
 		
 <!--		<entity_class name="humanWeaponsTrader" extends="humanRangedMaleTraderTemplate">
-			<property name="Tags" value="entity,cp,male,human,npc,trader,ranged"/>
+			<property name="Tags" value="entity,male,human,npc,trader,ranged"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManAll_X"/> 
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
@@ -1509,7 +1510,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanHeavyTrader" extends="humanRangedMaleTraderTemplate">
-			<property name="Tags" value="entity,cp,male,human,trader,ranged"/>
+			<property name="Tags" value="entity,male,human,trader,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
@@ -1525,7 +1526,7 @@
 			<property name="NPCID" value="traderHeavy"/>
 		</entity_class>
 		<entity_class name="humanBakerTrader" extends="humanMeleeMaleTraderTemplate">
-			<property name="Tags" value="entity,cp,male,human,trader,melee"/>
+			<property name="Tags" value="entity,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdollPack_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>

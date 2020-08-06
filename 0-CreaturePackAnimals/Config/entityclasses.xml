@@ -7,6 +7,7 @@
 <!-- Templates  -->	
 
 		<entity_class name="animalTemplateHostileWalking" >
+			<property name="IsChunkObserver" value="false"/>
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="Tags" value="entity,cp,animal,hostile,template"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?ArcticFox_X"/>

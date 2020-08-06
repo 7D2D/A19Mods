@@ -212,6 +212,56 @@
 			</effect_group> 
 		</item>	
 		
+		<item name="gunBanditSMG5Hidden"> 
+			<property name="Tags" value="weapon,ranged"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="6"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Candrop" value="false"/>	<!--  required or it will drop an Uber gun that never needs reloading  -->		
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/MP5/MP5Prefab.prefab"/>
+			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="CrosshairOnAim" value="false"/> 
+			<property name="CrosshairUpAfterShot" value="false"/> 
+			<property name="Sound_Sight_In" value="smg_sight_in"/>
+			<property name="Sound_Sight_Out" value="smg_sight_out"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="EconomicValue" value="0"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="AutoReload" value="true"/> <!-- required  -->
+			<property class="Action0">
+				<property name="Class" value="Ranged" />
+				<property name="Auto_fire" value="true" /> 
+				<property name="Magazine_items" value="ammoNPC9mmBulletBall" />
+				<property name="Reload_time" value="0" /> 
+				<property name="Infinite_ammo" value="true" />
+				<property name="Single_magazine_usage" value="false"/>
+				<property name="Bullet_icon" value="uzi" />
+				<property name="Sound_start" value="Weapons/Ranged/MP5/mp5_fire_start" />
+				<property name="Sound_repeat" value="Weapons/Ranged/MP5/mp5_fire_lp" />
+				<property name="Sound_end" value="Weapons/Ranged/MP5/mp5_fire_end" />
+				<property name="Sound_empty" value="Weapons/weapon_empty" />
+				<property name="Sound_reload" value="Weapons/Ranged/MP5/mp5_reload" />
+				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
+				<passive_effect name="MaxRange" operation="base_set" value="40"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> <!-- Bullets per shot  -->
+				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+			</effect_group> 
+			<property name="HoldingItemHidden" value="true"/>
+		</item>			
+		
 		<item name="gunBanditAk47">
 			<property name="Extends" value="gunBanditSMG5"/>
 			<property name="Tags" value="weapon,ranged"/>
@@ -243,26 +293,17 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="60"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
-				<passive_effect name="MaxRange" operation="base_set" value="60"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
+				<passive_effect name="MaxRange" operation="base_set" value="50"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> <!-- Bullets per shot  -->
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>	
-		
-		<item name="gunBanditHidden">
-			<property name="Extends" value="gunBanditAk47"/>
-			<property name="Tags" value="weapon,ranged"/>
-			<property name="CreativeMode" value="Dev"/>
-			<property name="HoldingItemHidden" value="true"/>
-		</item>	
-			
-		
 		
 		<item name="gunBanditPistol">
 			<property name="Extends" value="gunBanditSMG5"/>
@@ -308,7 +349,7 @@
 				<passive_effect name="MaxRange" operation="base_set" value="40"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> <!-- Bullets per shot?  -->
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
@@ -352,11 +393,11 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="70"/>
-				<passive_effect name="MaxRange" operation="base_set" value="70"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="60"/>
+				<passive_effect name="MaxRange" operation="base_set" value="60"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="300"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
@@ -400,11 +441,11 @@
 			</property>
 			<effect_group name="gunBanditMR10">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-					<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
-					<passive_effect name="MaxRange" operation="base_set" value="80"/>
+					<passive_effect name="DamageFalloffRange" operation="base_set" value="70"/>
+					<passive_effect name="MaxRange" operation="base_set" value="70"/>
 					<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
-					<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
-					<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+					<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+					<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
 					<passive_effect name="RoundsPerMinute" operation="base_set" value="3000"/>
 					<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
 					<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
@@ -446,8 +487,8 @@
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/>
 				<passive_effect name="MaxRange" operation="base_set" value="40"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> 
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
@@ -487,11 +528,11 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="60"/>
-				<passive_effect name="MaxRange" operation="base_set" value="60"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+				<passive_effect name="MaxRange" operation="base_set" value="50"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> 
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
@@ -541,8 +582,8 @@
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="30"/>
 				<passive_effect name="MaxRange" operation="base_set" value="30"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>				
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>				
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/> 
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
 				<passive_effect name="RoundRayCount" operation="base_set" value="10"/>
@@ -616,7 +657,7 @@
 			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC9mmBulletBall" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="32"/> 
+				<passive_effect name="EntityDamage" operation="base_set" value="15"/> 
 				<passive_effect name="BlockDamage" operation="base_set" value="7"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> <!-- These 3 lines fix the missing by shooting self in had bug,  needs tuning  -->
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.3"/> 
@@ -637,7 +678,7 @@
 			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC762mmBulletBall" tiered="false"> <!-- Removed the penetration -->
-				<passive_effect name="EntityDamage" operation="base_set" value="50"/> <!-- per bullet that hits  -->
+				<passive_effect name="EntityDamage" operation="base_set" value="20"/> <!-- per bullet that hits  -->
 				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/> 
@@ -658,8 +699,8 @@
 			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC762mmBulletAP" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="50"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="12"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="20"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="15"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.2"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/> 
@@ -680,7 +721,7 @@
 			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC762mmBulletHP" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="65"/> <!-- per bullet that hits  -->
+				<passive_effect name="EntityDamage" operation="base_set" value="25"/> <!-- per bullet that hits  -->
 				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> <!-- These 3 lines fix the missing by shooting self in had bug,  needs tuning  -->
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/> 
@@ -702,8 +743,11 @@
 			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPCCrossbowBoltIron" tiered="false"> <!-- ammoCrossbowBoltIron -->
-				<passive_effect name="EntityDamage" operation="base_set" value="38"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="20"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.2"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
 				<passive_effect name="ProjectileVelocity" operation="base_set" value="75"/>
@@ -721,7 +765,7 @@
 			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPCArrowIron" tiered="false"> 
-				<passive_effect name="EntityDamage" operation="base_set" value="30"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="15"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/>
@@ -744,14 +788,14 @@
 			<property name="EconomicValue" value="1"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPCShotgunShell" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="14"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="5.4"/>
-				<passive_effect name="BlockDamage" operation="base_add" value="20" tags="wood"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="5"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
+				<passive_effect name="BlockDamage" operation="base_add" value="10" tags="wood"/>
 				<passive_effect name="RoundRayCount" operation="base_set" value="10"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
 				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
 			</effect_group>
 		</item>
 		
@@ -1051,7 +1095,10 @@
 				<property name="QuestGiven" value="challenge_FoolsGold"/>
 			</property>
 		</item>
-	
+		
+
+		
+
 <!--  Vomit Ranged weapons  -->		
 		
 <!--		<item name="rangedBanditAk47">

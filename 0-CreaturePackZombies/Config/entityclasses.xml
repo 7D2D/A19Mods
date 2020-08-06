@@ -28,6 +28,7 @@
 			<property name="Tags" value="entity,cp,male,zombie,walker,melee,template"/>  <!-- entity/sex/type/role/attacktype: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="LookAtAngle" value="60"/> <!-- A19  -->
+			<property name="IsChunkObserver" value="true"/> <!-- When the player leaves the chunk that this zombie is in, can we flag it to despawn? True, we dont need them when a player is not around-->
 			<!-- Mesh and class properties -->
 			<property name="Mesh" value="Zombies/zombieStandardBoeRagdoll"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -916,7 +917,7 @@
 
 <!-- Testing  -->
 
-
+ 
 <!--		<entity_class name="zombieStig" extends="zombieRegularTemplate">
 		
 			<property name="Tags" value="entity,cp,male,zombie,normal"/>
