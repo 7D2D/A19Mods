@@ -166,6 +166,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
         <entity name="zombieGuppySeth" prob=".3"/>
 		<entity name="zombieGuppyGermanCosplay" prob=".3"/>
+		<entity name="zombieMalacayFCiv01" prob=".3"/>
     </append> 
 	
 	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieFemaleTutorialFeral' and @prob='.15']]">
