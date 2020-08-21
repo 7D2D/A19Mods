@@ -436,6 +436,33 @@
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
 		</entity_class>	
 		
+		<entity_class name="animalBanditWolf" extends="animalTemplateHostileWalking">
+			<property name="Mesh" value="#@modfolder(0-CreaturePackAnimals):Resources/XythAnimals.unity3d?WarWolf_X"/>
+			<property name="Tags" value="entity,animal,NPCAnimalWarWolf"/>
+			<property name="Faction" value="whiteriver"/>	
+			<property name="Weight" value="60"/>
+			<property name="HandItem" value="meleeHandAnimalWarWolf"/>	
+			<property name="PhysicsBody" value="wolf"/>
+			<property name="SoundRandom" value="coyoteroam"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+			</effect_group>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/> <!-- Actually has a working ragdoll.  And rootmotion.  No lie  -->
+			<property name="SizeScale" value="1"/> 
+			<property name="RagdollOnDeathChance" value="50"/>
+			<property name="Mass" value="80"/>
+		</entity_class>		
+		
+		
 <!-- Flying Things  -->
 
 		<entity_class name="animalRobin" extends="animalTemplateTimidFlying" >

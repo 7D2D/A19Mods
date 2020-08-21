@@ -41,8 +41,8 @@
 			<property class="Action0">
 				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
 				<property name="Range" value="2.5"/>
-				<property name="DamageEntity" value="45"/>
-				<property name="DamageBlock" value="45"/>
+				<property name="DamageEntity" value="35"/>
+				<property name="DamageBlock" value="35"/>
 			</property>
 		</item>
 		<item name="handDrone">
@@ -51,7 +51,7 @@
 			<property class="Action0">
 				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
 				<property name="Range" value="2.0"/>
-				<property name="DamageEntity" value="20"/>
+				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="20"/>
 			</property>	
 		</item>		
@@ -61,8 +61,8 @@
 			<property class="Action0">
 				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
 				<property name="Range" value="2.5"/>
-				<property name="DamageEntity" value="35"/>
-				<property name="DamageBlock" value="35"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="25"/>
 			</property>		
 		</item>	
 		<item name="handRobotArmy">
@@ -71,8 +71,8 @@
 			<property class="Action0">
 				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
 				<property name="Range" value="2.5"/>
-				<property name="DamageEntity" value="50"/>
-				<property name="DamageBlock" value="50"/>
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="40"/>
 			</property>	
 		</item>			
 		<item name="handMecBee">
@@ -81,8 +81,8 @@
 			<property class="Action0">
 				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
 				<property name="Range" value="1.0"/>
-				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="20"/>
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="10"/>
 			</property>
 		</item>	
 

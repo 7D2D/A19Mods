@@ -11,121 +11,128 @@
 		</entitygroup>
 	</append> -->
 	
+	<append xpath="/entitygroups">
+		<entitygroup name="BanditsAll">
+			<entity name="humanEveBanditClub"  />
+			<entity name="humanEveBanditKnife"  />
+			<entity name="humanEveBanditSMG"  />
+			<entity name="humanEveBanditAK47"  />
+			<entity name="humanEveBanditHunter"  />
+			<entity name="humanEveBanditPistol"  />
+			<entity name="humanEveBanditXBow"  />
+			<entity name="humanEveBanditBow"  />
+			<entity name="humanEveBanditShotty"  />
+			
+			<entity name="humanFarmerBanditClub"  />
+			<entity name="humanFarmerBanditKnife"  />
+			<entity name="humanFarmerBanditSMG"  />
+			<entity name="humanFarmerBanditAK47"  />
+			<entity name="humanFarmerBanditHunter"  />
+			<entity name="humanFarmerBanditPistol"  />
+			<entity name="humanFarmerBanditXBow"  />
+			<entity name="humanFarmerBanditBow"  />
+			<entity name="humanFarmerBanditShotty"  />		
+			
+			<entity name="humanCowboyBanditClub"  />
+			<entity name="humanCowboyBanditKnife"  />
+			<entity name="humanCowboyBanditSMG"  />
+			<entity name="humanCowboyBanditAK47"  />
+			<entity name="humanCowboyBanditHunter"  />
+			<entity name="humanCowboyBanditPistol"  />
+			<entity name="humanCowboyBanditXBow"  />
+			<entity name="humanCowboyBanditBow"  />
+			<entity name="humanCowboyBanditShotty"  />			
+			
+			<entity name="humanHarleyBanditClub"  />
+			<entity name="humanHarleyBanditKnife"  />
+			<entity name="humanHarleyBanditSMG"  />
+			<entity name="humanHarleyBanditAK47"  />
+			<entity name="humanHarleyBanditHunter"  />
+			<entity name="humanHarleyBanditPistol"  />
+			<entity name="humanHarleyBanditXBow"  />
+			<entity name="humanHarleyBanditBow"  />
+			<entity name="humanHarleyBanditShotty"  />			
+			
+			<entity name="humanBakerBanditChefKnife"  />
+			<entity name="humanJoelBanditChefKnife"  />
+			<entity name="humanHarleyBanditSlugger"  />				
+		</entitygroup>
+	</append> 
+	
+	<append xpath="/entitygroups">
+		<entitygroup name="SurvivorsAll">
+			<entity name="humanFarmerSurvivorClub"  />
+			<entity name="humanFarmerSurvivorKnife"  />
+			<entity name="humanFarmerSurvivorSMG"  />
+			<entity name="humanFarmerSurvivorAK47"  />
+			<entity name="humanFarmerSurvivorHunter"  />
+			<entity name="humanFarmerSurvivorPistol"  />
+			<entity name="humanFarmerSurvivorXBow"  />
+			<entity name="humanFarmerSurvivorBow"  />
+			<entity name="humanFarmerSurvivorShotty"  />	
+
+			<entity name="humanBakerSurvivorClub"  />
+			<entity name="humanBakerSurvivorKnife"  />
+			<entity name="humanBakerSurvivorSMG"  />
+			<entity name="humanBakerSurvivorAK47"  />
+			<entity name="humanBakerSurvivorHunter"  />
+			<entity name="humanBakerSurvivorPistol"  />
+			<entity name="humanBakerSurvivorXBow"  />
+			<entity name="humanBakerSurvivorBow"  />
+			<entity name="humanBakerSurvivorShotty"  />	
+
+			<entity name="humanNurseSurvivorClub"  />
+			<entity name="humanNurseSurvivorKnife"  />
+			<entity name="humanNurseSurvivorSMG"  />
+			<entity name="humanNurseSurvivorAK47"  />
+			<entity name="humanNurseSurvivorHunter"  />
+			<entity name="humanNurseSurvivorPistol"  />
+			<entity name="humanNurseSurvivorXBow"  />
+			<entity name="humanNurseSurvivorBow"  />
+			<entity name="humanNurseSurvivorShotty"  />	
+		</entitygroup>
+	</append> 	
+
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesAll')]">
-		<entity name="humanEveBanditClub" prob="0.01" />
-		<entity name="humanEveBanditKnife" prob="0.01" />
+		<entity name="humanEveBanditClub" prob="0.03" />
+		<entity name="humanEveBanditKnife" prob="0.03" />
 		<entity name="humanEveBanditSMG" prob="0.01" />
 		<entity name="humanEveBanditAK47" prob="0.01" />
 		<entity name="humanEveBanditHunter" prob="0.01" />
-		<entity name="humanEveBanditPistol" prob="0.01" />
-		<entity name="humanEveBanditXBow" prob="0.01" />
-		<entity name="humanEveBanditBow" prob="0.01" />
+		<entity name="humanEveBanditPistol" prob="0.02" />
+		<entity name="humanEveBanditXBow" prob="0.02" />
+		<entity name="humanEveBanditBow" prob="0.02" />
 		<entity name="humanEveBanditShotty" prob="0.01" />
-		
-		<entity name="humanFarmerBanditClub" prob="0.01" />
-		<entity name="humanFarmerBanditKnife" prob="0.01" />
-		<entity name="humanFarmerBanditSMG" prob="0.01" />
-		<entity name="humanFarmerBanditAK47" prob="0.01" />
-		<entity name="humanFarmerBanditHunter" prob="0.01" />
-		<entity name="humanFarmerBanditPistol" prob="0.01" />
-		<entity name="humanFarmerBanditXBow" prob="0.01" />
-		<entity name="humanFarmerBanditBow" prob="0.01" />
-		<entity name="humanFarmerBanditShotty" prob="0.01" />		
-		
-		<entity name="humanCowboyBanditClub" prob="0.01" />
-		<entity name="humanCowboyBanditKnife" prob="0.01" />
-		<entity name="humanCowboyBanditSMG" prob="0.01" />
-		<entity name="humanCowboyBanditAK47" prob="0.01" />
-		<entity name="humanCowboyBanditHunter" prob="0.01" />
-		<entity name="humanCowboyBanditPistol" prob="0.01" />
-		<entity name="humanCowboyBanditXBow" prob="0.01" />
-		<entity name="humanCowboyBanditBow" prob="0.01" />
-		<entity name="humanCowboyBanditShotty" prob="0.01" />			
-		
-		<entity name="humanHarleyBanditClub" prob="0.01" />
-		<entity name="humanHarleyBanditKnife" prob="0.01" />
-		<entity name="humanHarleyBanditSMG" prob="0.01" />
-		<entity name="humanHarleyBanditAK47" prob="0.01" />
-		<entity name="humanHarleyBanditHunter" prob="0.01" />
-		<entity name="humanHarleyBanditPistol" prob="0.01" />
-		<entity name="humanHarleyBanditXBow" prob="0.01" />
-		<entity name="humanHarleyBanditBow" prob="0.01" />
-		<entity name="humanHarleyBanditShotty" prob="0.01" />			
-		
-		<entity name="humanBakerBanditChefKnife" prob="0.01" />
-		<entity name="humanJoelBanditChefKnife" prob="0.01" />
-		<entity name="humanHarleyBanditSlugger" prob="0.01" />				
-<!--  Survivors  -->
-		<entity name="humanFarmerSurvivorClub" prob="0.01" />
-		<entity name="humanFarmerSurvivorKnife" prob="0.01" />
-		<entity name="humanFarmerSurvivorSMG" prob="0.01" />
-		<entity name="humanFarmerSurvivorAK47" prob="0.01" />
-		<entity name="humanFarmerSurvivorHunter" prob="0.01" />
-		<entity name="humanFarmerSurvivorPistol" prob="0.01" />
-		<entity name="humanFarmerSurvivorXBow" prob="0.01" />
-		<entity name="humanFarmerSurvivorBow" prob="0.01" />
-		<entity name="humanFarmerSurvivorShotty" prob="0.01" />	
-
-		<entity name="humanBakerSurvivorClub" prob="0.01" />
-		<entity name="humanBakerSurvivorKnife" prob="0.01" />
-		<entity name="humanBakerSurvivorSMG" prob="0.01" />
-		<entity name="humanBakerSurvivorAK47" prob="0.01" />
-		<entity name="humanBakerSurvivorHunter" prob="0.01" />
-		<entity name="humanBakerSurvivorPistol" prob="0.01" />
-		<entity name="humanBakerSurvivorXBow" prob="0.01" />
-		<entity name="humanBakerSurvivorBow" prob="0.01" />
-		<entity name="humanBakerSurvivorShotty" prob="0.01" />	
-
-		<entity name="humanNurseSurvivorClub" prob="0.01" />
-		<entity name="humanNurseSurvivorKnife" prob="0.01" />
-		<entity name="humanNurseSurvivorSMG" prob="0.01" />
-		<entity name="humanNurseSurvivorAK47" prob="0.01" />
-		<entity name="humanNurseSurvivorHunter" prob="0.01" />
-		<entity name="humanNurseSurvivorPistol" prob="0.01" />
-		<entity name="humanNurseSurvivorXBow" prob="0.01" />
-		<entity name="humanNurseSurvivorBow" prob="0.01" />
-		<entity name="humanNurseSurvivorShotty" prob="0.01" />	
-	</append> 	
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesNight')]">
-		<entity name="humanEveBanditClub" prob="0.03" />
-		<entity name="humanEveBanditKnife" prob="0.03" />
-		<entity name="humanEveBanditSMG" prob="0.03" />
-		<entity name="humanEveBanditAK47" prob="0.03" />
-		<entity name="humanEveBanditHunter" prob="0.03" />
-		<entity name="humanEveBanditPistol" prob="0.03" />
-		<entity name="humanEveBanditXBow" prob="0.03" />
-		<entity name="humanEveBanditBow" prob="0.03" />
-		<entity name="humanEveBanditShotty" prob="0.03" />
 		
 		<entity name="humanFarmerBanditClub" prob="0.03" />
 		<entity name="humanFarmerBanditKnife" prob="0.03" />
-		<entity name="humanFarmerBanditSMG" prob="0.03" />
-		<entity name="humanFarmerBanditAK47" prob="0.03" />
-		<entity name="humanFarmerBanditHunter" prob="0.03" />
-		<entity name="humanFarmerBanditPistol" prob="0.03" />
-		<entity name="humanFarmerBanditXBow" prob="0.03" />
-		<entity name="humanFarmerBanditBow" prob="0.03" />
-		<entity name="humanFarmerBanditShotty" prob="0.03" />		
+		<entity name="humanFarmerBanditSMG" prob="0.01" />
+		<entity name="humanFarmerBanditAK47" prob="0.01" />
+		<entity name="humanFarmerBanditHunter" prob="0.01" />
+		<entity name="humanFarmerBanditPistol" prob="0.02" />
+		<entity name="humanFarmerBanditXBow" prob="0.02" />
+		<entity name="humanFarmerBanditBow" prob="0.02" />
+		<entity name="humanFarmerBanditShotty" prob="0.01" />		
 		
 		<entity name="humanCowboyBanditClub" prob="0.03" />
 		<entity name="humanCowboyBanditKnife" prob="0.03" />
-		<entity name="humanCowboyBanditSMG" prob="0.03" />
-		<entity name="humanCowboyBanditAK47" prob="0.03" />
-		<entity name="humanCowboyBanditHunter" prob="0.03" />
-		<entity name="humanCowboyBanditPistol" prob="0.03" />
-		<entity name="humanCowboyBanditXBow" prob="0.03" />
-		<entity name="humanCowboyBanditBow" prob="0.03" />
-		<entity name="humanCowboyBanditShotty" prob="0.03" />			
+		<entity name="humanCowboyBanditSMG" prob="0.01" />
+		<entity name="humanCowboyBanditAK47" prob="0.01" />
+		<entity name="humanCowboyBanditHunter" prob="0.01" />
+		<entity name="humanCowboyBanditPistol" prob="0.02" />
+		<entity name="humanCowboyBanditXBow" prob="0.02" />
+		<entity name="humanCowboyBanditBow" prob="0.02" />
+		<entity name="humanCowboyBanditShotty" prob="0.01" />			
 		
 		<entity name="humanHarleyBanditClub" prob="0.03" />
 		<entity name="humanHarleyBanditKnife" prob="0.03" />
-		<entity name="humanHarleyBanditSMG" prob="0.03" />
-		<entity name="humanHarleyBanditAK47" prob="0.03" />
-		<entity name="humanHarleyBanditHunter" prob="0.03" />
-		<entity name="humanHarleyBanditPistol" prob="0.03" />
-		<entity name="humanHarleyBanditXBow" prob="0.03" />
-		<entity name="humanHarleyBanditBow" prob="0.03" />
-		<entity name="humanHarleyBanditShotty" prob="0.03" />			
+		<entity name="humanHarleyBanditSMG" prob="0.01" />
+		<entity name="humanHarleyBanditAK47" prob="0.01" />
+		<entity name="humanHarleyBanditHunter" prob="0.01" />
+		<entity name="humanHarleyBanditPistol" prob="0.02" />
+		<entity name="humanHarleyBanditXBow" prob="0.02" />
+		<entity name="humanHarleyBanditBow" prob="0.02" />
+		<entity name="humanHarleyBanditShotty" prob="0.01" />			
 		
 		<entity name="humanBakerBanditChefKnife" prob="0.03" />
 		<entity name="humanJoelBanditChefKnife" prob="0.03" />
@@ -133,79 +140,154 @@
 <!--  Survivors  -->
 		<entity name="humanFarmerSurvivorClub" prob="0.03" />
 		<entity name="humanFarmerSurvivorKnife" prob="0.03" />
-		<entity name="humanFarmerSurvivorSMG" prob="0.03" />
-		<entity name="humanFarmerSurvivorAK47" prob="0.03" />
-		<entity name="humanFarmerSurvivorHunter" prob="0.03" />
-		<entity name="humanFarmerSurvivorPistol" prob="0.03" />
-		<entity name="humanFarmerSurvivorXBow" prob="0.03" />
-		<entity name="humanFarmerSurvivorBow" prob="0.03" />
-		<entity name="humanFarmerSurvivorShotty" prob="0.03" />	
+		<entity name="humanFarmerSurvivorSMG" prob="0.01" />
+		<entity name="humanFarmerSurvivorAK47" prob="0.01" />
+		<entity name="humanFarmerSurvivorHunter" prob="0.01" />
+		<entity name="humanFarmerSurvivorPistol" prob="0.02" />
+		<entity name="humanFarmerSurvivorXBow" prob="0.02" />
+		<entity name="humanFarmerSurvivorBow" prob="0.02" />
+		<entity name="humanFarmerSurvivorShotty" prob="0.01" />	
 
 		<entity name="humanBakerSurvivorClub" prob="0.03" />
 		<entity name="humanBakerSurvivorKnife" prob="0.03" />
-		<entity name="humanBakerSurvivorSMG" prob="0.03" />
-		<entity name="humanBakerSurvivorAK47" prob="0.03" />
-		<entity name="humanBakerSurvivorHunter" prob="0.03" />
-		<entity name="humanBakerSurvivorPistol" prob="0.03" />
-		<entity name="humanBakerSurvivorXBow" prob="0.03" />
-		<entity name="humanBakerSurvivorBow" prob="0.03" />
-		<entity name="humanBakerSurvivorShotty" prob="0.03" />	
+		<entity name="humanBakerSurvivorSMG" prob="0.01" />
+		<entity name="humanBakerSurvivorAK47" prob="0.01" />
+		<entity name="humanBakerSurvivorHunter" prob="0.01" />
+		<entity name="humanBakerSurvivorPistol" prob="0.02" />
+		<entity name="humanBakerSurvivorXBow" prob="0.02" />
+		<entity name="humanBakerSurvivorBow" prob="0.02" />
+		<entity name="humanBakerSurvivorShotty" prob="0.01" />	
 
 		<entity name="humanNurseSurvivorClub" prob="0.03" />
 		<entity name="humanNurseSurvivorKnife" prob="0.03" />
-		<entity name="humanNurseSurvivorSMG" prob="0.03" />
-		<entity name="humanNurseSurvivorAK47" prob="0.03" />
-		<entity name="humanNurseSurvivorHunter" prob="0.03" />
-		<entity name="humanNurseSurvivorPistol" prob="0.03" />
-		<entity name="humanNurseSurvivorXBow" prob="0.03" />
-		<entity name="humanNurseSurvivorBow" prob="0.03" />
-		<entity name="humanNurseSurvivorShotty" prob="0.03" />	
-	</append> 		
-	
-	<!--  Testing Human Bandit Sleepers  -->
+		<entity name="humanNurseSurvivorSMG" prob="0.01" />
+		<entity name="humanNurseSurvivorAK47" prob="0.01" />
+		<entity name="humanNurseSurvivorHunter" prob="0.01" />
+		<entity name="humanNurseSurvivorPistol" prob="0.02" />
+		<entity name="humanNurseSurvivorXBow" prob="0.02" />
+		<entity name="humanNurseSurvivorBow" prob="0.02" />
+		<entity name="humanNurseSurvivorShotty" prob="0.01" />	
+	</append> 	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesNight')]">
+		<entity name="humanEveBanditClub" prob="0.05" />
+		<entity name="humanEveBanditKnife" prob="0.05" />
+		<entity name="humanEveBanditSMG" prob="0.05" />
+		<entity name="humanEveBanditAK47" prob="0.05" />
+		<entity name="humanEveBanditHunter" prob="0.05" />
+		<entity name="humanEveBanditPistol" prob="0.05" />
+		<entity name="humanEveBanditXBow" prob="0.05" />
+		<entity name="humanEveBanditBow" prob="0.05" />
+		<entity name="humanEveBanditShotty" prob="0.05" />
+		
+		<entity name="humanFarmerBanditClub" prob="0.05" />
+		<entity name="humanFarmerBanditKnife" prob="0.05" />
+		<entity name="humanFarmerBanditSMG" prob="0.05" />
+		<entity name="humanFarmerBanditAK47" prob="0.05" />
+		<entity name="humanFarmerBanditHunter" prob="0.05" />
+		<entity name="humanFarmerBanditPistol" prob="0.05" />
+		<entity name="humanFarmerBanditXBow" prob="0.05" />
+		<entity name="humanFarmerBanditBow" prob="0.05" />
+		<entity name="humanFarmerBanditShotty" prob="0.05" />		
+		
+		<entity name="humanCowboyBanditClub" prob="0.05" />
+		<entity name="humanCowboyBanditKnife" prob="0.05" />
+		<entity name="humanCowboyBanditSMG" prob="0.05" />
+		<entity name="humanCowboyBanditAK47" prob="0.05" />
+		<entity name="humanCowboyBanditHunter" prob="0.05" />
+		<entity name="humanCowboyBanditPistol" prob="0.05" />
+		<entity name="humanCowboyBanditXBow" prob="0.05" />
+		<entity name="humanCowboyBanditBow" prob="0.05" />
+		<entity name="humanCowboyBanditShotty" prob="0.05" />			
+		
+		<entity name="humanHarleyBanditClub" prob="0.05" />
+		<entity name="humanHarleyBanditKnife" prob="0.05" />
+		<entity name="humanHarleyBanditSMG" prob="0.05" />
+		<entity name="humanHarleyBanditAK47" prob="0.05" />
+		<entity name="humanHarleyBanditHunter" prob="0.05" />
+		<entity name="humanHarleyBanditPistol" prob="0.05" />
+		<entity name="humanHarleyBanditXBow" prob="0.05" />
+		<entity name="humanHarleyBanditBow" prob="0.05" />
+		<entity name="humanHarleyBanditShotty" prob="0.05" />			
+		
+		<entity name="humanBakerBanditChefKnife" prob="0.05" />
+		<entity name="humanJoelBanditChefKnife" prob="0.05" />
+		<entity name="humanHarleyBanditSlugger" prob="0.05" />				
+<!--  Survivors  -->
+		<entity name="humanFarmerSurvivorClub" prob="0.05" />
+		<entity name="humanFarmerSurvivorKnife" prob="0.05" />
+		<entity name="humanFarmerSurvivorSMG" prob="0.05" />
+		<entity name="humanFarmerSurvivorAK47" prob="0.05" />
+		<entity name="humanFarmerSurvivorHunter" prob="0.05" />
+		<entity name="humanFarmerSurvivorPistol" prob="0.05" />
+		<entity name="humanFarmerSurvivorXBow" prob="0.05" />
+		<entity name="humanFarmerSurvivorBow" prob="0.05" />
+		<entity name="humanFarmerSurvivorShotty" prob="0.05" />	
 
-	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoe']">
-		<entity name="humanEveBanditSleeperKnife" prob="0.03" />
-		<entity name="humanEveBanditSleeperSMG" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperKnife" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperSMG" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperKnife" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperSMG" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperPistol" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperSlugger" prob="0.03" />				
+		<entity name="humanBakerSurvivorClub" prob="0.05" />
+		<entity name="humanBakerSurvivorKnife" prob="0.05" />
+		<entity name="humanBakerSurvivorSMG" prob="0.05" />
+		<entity name="humanBakerSurvivorAK47" prob="0.05" />
+		<entity name="humanBakerSurvivorHunter" prob="0.05" />
+		<entity name="humanBakerSurvivorPistol" prob="0.05" />
+		<entity name="humanBakerSurvivorXBow" prob="0.05" />
+		<entity name="humanBakerSurvivorBow" prob="0.05" />
+		<entity name="humanBakerSurvivorShotty" prob="0.05" />	
+
+		<entity name="humanNurseSurvivorClub" prob="0.05" />
+		<entity name="humanNurseSurvivorKnife" prob="0.05" />
+		<entity name="humanNurseSurvivorSMG" prob="0.05" />
+		<entity name="humanNurseSurvivorAK47" prob="0.05" />
+		<entity name="humanNurseSurvivorHunter" prob="0.05" />
+		<entity name="humanNurseSurvivorPistol" prob="0.05" />
+		<entity name="humanNurseSurvivorXBow" prob="0.05" />
+		<entity name="humanNurseSurvivorBow" prob="0.05" />
+		<entity name="humanNurseSurvivorShotty" prob="0.05" />	
+	</append> 
+
+	<!--  Testing Human Bandit Sleepers  -->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoeRadiated']">
+		<entity name="humanEveBanditSleeperKnife" prob="0.05" />
+		<entity name="humanEveBanditSleeperSMG" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperKnife" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperSMG" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperKnife" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperSMG" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperPistol" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperSlugger" prob="0.05" />				
 	</insertAfter>
 	
-	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieJoe']">
-		<entity name="humanEveBanditSleeperKnife" prob="0.03" />
-		<entity name="humanEveBanditSleeperSMG" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperKnife" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperSMG" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperKnife" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperSMG" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperPistol" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperSlugger" prob="0.03" />		
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieJoeRadiated']">
+		<entity name="humanEveBanditSleeperKnife" prob="0.05" />
+		<entity name="humanEveBanditSleeperSMG" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperKnife" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperSMG" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperKnife" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperSMG" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperPistol" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperSlugger" prob="0.05" />		
 	</insertAfter>
 	
-	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteve']">
-		<entity name="humanEveBanditSleeperKnife" prob="0.03" />
-		<entity name="humanEveBanditSleeperSMG" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperKnife" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperSMG" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperKnife" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperSMG" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperPistol" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperSlugger" prob="0.03" />		
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteveRadiated']">
+		<entity name="humanEveBanditSleeperKnife" prob="0.05" />
+		<entity name="humanEveBanditSleeperSMG" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperKnife" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperSMG" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperKnife" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperSMG" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperPistol" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperSlugger" prob="0.05" />		
 	</insertAfter>
 	
-	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMoe']">
-		<entity name="humanEveBanditSleeperKnife" prob="0.03" />
-		<entity name="humanEveBanditSleeperSMG" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperKnife" prob="0.03" />
-		<entity name="humanFarmerBanditSleeperSMG" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperKnife" prob="0.03" />
-		<entity name="humanCowboyBanditSleeperSMG" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperPistol" prob="0.03" />		
-		<entity name="humanHarleyBanditSleeperSlugger" prob="0.03" />		
+	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMoeRadiated']">
+		<entity name="humanEveBanditSleeperKnife" prob="0.05" />
+		<entity name="humanEveBanditSleeperSMG" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperKnife" prob="0.05" />
+		<entity name="humanFarmerBanditSleeperSMG" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperKnife" prob="0.05" />
+		<entity name="humanCowboyBanditSleeperSMG" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperPistol" prob="0.05" />		
+		<entity name="humanHarleyBanditSleeperSlugger" prob="0.05" />		
 	</insertAfter> 
 
 

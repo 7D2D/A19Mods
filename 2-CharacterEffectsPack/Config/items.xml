@@ -180,6 +180,10 @@
 				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="IsHuman" />
 				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" cvar="InfectedStageCvar" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="Disinfect Zombie">
+				<requirement name="EntityTagCompare" target="other" tags="saveable"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="IsCured" />
+			</effect_group>
 		</item>		
 
 	</append>

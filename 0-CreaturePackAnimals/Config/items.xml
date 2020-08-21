@@ -57,6 +57,17 @@
 				<property name="DamageBlock" value="5"/>
 			</property>
 		</item>
+		<item name="meleeHandAnimalWarWolf">
+			<property name="Extends" value="meleeHandAnimalTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="35"/>
+			<property class="Action0">
+				<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="1.3"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="9"/>
+			</property>
+		</item>
 		<item name="meleeHandAnimalSpider">
 			<property name="Extends" value="meleeHandAnimalTemplate"/>
 			<property name="CreativeMode" value="None"/>

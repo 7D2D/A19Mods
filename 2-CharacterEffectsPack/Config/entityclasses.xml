@@ -19,8 +19,9 @@
 			<property name="SoundDeath" value="malehatedeath"/>
 			<property name="SoundAttack" value="malehateattack"/>	
 		</entity_class>	
-	</append>
+	</append>	
 	
+
 <!-- New sound system needs to know if character is male or female  -->	
 	
 	
