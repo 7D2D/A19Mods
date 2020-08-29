@@ -253,5 +253,16 @@
 			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
 		</SoundDataNode>
 		
+		<SoundDataNode name="flySounds">
+			<AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="#@modfolder:Resources/Flynoise.unity3d?flynoise" Loop="true" />
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="3"/>
+			<LowestPitch name="0.8"/>
+			<HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="20"/> 
+		</SoundDataNode>	
+		
 	</append>	
 </configs>

@@ -240,7 +240,7 @@
 
 <!--  Xyth Swarms  -->		
 	
-		<entity_class name="animalSnowSwarm_X" extends="animalZombieVulture">
+		<entity_class name="animalSnowSwarm_X" extends="animalTemplateHostileFlying">
 			<property name="Tags" value="hostile"/>
 			<property name="Class" value="EntityHornet" />
 			<property name="AvatarController" value="AvatarAnimalController"/>
@@ -250,7 +250,7 @@
 			<property name="PhysicsBody" value="vulture" />
 			<property name="SurfaceCategory" value="earth"/>
 			<property name="Mass" value="10"/>
-			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?SnowSwarm2_X" /> 
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?SnowSwarm2_X" /> 
 			<property name="HandItem" value="meleeHandSnowstorm" />
 			<property name="SoundRandom" value="" />
 			<property name="SoundRandomTime" value="60.0"/>
@@ -272,9 +272,9 @@
 			<property name="MoveSpeed" value=".2"/>
 			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 
 		</entity_class> 
-		<entity_class name="animalBloodFlySwarm_X" extends="animalZombieVulture">
+		<entity_class name="animalBloodFlySwarm_X" extends="animalTemplateHostileFlying">
 			<property name="Tags" value="insect,hostile"/>
-			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?Swarm_X" /> 
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Swarm_X" /> 
 			<property name="HandItem" value="meleeHandBloodFly" />
 			<property name="Class" value="EntityVulture" />
 			<property name="AvatarController" value="AvatarAnimalController"/>
@@ -462,7 +462,6 @@
 			<property name="Mass" value="80"/>
 		</entity_class>		
 		
-		
 <!-- Flying Things  -->
 
 		<entity_class name="animalRobin" extends="animalTemplateTimidFlying" >
@@ -589,7 +588,40 @@
 		</entity_class>
 		
 <!--  Hostile Flyers  -->		
-		
+		<entity_class name="animalBloatfly" extends="animalTemplateHostileFlying"> 
+			<property name="Tags" value="entity,cp,animal,hostile,animalBloatfly"/>
+			<property name="Faction" value="animals"/>					
+			<property name="Mass" value="100"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Bloatfly_X"/>
+<!--			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?creatureGuppyFlyingInsect"/> -->
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="MaxTurnSpeed" value="190"/>      
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="ExperienceGain" value="250"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SoundRandomTime" value="5"/>
+			<property name="SoundRandom" value="flySounds" />
+			<property name="SoundAlert" value="flySounds"/>
+			<property name="SoundHurt" value="animalhornethurt"/>
+			<property name="SoundDeath" value="animalhornetdeath"/>
+			<property name="SoundAttack" value="animalhornetattack"/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5"/> <!-- animalZombieDog -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="0"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="0"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="0"/>
+		</entity_class>			
 		<entity_class name="animalGuppyInsect" extends="animalTemplateHostileFlying"> 
 			<property name="Tags" value="entity,cp,animal,hostile,animalGuppyInsect"/>
 			<property name="Faction" value="animals"/>					
@@ -611,7 +643,7 @@
 			<property name="SoundSense" value=""/>
 			<property name="SoundGiveUp" value=""/>
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="390"/>
+				<passive_effect name="HealthMax" operation="base_set" value="350"/>
 			</effect_group>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
             <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/> 

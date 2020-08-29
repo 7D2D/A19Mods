@@ -5,17 +5,26 @@
 		<entity name="animalRobin" />
 		<entity name="animalCrow" />
 		<entity name="animalEagle" />
+		<entity name="animalAlcatraz" />
 		<entity name="animalPug" prob=".25" />
 		<entity name="animalBeagle" prob=".25" />
 		<entity name="animalBat" prob=".25" />
-		<entity name="animalBats" prob="1" />
+		<entity name="animalBats" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='AnimalsFarm']">	
 		<entity name="animalGoat" />
-		<entity name="animalWolfhound" />
+		<entity name="animalWolfhound" prob=".25" />
+		<entity name="animalFox" prob=".25" />
+		<entity name="animalPug" prob=".25" />
+		<entity name="animalBeagle" prob=".25" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='WildGameForest']">		
-		<entity name="animalGoat" prob="1" />
+		<entity name="animalGoat" />
+		<entity name="animalRobin" />
+		<entity name="animalCrow" />
+		<entity name="animalEagle" />
+		<entity name="animalAlcatraz" />
+		<entity name="animalFox" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">	
 		<entity name="animalSpider01" prob="20"/>
