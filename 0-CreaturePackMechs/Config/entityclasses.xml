@@ -3,7 +3,6 @@
 	<append xpath="/entity_classes" >
 
 		<entity_class name="mechTemplateHostile">
-			<property name="IsChunkObserver" value="true"/>
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want mechs to head track  -->
 			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
@@ -85,8 +84,10 @@
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="DeadBodyHitPoints" value="300"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="DeadBodyHitPoints" value="300"/>
 			<property name="CanClimbLadders" value="true"/>
 			<property name="ExperienceGain" value="550"/> 
 			<effect_group name="Base Effects">
@@ -99,10 +100,10 @@
 			</effect_group>
 		</entity_class>
 		
-<!--  Drones:  Not currently interactable is A19b173  --> 
+<!--  Drones:  Not currently interactable is A19b180  --> 
 	
-		<entity_class name="droneJunkDrone" >
-			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
+<!--		<entity_class name="droneJunkDrone" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X" />	
 			<property name="Class" value="EntityDrone"/>
 			<property name="Parent" value="NPC"/>
 			<property name="Prefab" value="NPC"/>
@@ -116,9 +117,9 @@
 			<property name="NavObject" value="NOjunkDrone" />
 			<property name="TrackerIcon" value="ui_game_symbol_assemble"/>
 			<property name="NPCID" value="NPCjunkDrone"/>
-			<property name="LootListAlive" value="139"/> <!-- used to determine container X/Y size -->
+			<property name="LootListAlive" value="139"/> 
 			<property name="TimeStayAfterDeath" value="3600"/>
-			<property name="ModelType" value="Custom"/>	<!-- <property name="ModelType" value="Custom"/> -->
+			<property name="ModelType" value="Custom"/>	
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="SurfaceCategory" value="metal"/>
             <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
@@ -170,7 +171,7 @@
             <drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="1"/>
              <drop event="Destroy" name="resourceScrapIron" count="1"/>
             <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>			
-		</entity_class>	
+		</entity_class>	-->
 		
 <!--  Robots  -->
 		

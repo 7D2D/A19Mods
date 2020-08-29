@@ -12,12 +12,12 @@
 		<entity name="mechDrone" prob="5" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']">
-		<entity name="mechSphereI" prob="10" />
-		<entity name="mechSphereII" prob="10" />
+		<entity name="mechSphereI" prob="5" />
+		<entity name="mechSphereII" prob="5" />
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
-		<entity name="mechSphereI" prob="10" />
-		<entity name="mechSphereII" prob="10" />
+		<entity name="mechSphereI" prob="5" />
+		<entity name="mechSphereII" prob="5" />
 	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='VultureGroup']">	
 		<entity name="mechBee" />
