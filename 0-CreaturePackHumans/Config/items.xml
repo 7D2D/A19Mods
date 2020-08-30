@@ -1,7 +1,7 @@
 <configs>
 	<append xpath="/items">
 	
-		<item name="HumanEntityLoadingHack">
+		<item name="HumanEntityLoadingHack01">
 			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
 			<property name="HoldType" value="45"/>
@@ -15,6 +15,62 @@
 			<property name="EconomicBundleSize" value="1000"/>
 			<property name="Group" value="Resources"/>
 		</item>
+		<item name="HumanEntityLoadingHack02">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>		
+		<item name="HumanEntityLoadingHack04">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>		
+		<item name="HumanEntityLoadingHack05">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>		
+		<item name="HumanEntityLoadingHack06">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultResidentDark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultResidentDark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>		
 	
 <!-- Buff Books  -->
 	

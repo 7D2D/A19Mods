@@ -1,0 +1,7 @@
+<configs>
+	
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='22']/spawn/@group">BanditsAll </set> 
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='22']/spawn[@group='BanditsAll' and @num='08']/@num">03</set> 
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='39']/spawn/@group">BanditsAll </set> 
+
+</configs>

@@ -34,11 +34,11 @@
 	
 <!-- Templates  -->	
 
-		<!--  These templates use the BanditClass, which has the advantage of spawning a weapon into a properly configured Hand/Gun Joint.  Ranged characters can be very accurate.  In vanilla, faction is decided by class, so good guys need to use a different class, like the enemyanimal class for example. -->
+		<!--  These Templates use the BanditClass, which has the advantage of spawning a weapon into a properly configured Hand/Gun Joint.  Ranged characters can be very accurate.  In vanilla, faction is decided by class, so good guys need to use a different class, like the enemyanimal class for example. -->
 
-		<!--  GrandParent templates  -->
+		<!--  GrandParent Templates  -->
 
-		<entity_class name="humanMeleeMaleTemplate"> <!-- If you want to make a bandit without spawning in weapons, use this template  -->
+		<entity_class name="humanMeleeMaleTemplate"> <!-- If you want to make a bandit without spawning in weapons, use this Template  -->
 			<property name="EntityType" value="Player"/>
 			<property name="Tags" value="entity,male,human,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
@@ -60,7 +60,7 @@
 			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
 			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
 			<property name="TrackerIcon" value="ui_game_symbol_run"/>		
-			<property name="AINoiseSeekDist" value="20"/>	
+			<property name="AINoiseSeekDist" value="30"/>	
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="LookAtAngle" value="0"/> <!-- A19  Fixs broken necks for now -->
 			<property name="AttackTimeoutDay" value="1.2"/> 
@@ -142,8 +142,8 @@
 			<property name="HeadExplosionDamageMultiplier" value="1"/>
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
 			<property name="PainResistPerHit" value=".5"/>		
-			<property name="MaxViewAngle" value="270"/>
-			<property name="SightRange" value="50"/>
+			<property name="MaxViewAngle" value="230"/>
+			<property name="SightRange" value="70"/>
 			<property name="LegCrippleScale" value="0"/><!--  Needed to prevent crippling which changes walktype to zombie (may change that eventually  -->
 			<property name="SightLightThreshold" value="-2,150"/> 
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> 
@@ -155,7 +155,7 @@
 			<property name="SleeperSmellSenseThreshold" value="20,50"/> 
 			<property name="SoundSleeperSenseChance" value=".5"/> 
 			<property name="SleeperSmellWakeThreshold" value="40,100"/>
-			<property name="NoiseAlertThreshold" value="30"/> 
+			<property name="NoiseAlertThreshold" value="50"/> 
 			<property name="SmellAlertThreshold" value="40"/> 
 			<property name="MaxTurnSpeed" value="250"/>
 			<property name="MoveSpeed" value="0.25"/> 
@@ -167,10 +167,10 @@
 			<property name="JumpMaxDistance" value="2.8, 3.9"/>
 			<property name="Immunity" value="sickness;disease;wellness"/> 
 			<property name="ExperienceGain" value="500"/> 
-			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropProb" value="0.1"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 			<property name="TimeStayAfterDeath" value="30"/>
-			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="DeadBodyHitPoints" value="400"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="200"/>
@@ -220,7 +220,7 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>			
 		</entity_class>
 		
-		<entity_class name="humanRangedMaleTemplate" extends="humanMeleeMaleTemplate"> 	<!-- If you want to make a ranged bandit without spawning in weapons, use this template  -->
+		<entity_class name="humanRangedMaleTemplate" extends="humanMeleeMaleTemplate"> 	<!-- If you want to make a ranged bandit without spawning in weapons, use this Template  -->
 			<property name="Class" value="EntityBandit"/>
 			<property name="Tags" value="entity,male,human,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
@@ -270,7 +270,7 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>				
 		</entity_class>	
 		
-		<!--  Bandit Sleeper templates, not doing survivors as its fine if they sleep when player is near  -->
+		<!--  Bandit Sleeper Templates, not doing survivors as its fine if they sleep when player is near  -->
 		
 		<entity_class name="humanMeleeMaleSleeperTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Tags" value="entity,male,human,melee,sleeper"/>
@@ -304,47 +304,55 @@
 		<!--  Parent Templates  Not really needed because as long as you specify the 3 ItemsOnEnterGame in each entity class then these are redundent, but left as examples of the minimum required elements as Class determines targeting, and faction and tags do not extend.   -->
 		
 			
-		<entity_class name="humanMeleeMaleBanditTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this template  -->
+		<entity_class name="humanMeleeMaleBanditTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this Template  -->
 			<property name="Tags" value="entity,male,human,bandit,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
 		</entity_class>	
 
-		<entity_class name="humanRangedMaleBanditTemplate" extends="humanRangedMaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this template  -->
+		<entity_class name="humanRangedMaleBanditTemplate" extends="humanRangedMaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this Template  -->
 			<property name="Tags" value="entity,male,human,bandit,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
 		</entity_class>	
 		
-		<entity_class name="humanMeleeFemaleBanditTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this template  -->
+		<entity_class name="humanMeleeFemaleBanditTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this Template  -->
 			<property name="Tags" value="entity,female,human,bandit,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
 		</entity_class>	
 
-		<entity_class name="humanRangedFemaleBanditTemplate" extends="humanRangedFemaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this template  -->
+		<entity_class name="humanRangedFemaleBanditTemplate" extends="humanRangedFemaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this Template  -->
 			<property name="Tags" value="entity,female,human,bandit,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>			
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
 		</entity_class>			
 		
-		<entity_class name="humanMeleeMaleSurvivorTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a melee survivor, use this template  -->
+		<entity_class name="humanMeleeMaleSurvivorTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a melee survivor, use this Template  -->
 			<property name="Tags" value="entity,male,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
@@ -366,7 +374,7 @@
 			<property name="AITarget-4" value=""/> 
 		</entity_class>	
 
-		<entity_class name="humanRangedMaleSurvivorTemplate" extends="humanRangedMaleTemplate"> <!-- If you want to make a ranged survivor, use this template  -->
+		<entity_class name="humanRangedMaleSurvivorTemplate" extends="humanRangedMaleTemplate"> <!-- If you want to make a ranged survivor, use this Template  -->
 			<property name="Tags" value="entity,male,human,survivor,ranged"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
@@ -389,7 +397,7 @@
 			<property name="AITarget-4" value=""/> 			
 		</entity_class>	
 		
-		<entity_class name="humanMeleeMaleSurvivorTimidTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a cowardly survivor, use this template  -->
+		<entity_class name="humanMeleeMaleSurvivorTimidTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a cowardly survivor, use this Template  -->
 			<property name="Tags" value="entity,male,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
@@ -456,7 +464,7 @@
 			<property name="AITarget-4" value=""/> 			
 		</entity_class>	
 		
-		<entity_class name="humanMeleeFemaleSurvivorTimidTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a cowardly survivor, use this template  -->
+		<entity_class name="humanMeleeFemaleSurvivorTimidTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a cowardly survivor, use this Template  -->
 			<property name="Tags" value="entity,female,human,survivor,melee"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
@@ -478,7 +486,7 @@
 			<property name="AITarget-4" value=""/>
 		</entity_class>	
 		
-		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
+<!--		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -523,39 +531,8 @@
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
 			<property name="AITarget-4" value=""/> 
-		</entity_class> 
-
-<!--		<entity_class name="humanRangedMaleTraderTemplate" extends="humanMeleeMaleTraderTemplate">
-			<property name="Class" value="EntitySurvivor"/> 
-			<property name="Tags" value="entity,male,human,trader,ranged"/>
-			<property name="HideInSpawnMenu" value="true"/>	
-			<property name="Faction" value="whiteriver"/>
-			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManAll_X"/> 
-			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
-			<property name="Mass" value="150"/> 
-			<property name="RightHandJointName" value="Muzzle" />
-			<property name="HandItem" value="handBanditMP7"/> 
-			<property name="MoveSpeed" value="0.25"/> 
-			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
-			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="MoveSpeedRand" value="-.2, .25"/> 				
-			<property name="LootListAlive" value="62"/>
-			<property name="NPCID" value="traderWeapons"/>
-			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
-			<property name="AITask-3" value="ApproachDistraction"/> 
-			<property name="AITask-4" value="ApproachSpot"/> 
-			<property name="AITask-5" value="Look"/>
-			<property name="AITask-6" value="BreakBlock"/> 
-			<property name="AITask-7" value="Wander"/> 
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityEnemyAnimal,EntityBandit"/> 
-			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
-			<property name="AITarget-4" value=""/> 
 		</entity_class> -->
-		
+
 <!-- Bandits that spawn weapons -->	
 
 		<!-- Eve  -->
@@ -978,9 +955,1054 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
 		</entity_class> 		
 		
+<!--  DarkStar Raider Guys -->
 
+		<!--  RaiderHumongous -->
+		<entity_class name="humanRaiderHumongousClub" extends="humanMeleeMaleTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanRaiderHumongousKnife" extends="humanMeleeMaleTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanRaiderHumongousSMG" extends="humanRangedMaleTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanRaiderHumongousAK47" extends="humanRangedMaleTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>	
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanRaiderHumongousHunter" extends="humanRangedMaleTemplate"> 
+            <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>	
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanRaiderHumongousPistol" extends="humanRangedMaleTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>			
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanRaiderHumongousXBow" extends="humanRangedMaleTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>			
+			<property name="WalkType" value="6"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanRaiderHumongousShotty" extends="humanRangedMaleTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderHumongousDark"/>		
+			<property name="WalkType" value="6"/>			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 		
+
+		<!--  RaiderMoto -->
+		
+		<entity_class name="humanRaiderMotoClub" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanRaiderMotoKnife" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanRaiderMotoSMG" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanRaiderMotoAK47" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>	
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanRaiderMotoHunter" extends="humanRangedMaleBanditTemplate"> 
+            <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>	
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanRaiderMotoPistol" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>			
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanRaiderMotoXBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>			
+			<property name="WalkType" value="6"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanRaiderMotoShotty" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderMoto2Dark"/>		
+			<property name="WalkType" value="6"/>			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 		
+
+		<!--  RaiderPest -->
+		
+		<entity_class name="HumanRaiderPestClub" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="HumanRaiderPestKnife" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderPestSMG" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderPestAK47" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>	
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="HumanRaiderPestHunter" extends="humanRangedMaleBanditTemplate"> 
+            <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>	
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="HumanRaiderPestPistol" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>			
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="HumanRaiderPestXBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>			
+			<property name="WalkType" value="6"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderPestShotty" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>		
+			<property name="WalkType" value="6"/>			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 		
+
+		<!--  RaiderRat -->
+
+		<entity_class name="HumanRaiderRatClub" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="HumanRaiderRatKnife" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderRatSMG" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderRatAK47" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>	
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="HumanRaiderRatHunter" extends="humanRangedMaleBanditTemplate"> 
+            <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>	
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="HumanRaiderRatPistol" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>			
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="HumanRaiderRatXBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>			
+			<property name="WalkType" value="6"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderRatShotty" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>		
+			<property name="WalkType" value="6"/>			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 		
+
+
+
+		<!--  RaiderSlugger -->
+
+		<entity_class name="HumanRaiderSluggerClub" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="HumanRaiderSluggerKnife" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderSluggerSMG" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderSluggerAK47" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>	
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="HumanRaiderSluggerHunter" extends="humanRangedMaleBanditTemplate"> 
+            <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>	
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="HumanRaiderSluggerPistol" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>			
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="HumanRaiderSluggerXBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>			
+			<property name="WalkType" value="6"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="HumanRaiderSluggerShotty" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>		
+			<property name="WalkType" value="6"/>			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 		
+
+<!--  DarkStar Whisperers -->	
+
+		<!-- Whisperer Alpha  -->
+		
+		<entity_class name="humanWhispererAlphaClub" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererAlphaKnife" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererAlphaSMG" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererAlphaAK47" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererAlphaHunter" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanWhispererAlphaPistol" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanWhispererAlphaXBow" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererAlphaBow" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>		
+			<property name="WalkType" value="3"/> 
+			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditBow,ammoNPCArrowIron"/> 
+		</entity_class> 
+		
+		<entity_class name="humanWhispererAlphaShotty" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 
+
+<!--  Whisperer Beta  -->
 		
 		
+		<entity_class name="humanWhispererBetaClub" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererBetaKnife" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererBetaSMG" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererBetaAK47" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererBetaHunter" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanWhispererBetaPistol" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanWhispererBetaXBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererBetaBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>		
+			<property name="WalkType" value="3"/> 
+			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditBow,ammoNPCArrowIron"/> 
+		</entity_class> 
+		
+		<entity_class name="humanWhispererBetaShotty" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 									
+
+		<!-- Whisperer Female 01  -->
+		
+		<entity_class name="humanWhispererFemale01Club" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererFemale01Knife" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererFemale01SMG" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererFemale01AK47" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererFemale01Hunter" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanWhispererFemale01Pistol" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanWhispererFemale01XBow" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererFemale01Bow" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>		
+			<property name="WalkType" value="3"/> 
+			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditBow,ammoNPCArrowIron"/> 
+		</entity_class> 
+		
+		<entity_class name="humanWhispererFemale01Shotty" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 					
+		
+		<!-- Whisperer Female 02  -->
+		
+		<entity_class name="humanWhispererFemale02Club" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererFemale02Knife" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererFemale02SMG" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererFemale02AK47" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererFemale02Hunter" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanWhispererFemale02Pistol" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanWhispererFemale02XBow" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererFemale02Bow" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>		
+			<property name="WalkType" value="3"/> 
+			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditBow,ammoNPCArrowIron"/> 
+		</entity_class> 
+		
+		<entity_class name="humanWhispererFemale02Shotty" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 
+
+
+		<!--  Whisperer male 01  -->
+		
+		<entity_class name="humanWhispererMale01Club" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererMale01Knife" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererMale01SMG" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererMale01AK47" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererMale01Hunter" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanWhispererMale01Pistol" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanWhispererMale01XBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererMale01Bow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>		
+			<property name="WalkType" value="3"/> 
+			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditBow,ammoNPCArrowIron"/> 
+		</entity_class> 
+		
+		<entity_class name="humanWhispererMale01Shotty" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 							
+		
+			<!--  Whisperer male 02  -->
+		
+		<entity_class name="humanWhispererMale02Club" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererMale02Knife" extends="humanMeleeMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererMale02SMG" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererMale02AK47" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanWhispererMale02Hunter" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanWhispererMale02Pistol" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanWhispererMale02XBow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanWhispererMale02Bow" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>		
+			<property name="WalkType" value="3"/> 
+			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditBow,ammoNPCArrowIron"/> 
+		</entity_class> 
+		
+		<entity_class name="humanWhispererMale02Shotty" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 
+
 <!-- Bandits that bring their own knives (and bats)  to the gunfight.  I doubt ranged will work this way unless I make an invisible gun item to spawn in, or you use the vomit class  -->	
 
 		<!-- Melee  -->
@@ -1104,7 +2126,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1115,7 +2137,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/> 
@@ -1126,7 +2148,7 @@
 		</entity_class>
 		
 		<entity_class name="humanFarmerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
             <property name="WalkType" value="6"/> 
@@ -1137,7 +2159,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanFarmerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1148,7 +2170,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanFarmerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>
@@ -1159,7 +2181,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanFarmerSurvivorBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
@@ -1170,7 +2192,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanFarmerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>			
 			<property name="WalkType" value="6"/>
@@ -1205,7 +2227,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanBakerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1216,7 +2238,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanBakerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/> 
@@ -1227,7 +2249,7 @@
 		</entity_class>
 		
 		<entity_class name="humanBakerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
             <property name="WalkType" value="6"/> 
@@ -1238,7 +2260,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanBakerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>			
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1249,7 +2271,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanBakerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/>
@@ -1260,7 +2282,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanBakerSurvivorBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>			
 			<property name="WalkType" value="3"/> 
@@ -1271,7 +2293,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanBakerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdoll2_X"/>		
 			<property name="WalkType" value="6"/>
@@ -1306,7 +2328,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorSMG" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1317,7 +2339,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorAK47" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/> 
@@ -1328,7 +2350,7 @@
 		</entity_class>
 		
 		<entity_class name="humanNurseSurvivorHunter" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
             <property name="WalkType" value="6"/> 
@@ -1339,7 +2361,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanNurseSurvivorPistol" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1350,7 +2372,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanNurseSurvivorXBow" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="6"/>
@@ -1361,7 +2383,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanNurseSurvivorBow" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>		
 			<property name="WalkType" value="3"/> 
@@ -1372,7 +2394,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanNurseSurvivorShotty" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?NurseNancy_X"/>
 			<property name="WalkType" value="6"/>
@@ -1382,7 +2404,634 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
 		</entity_class> 
 
+<!--  DarkStar Soldiers (Good guys) -->
 
+		<!--  ArmyDoctor2Dark -->
+		<entity_class name="humanSoldierGirl01SurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierGirl01SurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierGirl01SurvivorSMG" extends="humanRangedFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierGirl01SurvivorAK47" extends="humanRangedFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierGirl01SurvivorHunter" extends="humanRangedFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanSoldierGirl01SurvivorPistol" extends="humanRangedFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanSoldierGirl01SurvivorXBow" extends="humanRangedFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierGirl01SurvivorShotty" extends="humanRangedFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 
+		
+		<!--  Delta -->
+		
+		<entity_class name="humanSoldierDeltaSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierDeltaSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierDeltaSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierDeltaSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierDeltaSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanSoldierDeltaSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanSoldierDeltaSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierDeltaSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 		
+		
+		<!--  Hunter -->
+		
+		<entity_class name="humanSoldierHunterSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierHunterSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierHunterSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierHunterSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierHunterSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanSoldierHunterSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanSoldierHunterSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierHunterSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 				
+		
+		
+		<!--  NationalGuard -->
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierNationalGuardSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 
+
+		<!--  Ranger -->
+		
+		
+		<entity_class name="humanSoldierRangerSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierRangerSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierRangerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierRangerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
+		</entity_class>
+		
+		<entity_class name="humanSoldierRangerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
+            <property name="WalkType" value="6"/> 
+            <property name="RightHandJointName" value="Gunjoint" />  
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
+        </entity_class>    		
+		
+		<entity_class name="humanSoldierRangerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>	
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="humanSoldierRangerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>	
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
+		</entity_class>	
+		
+		<entity_class name="humanSoldierRangerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
+			<property name="WalkType" value="6"/>
+			<property name="RightHandJointName" value="Gunjoint" />  			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPumpShotgun,ammoNPCShotgunShell"/> 
+		</entity_class> 						
+
+
+<!--  DarkStar Vault Dwellers uses ASCharacterStandard phyhsics-->
+
+		<!--  FemaleVaultResident -->
+
+		<entity_class name="humanVaultFemaleResidentSurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultResidentDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanVaultFemaleResidentSurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultResidentDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+			
+		<!--  FemaleVaultSecurity -->
+
+		<entity_class name="humanVaultFemaleSecuritySurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultSecurityDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanVaultFemaleSecuritySurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultSecurityDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+		<!--  VaultDoctor -->
+
+		<entity_class name="humanVaultDoctorSurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultDoctorDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanVaultDoctorSurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultDoctorDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+
+		<!--  Male PowerArmor -->
+
+		<entity_class name="humanVaultPowerArmorSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MalePowerArmorDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanVaultPowerArmorSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MalePowerArmorDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+			
+		<!--  Male VaultResident -->
+
+		<entity_class name="humanVaultMaleResidentSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultResidentDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanVaultMaleResidentSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultResidentDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+	
+
+		<!--  Male VaultSecurity -->
+
+		<entity_class name="humanVaultMaleSecuritySurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultSecurityDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanVaultMaleSecuritySurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultSecurityDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
+	
+		<!--  Male VaultBoss -->
+
+		<entity_class name="humanVaultBossSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultBossDark"/>
+			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
+		</entity_class>
+		
+		<entity_class name="humanVaultBossSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultBossDark"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditKnifeIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
+		</entity_class>	
+		
 		<!--  Sample Sleepers for Testing.  If someone want to extend this group, send me the updated xml -->
 
 		<entity_class name="humanEveBanditSleeperKnife" extends="humanMeleeFemaleSleeperTemplate"> 
@@ -1474,7 +3123,7 @@
 <!-- Wandering Traders: Wandering Traders are invunerable to damage, and wont stop to chat so trade quick.  Wandering Traders are working perfectly when using the DMT NPC version. -->
 
 			
-		<entity_class name="humanJoelTrader" extends="humanMeleeMaleTraderTemplate">
+<!--		<entity_class name="humanJoelTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -1491,10 +3140,10 @@
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="62"/>
-			<property name="NPCID" value="traderJoel"/>
+			<property name="NPCID" value="traderHeavy"/>
 		</entity_class> 
 		
-<!--		<entity_class name="humanWeaponsTrader" extends="humanRangedMaleTraderTemplate">
+		<entity_class name="humanWeaponsTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Tags" value="entity,male,human,npc,trader,ranged"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManAll_X"/> 
@@ -1507,13 +3156,13 @@
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="LootListAlive" value="62"/>
 			<property name="NPCID" value="traderWeapons"/>
-		</entity_class> 
+		</entity_class> -->
 		
-		<entity_class name="humanHeavyTrader" extends="humanRangedMaleTraderTemplate">
+<!--		<entity_class name="humanHeavyTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Tags" value="entity,male,human,trader,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?HeavyGuy_X"/> 
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="200"/> 
 			<property name="RightHandJointName" value="Muzzle" />
@@ -1524,8 +3173,8 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="62"/>
 			<property name="NPCID" value="traderHeavy"/>
-		</entity_class>
-		<entity_class name="humanBakerTrader" extends="humanMeleeMaleTraderTemplate">
+		</entity_class> -->
+<!--		<entity_class name="humanBakerTrader" extends="humanMeleeMaleTraderTemplate">
 			<property name="Tags" value="entity,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?BakerRagdollPack_X"/>
