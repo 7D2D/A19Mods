@@ -288,7 +288,7 @@
 			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
 			<property name="MaxTurnSpeed" value="190"/>
 			<property name="DeadBodyHitPoints" value="100"/>
-			<property name="SizeScale" value="1.3"/>
+			<property name="SizeScale" value="1.5"/>
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="3"/>

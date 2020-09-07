@@ -17,7 +17,7 @@
 				portrait="npc_joel"
 				greeting_type="nearby"
 				stance="Like" voice_set="trader"
-				trader_id="64" dialog_id="NPCWithATale" />	
+				trader_id="64" dialog_id="AFarmerSurvivor" />	
 			<npc_info
 				id="traderWeapons"
 				name="Weapon Trader"

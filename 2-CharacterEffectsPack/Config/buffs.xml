@@ -367,12 +367,17 @@
 				 Set WalkType to "7"
 			-->
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"/> might need that -->
+						
+			<effect_group name="IsHumanAfterHiredRelog"> <!-- This resets the IsHuman value to 2 periodlically to fix it being reset on relogging  -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="IsHuman" value="2"/>
+			</effect_group>				
 			<effect_group name="IsHuman">
 				<requirement name="!EntityTagCompare" tags="saveable"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="NPCSoundSys" />
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetFloat" property="IVar" value="0.0" duration="1"/>
 			</effect_group>
+
 			<effect_group name="IsCured">
 				<requirement name="EntityTagCompare" tags="saveable"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="NPCSoundSys" />
@@ -434,7 +439,7 @@
 	</append>
 	<!-- Uncomment <duration="25200"/> and <update_rate="3600"/> and comment out the others when doing a full test -->
 	<append xpath="/buffs">
-		<buff name="IsInfected" icon="ui_game_symbol_radiation" icon_color="75,255,125" hidden="false"><stack_type value="replace"/><!--<duration value="25200"/>--><duration value="0"/><!--<update_rate value="3600"/>--><update_rate value="15"/>
+		<buff name="IsInfected" icon="ui_game_symbol_radiation" icon_color="75,255,125" hidden="false"><stack_type value="replace"/><!--<duration value="25200"/>--><duration value="0"/><!--<update_rate value="3600"/>--><update_rate value="500"/>
 			<!-- Remove Buff "IsHuman".
 				 Set Animator "IsHuman" to Value="1". 
 				 Establish "InfectedStageCvar" value="0" 
@@ -712,5 +717,49 @@
 			</effect_group>	-->
 		</buff> 
 	</append>
-
+<!--
+			Walk Type Desc:
+   -1) Swim		
+	0) Normal attack (no movement)
+	1) Fat walk
+	2) Stomp (tough guy) walk
+	3) Arlene (Dracula) walk 
+	4) Army Crawl
+	5) Limping
+	6) Tweaker Walk
+	7) Listing Walk
+	8) Spider Walk
+	9) Behemouth Walk
+-->
+	<append xpath="/buffs">
+		<buff name="ZombieWalkChange"><stack_type value="ignore"/><duration value="0"/>  <!--  Credit to Tin for writing this  -->
+			<effect_group name="ZombieWalkChange">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="WalkChange" operation="set" value="randomint(1,6)"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="1"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="1"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="2"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="2"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="3"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="3"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="6"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="4"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="7"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="5"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="7"/>	<!-- increasing chance of type 7 since that type has alternate walks as well  -->
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="6"/>
+			</effect_group>
+		</buff>
+	</append>
 </EffectsBuffs>

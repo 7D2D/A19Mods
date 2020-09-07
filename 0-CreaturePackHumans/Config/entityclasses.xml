@@ -169,7 +169,7 @@
 			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.1"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="TimeStayAfterDeath" value="10"/>
 			<property name="DeadBodyHitPoints" value="400"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
@@ -191,11 +191,18 @@
 			<effect_group name="UseFactions"> <!-- This activates thr Usefactions Buff which tells the game not to use DMT faction classes  -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UseFactionsNo"/>		
 			</effect_group>	
+			
+			<property name="RotateToGround" value="false"/>	
+			<property name="PushFactor" value="10"/>	
+			
+			<!--  testing  -->
 			<!--<effect_group name="ragtestforNREs">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ragtest"/>		
 			</effect_group>-->				
-			<property name="RotateToGround" value="false"/>	
-			<property name="PushFactor" value="10"/>			
+			
+			<!--<property name="CorpseBlock" value="zombieTrellis"/>
+			<property name="CorpseBlockChance" value="1"/> -->
+			
 		</entity_class>
 		
 		<entity_class name="humanMeleeFemaleTemplate" extends="humanMeleeMaleTemplate">
@@ -486,7 +493,7 @@
 			<property name="AITarget-4" value=""/>
 		</entity_class>	
 		
-<!--		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
+		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
 			<property name="Class" value="EntitySurvivor"/> 
 			<property name="Tags" value="entity,male,human,trader,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -531,7 +538,7 @@
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
 			<property name="AITarget-4" value=""/> 
-		</entity_class> -->
+		</entity_class> 
 
 <!-- Bandits that spawn weapons -->	
 
@@ -1398,7 +1405,7 @@
 		<!-- Whisperer Alpha  -->
 		
 		<entity_class name="humanWhispererAlphaClub" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1409,7 +1416,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererAlphaKnife" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
 			<property name="WalkType" value="7"/>
@@ -1420,7 +1427,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererAlphaSMG" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1431,7 +1438,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererAlphaAK47" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
 			<property name="WalkType" value="6"/> 
@@ -1442,7 +1449,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererAlphaHunter" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
             <property name="WalkType" value="6"/> 
@@ -1453,7 +1460,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanWhispererAlphaPistol" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1464,7 +1471,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanWhispererAlphaXBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>	
 			<property name="WalkType" value="6"/>
@@ -1475,7 +1482,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererAlphaBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>		
 			<property name="WalkType" value="3"/> 
@@ -1486,7 +1493,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanWhispererAlphaShotty" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererADark"/>
 			<property name="WalkType" value="6"/>
@@ -1500,7 +1507,7 @@
 		
 		
 		<entity_class name="humanWhispererBetaClub" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1511,7 +1518,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererBetaKnife" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
 			<property name="WalkType" value="7"/>
@@ -1522,7 +1529,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererBetaSMG" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1533,7 +1540,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererBetaAK47" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
 			<property name="WalkType" value="6"/> 
@@ -1544,7 +1551,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererBetaHunter" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
             <property name="WalkType" value="6"/> 
@@ -1555,7 +1562,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanWhispererBetaPistol" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1566,7 +1573,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanWhispererBetaXBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>	
 			<property name="WalkType" value="6"/>
@@ -1577,7 +1584,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererBetaBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>		
 			<property name="WalkType" value="3"/> 
@@ -1588,7 +1595,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanWhispererBetaShotty" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererBDark"/>
 			<property name="WalkType" value="6"/>
@@ -1601,7 +1608,7 @@
 		<!-- Whisperer Female 01  -->
 		
 		<entity_class name="humanWhispererFemale01Club" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1612,7 +1619,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererFemale01Knife" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
 			<property name="WalkType" value="7"/>
@@ -1623,7 +1630,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererFemale01SMG" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1634,7 +1641,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererFemale01AK47" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -1645,7 +1652,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererFemale01Hunter" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
             <property name="WalkType" value="6"/> 
@@ -1656,7 +1663,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanWhispererFemale01Pistol" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1667,7 +1674,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanWhispererFemale01XBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -1678,7 +1685,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererFemale01Bow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>		
 			<property name="WalkType" value="3"/> 
@@ -1689,7 +1696,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanWhispererFemale01Shotty" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF01Dark"/>
 			<property name="WalkType" value="6"/>
@@ -1702,7 +1709,7 @@
 		<!-- Whisperer Female 02  -->
 		
 		<entity_class name="humanWhispererFemale02Club" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1713,7 +1720,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererFemale02Knife" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
 			<property name="WalkType" value="7"/>
@@ -1724,7 +1731,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererFemale02SMG" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1735,7 +1742,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererFemale02AK47" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -1746,7 +1753,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererFemale02Hunter" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
             <property name="WalkType" value="6"/> 
@@ -1757,7 +1764,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanWhispererFemale02Pistol" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1768,7 +1775,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanWhispererFemale02XBow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -1779,7 +1786,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererFemale02Bow" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>		
 			<property name="WalkType" value="3"/> 
@@ -1790,7 +1797,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanWhispererFemale02Shotty" extends="humanRangedFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererF02Dark"/>
 			<property name="WalkType" value="6"/>
@@ -1804,7 +1811,7 @@
 		<!--  Whisperer male 01  -->
 		
 		<entity_class name="humanWhispererMale01Club" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1815,7 +1822,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererMale01Knife" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
 			<property name="WalkType" value="7"/>
@@ -1826,7 +1833,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererMale01SMG" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1837,7 +1844,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererMale01AK47" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -1848,7 +1855,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererMale01Hunter" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
             <property name="WalkType" value="6"/> 
@@ -1859,7 +1866,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanWhispererMale01Pistol" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1870,7 +1877,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanWhispererMale01XBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -1881,7 +1888,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererMale01Bow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>		
 			<property name="WalkType" value="3"/> 
@@ -1892,7 +1899,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanWhispererMale01Shotty" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM01Dark"/>
 			<property name="WalkType" value="6"/>
@@ -1905,7 +1912,7 @@
 			<!--  Whisperer male 02  -->
 		
 		<entity_class name="humanWhispererMale02Club" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -1916,7 +1923,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererMale02Knife" extends="humanMeleeMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
 			<property name="WalkType" value="7"/>
@@ -1927,7 +1934,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererMale02SMG" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -1938,7 +1945,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererMale02AK47" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -1949,7 +1956,7 @@
 		</entity_class>
 		
 		<entity_class name="humanWhispererMale02Hunter" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
             <property name="WalkType" value="6"/> 
@@ -1960,7 +1967,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanWhispererMale02Pistol" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -1971,7 +1978,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanWhispererMale02XBow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -1982,7 +1989,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanWhispererMale02Bow" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>		
 			<property name="WalkType" value="3"/> 
@@ -1993,7 +2000,7 @@
 		</entity_class> 
 		
 		<entity_class name="humanWhispererMale02Shotty" extends="humanRangedMaleBanditTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/Whispererz.unity3d?WhispererM02Dark"/>
 			<property name="WalkType" value="6"/>
@@ -2053,51 +2060,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 		</entity_class> 		
-		
-		<!-- Ranged folks that have a weapon already attached so spawning in another looks bad  -  Not working yet -->
-		
-<!--		<entity_class name="humanRifleManBanditNoHatNoMesh" extends="humanRangedMaleBanditTemplate">
-			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
-			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?RifleManNoHatPack_X"/>
-			<property name="WalkType" value="6"/> 
-			<property name="RightHandJointName" value="Gunjoint" />  
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditHidden,ammoNPC762mmBulletBall"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditHidden,ammoNPC762mmBulletBall"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHidden,ammoNPC762mmBulletBall"/> 
-		</entity_class> -->
-	
-		
-<!--		<entity_class name="humanHeavyGuyBandit" extends="humanRangedMaleTemplate">
-			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
-			<property name="PushFactor" value="20"/>
-			<property name="RightHandJointName" value="Muzzle" />
-			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
-			<property name="HandItem" value="gunBanditPumpShotgun"/> 
-		</entity_class> 
-		<entity_class name="humanFatAshBandit" extends="humanRangedMaleTemplate">
-			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
-			<property name="PushFactor" value="20"/>
-			<property name="Mesh" value="#@modfolder:Resources/FatAsh.unity3d?AshBandit_X"/> 
-			<property name="Mass" value="200"/>
-			<property name="HandItem" value="gunBanditPumpShotgun"/> 
-			<property name="RightHandJointName" value="Gunjoint" />
-			<property name="MoveSpeed" value="0.25"/> 
-			<property name="MoveSpeedAggro" value=".8, .8"/> 
-			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="SoundAttack" value="chainsaw_fire_rev" /> 
-			<property name="JumpMaxDistance" value="2.0"/>
-			<property name="WalkType" value="7"/>
-			<property name="ExperienceGain" value="1550"/> 
-			<property name="DeadBodyHitPoints" value="1000"/>
-			<property name="TimeStayAfterDeath" value="5"/>
-			<property name="LootDropProb" value=".5"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerBandit"/>
-			<property name="AINoiseSeekDist" value="8"/>
-			<property name="AIPathCostScale" value=".8, 1"/>
-		</entity_class> -->
-		
-
 
 <!-- Survivors -->
 
@@ -2408,7 +2370,7 @@
 
 		<!--  ArmyDoctor2Dark -->
 		<entity_class name="humanSoldierGirl01SurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2419,7 +2381,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierGirl01SurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
 			<property name="WalkType" value="7"/>
@@ -2430,7 +2392,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierGirl01SurvivorSMG" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -2441,7 +2403,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierGirl01SurvivorAK47" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -2452,7 +2414,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierGirl01SurvivorHunter" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
             <property name="WalkType" value="6"/> 
@@ -2463,7 +2425,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanSoldierGirl01SurvivorPistol" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -2474,7 +2436,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanSoldierGirl01SurvivorXBow" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -2485,7 +2447,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierGirl01SurvivorShotty" extends="humanRangedFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctor2Dark"/>
 			<property name="WalkType" value="6"/>
@@ -2498,7 +2460,7 @@
 		<!--  Delta -->
 		
 		<entity_class name="humanSoldierDeltaSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2509,7 +2471,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierDeltaSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
 			<property name="WalkType" value="7"/>
@@ -2520,7 +2482,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierDeltaSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -2531,7 +2493,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierDeltaSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -2542,7 +2504,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierDeltaSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
             <property name="WalkType" value="6"/> 
@@ -2553,7 +2515,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanSoldierDeltaSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -2564,7 +2526,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanSoldierDeltaSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -2575,7 +2537,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierDeltaSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Delta2Dark"/>
 			<property name="WalkType" value="6"/>
@@ -2588,7 +2550,7 @@
 		<!--  Hunter -->
 		
 		<entity_class name="humanSoldierHunterSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2599,7 +2561,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierHunterSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
 			<property name="WalkType" value="7"/>
@@ -2610,7 +2572,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierHunterSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -2621,7 +2583,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierHunterSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
 			<property name="WalkType" value="6"/> 
@@ -2632,7 +2594,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierHunterSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
             <property name="WalkType" value="6"/> 
@@ -2643,7 +2605,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanSoldierHunterSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -2654,7 +2616,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanSoldierHunterSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>	
 			<property name="WalkType" value="6"/>
@@ -2665,7 +2627,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierHunterSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?HunterDark"/>
 			<property name="WalkType" value="6"/>
@@ -2679,7 +2641,7 @@
 		<!--  NationalGuard -->
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2690,7 +2652,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
 			<property name="WalkType" value="7"/>
@@ -2701,7 +2663,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -2712,7 +2674,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -2723,7 +2685,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
             <property name="WalkType" value="6"/> 
@@ -2734,7 +2696,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -2745,7 +2707,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -2756,7 +2718,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierNationalGuardSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard2Dark"/>
 			<property name="WalkType" value="6"/>
@@ -2770,7 +2732,7 @@
 		
 		
 		<entity_class name="humanSoldierRangerSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2781,7 +2743,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierRangerSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
 			<property name="WalkType" value="7"/>
@@ -2792,7 +2754,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierRangerSurvivorSMG" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
 			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
@@ -2803,7 +2765,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierRangerSurvivorAK47" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
 			<property name="WalkType" value="6"/> 
@@ -2814,7 +2776,7 @@
 		</entity_class>
 		
 		<entity_class name="humanSoldierRangerSurvivorHunter" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
             <property name="WalkType" value="6"/> 
@@ -2825,7 +2787,7 @@
         </entity_class>    		
 		
 		<entity_class name="humanSoldierRangerSurvivorPistol" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>	
 			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
@@ -2836,7 +2798,7 @@
 		</entity_class>			
 		
 		<entity_class name="humanSoldierRangerSurvivorXBow" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>	
 			<property name="WalkType" value="6"/>
@@ -2847,7 +2809,7 @@
 		</entity_class>	
 		
 		<entity_class name="humanSoldierRangerSurvivorShotty" extends="humanRangedMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?Ranger2Dark"/>
 			<property name="WalkType" value="6"/>
@@ -2863,7 +2825,7 @@
 		<!--  FemaleVaultResident -->
 
 		<entity_class name="humanVaultFemaleResidentSurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultResidentDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2874,7 +2836,7 @@
 		</entity_class>
 		
 		<entity_class name="humanVaultFemaleResidentSurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultResidentDark"/>
 			<property name="WalkType" value="7"/>
@@ -2887,7 +2849,7 @@
 		<!--  FemaleVaultSecurity -->
 
 		<entity_class name="humanVaultFemaleSecuritySurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultSecurityDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2898,7 +2860,7 @@
 		</entity_class>
 		
 		<entity_class name="humanVaultFemaleSecuritySurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultSecurityDark"/>
 			<property name="WalkType" value="7"/>
@@ -2911,7 +2873,7 @@
 		<!--  VaultDoctor -->
 
 		<entity_class name="humanVaultDoctorSurvivorClub" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultDoctorDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2922,7 +2884,7 @@
 		</entity_class>
 		
 		<entity_class name="humanVaultDoctorSurvivorKnife" extends="humanMeleeFemaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,female,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultDoctorDark"/>
 			<property name="WalkType" value="7"/>
@@ -2936,7 +2898,7 @@
 		<!--  Male PowerArmor -->
 
 		<entity_class name="humanVaultPowerArmorSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MalePowerArmorDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2947,7 +2909,7 @@
 		</entity_class>
 		
 		<entity_class name="humanVaultPowerArmorSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MalePowerArmorDark"/>
 			<property name="WalkType" value="7"/>
@@ -2960,7 +2922,7 @@
 		<!--  Male VaultResident -->
 
 		<entity_class name="humanVaultMaleResidentSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultResidentDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2971,7 +2933,7 @@
 		</entity_class>
 		
 		<entity_class name="humanVaultMaleResidentSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultResidentDark"/>
 			<property name="WalkType" value="7"/>
@@ -2986,7 +2948,7 @@
 		<!--  Male VaultSecurity -->
 
 		<entity_class name="humanVaultMaleSecuritySurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultSecurityDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -2997,7 +2959,7 @@
 		</entity_class>
 		
 		<entity_class name="humanVaultMaleSecuritySurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultSecurityDark"/>
 			<property name="WalkType" value="7"/>
@@ -3011,7 +2973,7 @@
 		<!--  Male VaultBoss -->
 
 		<entity_class name="humanVaultBossSurvivorClub" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultBossDark"/>
 			<property name="WalkType" value="7"/> <!-- Default human melee walktype  -->
@@ -3022,7 +2984,7 @@
 		</entity_class>
 		
 		<entity_class name="humanVaultBossSurvivorKnife" extends="humanMeleeMaleSurvivorTemplate"> 
-			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="Tags" value="entity,cp,male,human,survivor,melee"/>
 			<property name="Faction" value="whiteriver"/><property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultBossDark"/>
 			<property name="WalkType" value="7"/>
@@ -3119,6 +3081,11 @@
 			<property name="HandItem" value="meleeHarleyBat"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,10,5,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/>
 		</entity_class> 
+		
+<!-- Testing  -->
+
+
+
 
 <!-- Wandering Traders: Wandering Traders are invunerable to damage, and wont stop to chat so trade quick.  Wandering Traders are working perfectly when using the DMT NPC version. -->
 

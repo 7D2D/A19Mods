@@ -7,7 +7,7 @@
 <!-- Templates  -->	
 
 		<entity_class name="animalTemplateHostileWalking" >
-			<property name="IsChunkObserver" value="false"/>
+			<property name="IsChunkObserver" value="true"/>
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="Tags" value="entity,cp,animal,hostile,template"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?ArcticFox_X"/>
@@ -241,7 +241,7 @@
 <!--  Xyth Swarms  -->		
 	
 		<entity_class name="animalSnowSwarm_X" extends="animalTemplateHostileFlying">
-			<property name="Tags" value="hostile"/>
+			<property name="Tags" value="entity,cp,animal,hostile"/>
 			<property name="Class" value="EntityHornet" />
 			<property name="AvatarController" value="AvatarAnimalController"/>
 			<property name="ModelType" value="Standard" />
@@ -273,7 +273,7 @@
 			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 
 		</entity_class> 
 		<entity_class name="animalBloodFlySwarm_X" extends="animalTemplateHostileFlying">
-			<property name="Tags" value="insect,hostile"/>
+			<property name="Tags" value="entity,cp,animal,hostile"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Swarm_X" /> 
 			<property name="HandItem" value="meleeHandBloodFly" />
 			<property name="Class" value="EntityVulture" />

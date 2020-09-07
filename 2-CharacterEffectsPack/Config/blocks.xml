@@ -1,5 +1,63 @@
 ﻿<configs>
 
-	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedZombieFeatures']/property[@name='RandomWalk']/@value">false</set>
-	
+<!--	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedZombieFeatures']/property[@name='RandomWalk']/@value">false</set> -->
+
+	<append xpath="/blocks" >
+		 <block name="spawnZombieBlock">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnZombieNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="SpawnZombie"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="spawnZombieNext">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="spawnZombieBlock"/>
+			<property name="PlantGrowing.Next" value="spawnZombieEnd"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.GrowthRate" value="0.25"/>
+		</block>
+		<block name="spawnZombieEnd">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="spawnZombieBlock"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="PlantGrowing.Next" value="terrAsphalt"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+		</block>
+
+		<block name="SpawnZombie">
+			<property name="Extends" value="metalTrussingRampOld" param1="DescriptionKey"/>
+			<property name="CustomIcon" value="metalTrussingRampOld"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Class" value="SpawnEntity"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Model" value="Entities/Electrical/battery_bankPrefab"/> <property name="HandleFace" value="Bottom"/>
+			<property name="SpawnClass" value="zombieFemaleTutorial"/>
+			<property name="FilterTags" value="fdesign"/>
+			<property name="Collide" value="sight"/>
+		</block>
+		
+<!--		<block name="zombieTrellis">
+			<property name="Extends" value="woodTrellisDiamond"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSitPrefab.prefab"/>
+			<property name="Pose" value="0"/>
+			<property name="Material" value="Mwood_ladders"/>
+			<property name="LookIdentity" value="0,0,1"/>
+			<property name="Class" value="Ladder"/>
+		</block> -->
+		
+  </append>
 </configs>

@@ -1,6 +1,8 @@
 <EntityBuffStarter>
 
-	<append xpath="/entity_classes">	<!-- This bit of Sphereii genius bypasses the warnings if the NPC modlets not loaded  -->
+
+	<!-- This bit of Sphereii genius bypasses the warnings if the NPC modlets not loaded  -->
+<!--	<append xpath="/entity_classes">	
 		<entity_class name="npcDummyTemplate" extends="humanMeleeMaleBanditTemplate">
 			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="SoundRandom" value="malehateroam"/>
@@ -19,7 +21,7 @@
 			<property name="SoundDeath" value="malehatedeath"/>
 			<property name="SoundAttack" value="malehateattack"/>	
 		</entity_class>	
-	</append>	
+	</append>	-->
 	
 
 <!-- New sound system needs to know if character is male or female  -->	
@@ -77,32 +79,22 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="InfectedAttack"/>
 		</effect_group>
 	</append>
-
+	
+<!--  add random walktypes to all zombies  -->	
+	
+	<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
+		<effect_group name="RNDWalkStart">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ZombieWalkChange"/>		
+		</effect_group>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieRegularTemplate']">
+		<effect_group name="RNDWalkStartCP">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ZombieWalkChange"/>		
+		</effect_group>
+	</append>	
+	
 <!-- Removing the default vanilla sounds from humanoids and zombies to be replaced by new sound system  -->
 
-	<!--<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundRandom')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAlert')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundSense')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundHurt')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundDeath')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAttack')]/@value">...</set> 
-
-	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundRandom')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundAlert')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundSense')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundHurt')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundDeath')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'human')]/property[starts-with(@name, 'SoundAttack')]/@value">...</set> 
-
-	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundRandom')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAlert')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundSense')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundHurt')]/@value">...</set> 	
-	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundDeath')]/@value">...</set> 
-	<set xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAttack')]/@value">...</set> -->
-	
-	
-	
 	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundRandom')]"/> 
 	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAlert')]"/> 
 	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundSense')]"/> 
@@ -123,5 +115,8 @@
 	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundHurt')]" />	
 	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundDeath')]" />
 	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAttack')]" />	
+
+
+
 		
 </EntityBuffStarter>

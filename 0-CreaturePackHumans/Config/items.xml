@@ -829,7 +829,7 @@
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>				
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/> 
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
-				<passive_effect name="RoundRayCount" operation="base_set" value="10"/>
+				<passive_effect name="RoundRayCount" operation="base_set" value="5"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 				<passive_effect name="BuffProcChance" operation="base_set" value=".02" tags="buffInjuryBleedingZombie"/>
 			</effect_group>
@@ -1108,7 +1108,7 @@
 				<passive_effect name="EntityDamage" operation="base_set" value="5"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="10" tags="wood"/>
-				<passive_effect name="RoundRayCount" operation="base_set" value="10"/>
+				<passive_effect name="RoundRayCount" operation="base_set" value="5"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
 				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
