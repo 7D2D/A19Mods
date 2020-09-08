@@ -9,10 +9,11 @@
 		-->
 
 		<buff name="IsHuman">
-			<stack_type value="ignore"/>
+			<stack_type value="replace"/>
 			<duration value="0"/>
+			<update_rate value="1"/>
 			<effect_group name="IsHuman"> <!-- This sets the IsHuman value to 2 which is the parameter INT value used to path to only human animations  -->
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2" duration="1" />
 			</effect_group>
 		</buff>	
 		

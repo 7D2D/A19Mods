@@ -355,26 +355,26 @@
 	</append>
 <!-- End of Buff Sound System Buffs (Male/Female) <update_rate value="3"/>-->
 
+	<remove xpath="/buffs/buff[starts-with(@name, 'IsHuman')]" />
+
 	<append xpath="/buffs">
 		<buff name="IsHuman">
-			<stack_type value="ignore"/>
+			<stack_type value="replace"/>
 			<duration value="0"/>
 			<requirement name="!EntityTagCompare" tags="player"/>
 			<requirement name="!EntityTagCompare" tags="animal"/>
-			<requirement name="NotHasBuff" buff="IsZombie"/>
-			<requirement name="NotHasBuff" buff="IsInfected"/>
+<!--			<requirement name="NotHasBuff" buff="IsZombie"/>
+			<requirement name="NotHasBuff" buff="IsInfected"/> -->
 			<!-- IsHuman Animator set to "0" for zombie 
 				 Set WalkType to "7"
 			-->
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"/> might need that -->
 						
-			<effect_group name="IsHumanAfterHiredRelog"> <!-- This resets the IsHuman value to 2 periodlically to fix it being reset on relogging  -->
-				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="IsHuman" value="2"/>
-			</effect_group>				
+			
 			<effect_group name="IsHuman">
 				<requirement name="!EntityTagCompare" tags="saveable"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="NPCSoundSys" />
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2" duration="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetFloat" property="IVar" value="0.0" duration="1"/>
 			</effect_group>
 
@@ -524,6 +524,9 @@
 			</effect_group>
 		</buff>
 	</append>
+	
+	<remove xpath="/buffs/buff[starts-with(@name, 'IsZombie')]" />
+	
 	<append xpath="/buffs">
 		<buff name="IsZombie" icon="ui_game_symbol_radiation" icon_color="0,0,125" hidden="false"><stack_type value="ignore"/><duration value="0"/><update_rate value="2"/>
 			<!-- IsHuman Animator set to "0" for zombie 
