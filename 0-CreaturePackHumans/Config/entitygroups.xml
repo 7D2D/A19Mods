@@ -384,8 +384,8 @@
 		<entity name="humanJoelBanditChefKnife" prob="0.02" />
 		<entity name="humanHarleyBanditSlugger" prob="0.02" />	
 
-		<entity name="humanRaiderHumongousClub"  prob="0.01" />
-		<entity name="humanRaiderHumongousKnife"  prob="0.01" />
+		<entity name="humanRaiderHumongousClub"  prob="0.02" />
+		<entity name="humanRaiderHumongousKnife"  prob="0.02" />
 		<entity name="humanRaiderHumongousSMG"  prob="0.01" />
 		<entity name="humanRaiderHumongousAK47"  prob="0.01" />
 		<entity name="humanRaiderHumongousHunter"  prob="0.01" />
@@ -393,8 +393,8 @@
 		<entity name="humanRaiderHumongousXBow"  prob="0.01" />
 		<entity name="humanRaiderHumongousShotty"  prob="0.01" />	
 
-		<entity name="humanRaiderMotoClub"  prob="0.01" />
-		<entity name="humanRaiderMotoKnife"  prob="0.01" />
+		<entity name="humanRaiderMotoClub"  prob="0.02" />
+		<entity name="humanRaiderMotoKnife"  prob="0.02" />
 		<entity name="humanRaiderMotoSMG"  prob="0.01" />
 		<entity name="humanRaiderMotoAK47"  prob="0.01" />
 		<entity name="humanRaiderMotoHunter"  prob="0.01" />
@@ -402,8 +402,8 @@
 		<entity name="humanRaiderMotoXBow"  prob="0.01" />
 		<entity name="humanRaiderMotoShotty"  prob="0.01" />	
 
-		<entity name="HumanRaiderPestClub"  prob="0.01" />
-		<entity name="HumanRaiderPestKnife"  prob="0.01" />
+		<entity name="HumanRaiderPestClub"  prob="0.02" />
+		<entity name="HumanRaiderPestKnife"  prob="0.02" />
 		<entity name="HumanRaiderPestSMG"  prob="0.01" />
 		<entity name="HumanRaiderPestAK47"  prob="0.01" />
 		<entity name="HumanRaiderPestHunter"  prob="0.01" />
@@ -411,8 +411,8 @@
 		<entity name="HumanRaiderPestXBow"  prob="0.01" />
 		<entity name="HumanRaiderPestShotty"  prob="0.01" />	
 		
-		<entity name="HumanRaiderRatClub"  prob="0.01" />
-		<entity name="HumanRaiderRatKnife"  prob="0.01" />
+		<entity name="HumanRaiderRatClub"  prob="0.02" />
+		<entity name="HumanRaiderRatKnife"  prob="0.02" />
 		<entity name="HumanRaiderRatSMG"  prob="0.01" />
 		<entity name="HumanRaiderRatAK47"  prob="0.01" />
 		<entity name="HumanRaiderRatHunter"  prob="0.01" />
@@ -420,8 +420,8 @@
 		<entity name="HumanRaiderRatXBow"  prob="0.01" />
 		<entity name="HumanRaiderRatShotty"  prob="0.01" />	
 
-		<entity name="HumanRaiderSluggerClub"  prob="0.01" />
-		<entity name="HumanRaiderSluggerKnife"  prob="0.01" />
+		<entity name="HumanRaiderSluggerClub"  prob="0.02" />
+		<entity name="HumanRaiderSluggerKnife"  prob="0.02" />
 		<entity name="HumanRaiderSluggerSMG"  prob="0.01" />
 		<entity name="HumanRaiderSluggerAK47"  prob="0.01" />
 		<entity name="HumanRaiderSluggerHunter"  prob="0.01" />
@@ -429,8 +429,8 @@
 		<entity name="HumanRaiderSluggerXBow"  prob="0.01" />
 		<entity name="HumanRaiderSluggerShotty"  prob="0.01" />	
 
-		<entity name="humanWhispererAlphaClub"  prob="0.01" />
-		<entity name="humanWhispererAlphaKnife"  prob="0.01" />
+		<entity name="humanWhispererAlphaClub"  prob="0.02" />
+		<entity name="humanWhispererAlphaKnife"  prob="0.02" />
 		<entity name="humanWhispererAlphaSMG"  prob="0.01" />
 		<entity name="humanWhispererAlphaAK47"  prob="0.01" />
 		<entity name="humanWhispererAlphaHunter"  prob="0.01" />
@@ -438,8 +438,8 @@
 		<entity name="humanWhispererAlphaXBow"  prob="0.01" />
 		<entity name="humanWhispererAlphaShotty"  prob="0.01" />	
 
-		<entity name="humanWhispererBetaClub"  prob="0.01" />
-		<entity name="humanWhispererBetaKnife"  prob="0.01" />
+		<entity name="humanWhispererBetaClub"  prob="0.02" />
+		<entity name="humanWhispererBetaKnife"  prob="0.02" />
 		<entity name="humanWhispererBetaSMG"  prob="0.01" />
 		<entity name="humanWhispererBetaAK47"  prob="0.01" />
 		<entity name="humanWhispererBetaHunter"  prob="0.01" />
@@ -447,8 +447,8 @@
 		<entity name="humanWhispererBetaXBow"  prob="0.01" />
 		<entity name="humanWhispererBetaShotty"  prob="0.01" />	
 
-		<entity name="humanWhispererFemale01Club"  prob="0.01" />
-		<entity name="humanWhispererFemale01Knife"  prob="0.01" />
+		<entity name="humanWhispererFemale01Club"  prob="0.02" />
+		<entity name="humanWhispererFemale01Knife"  prob="0.02" />
 		<entity name="humanWhispererFemale01SMG"  prob="0.01" />
 		<entity name="humanWhispererFemale01AK47"  prob="0.01" />
 		<entity name="humanWhispererFemale01Hunter"  prob="0.01" />
@@ -456,8 +456,8 @@
 		<entity name="humanWhispererFemale01XBow"  prob="0.01" />
 		<entity name="humanWhispererFemale01Shotty"  prob="0.01" />	
 
-		<entity name="humanWhispererFemale02Club"  prob="0.01" />
-		<entity name="humanWhispererFemale02Knife"  prob="0.01" />
+		<entity name="humanWhispererFemale02Club"  prob="0.02" />
+		<entity name="humanWhispererFemale02Knife"  prob="0.02" />
 		<entity name="humanWhispererFemale02SMG"  prob="0.01" />
 		<entity name="humanWhispererFemale02AK47"  prob="0.01" />
 		<entity name="humanWhispererFemale02Hunter"  prob="0.01" />
@@ -465,8 +465,8 @@
 		<entity name="humanWhispererFemale02XBow"  prob="0.01" />
 		<entity name="humanWhispererFemale02Shotty"  prob="0.01" />	
 
-		<entity name="humanWhispererMale01Club"  prob="0.01" />
-		<entity name="humanWhispererMale01Knife"  prob="0.01" />
+		<entity name="humanWhispererMale01Club"  prob="0.02" />
+		<entity name="humanWhispererMale01Knife"  prob="0.02" />
 		<entity name="humanWhispererMale01SMG"  prob="0.01" />
 		<entity name="humanWhispererMale01AK47"  prob="0.01" />
 		<entity name="humanWhispererMale01Hunter"  prob="0.01" />
@@ -474,8 +474,8 @@
 		<entity name="humanWhispererMale01XBow"  prob="0.01" />
 		<entity name="humanWhispererMale01Shotty"  prob="0.01" />	
 
-		<entity name="humanWhispererMale02Club"  prob="0.01" />
-		<entity name="humanWhispererMale02Knife"  prob="0.01" />
+		<entity name="humanWhispererMale02Club"  prob="0.02" />
+		<entity name="humanWhispererMale02Knife"  prob="0.02" />
 		<entity name="humanWhispererMale02SMG"  prob="0.01" />
 		<entity name="humanWhispererMale02AK47"  prob="0.01" />
 		<entity name="humanWhispererMale02Hunter"  prob="0.01" />
@@ -514,8 +514,8 @@
 		<entity name="humanNurseSurvivorBow" prob="0.02" />
 		<entity name="humanNurseSurvivorShotty" prob="0.01" />	
 		
-		<entity name="humanSoldierGirl01SurvivorClub"  prob="0.01" />
-		<entity name="humanSoldierGirl01SurvivorKnife"  prob="0.01" />
+		<entity name="humanSoldierGirl01SurvivorClub"  prob="0.02" />
+		<entity name="humanSoldierGirl01SurvivorKnife"  prob="0.02" />
 		<entity name="humanSoldierGirl01SurvivorSMG"  prob="0.01" />
 		<entity name="humanSoldierGirl01SurvivorAK47"  prob="0.01" />
 		<entity name="humanSoldierGirl01SurvivorHunter"  prob="0.01" />
@@ -523,8 +523,8 @@
 		<entity name="humanSoldierGirl01SurvivorXBow"  prob="0.01" />
 		<entity name="humanSoldierGirl01SurvivorShotty"  prob="0.01" />				
 		
-		<entity name="humanSoldierDeltaSurvivorClub"  prob="0.01" />
-		<entity name="humanSoldierDeltaSurvivorKnife"  prob="0.01" />
+		<entity name="humanSoldierDeltaSurvivorClub"  prob="0.02" />
+		<entity name="humanSoldierDeltaSurvivorKnife"  prob="0.02" />
 		<entity name="humanSoldierDeltaSurvivorSMG"  prob="0.01" />
 		<entity name="humanSoldierDeltaSurvivorAK47"  prob="0.01" />
 		<entity name="humanSoldierDeltaSurvivorHunter"  prob="0.01" />
@@ -532,8 +532,8 @@
 		<entity name="humanSoldierDeltaSurvivorXBow"  prob="0.01" />
 		<entity name="humanSoldierDeltaSurvivorShotty"  prob="0.01" />				
 		
-		<entity name="humanSoldierHunterSurvivorClub"  prob="0.01" />
-		<entity name="humanSoldierHunterSurvivorKnife"  prob="0.01" />
+		<entity name="humanSoldierHunterSurvivorClub"  prob="0.02" />
+		<entity name="humanSoldierHunterSurvivorKnife"  prob="0.02" />
 		<entity name="humanSoldierHunterSurvivorSMG"  prob="0.01" />
 		<entity name="humanSoldierHunterSurvivorAK47"  prob="0.01" />
 		<entity name="humanSoldierHunterSurvivorHunter"  prob="0.01" />
@@ -541,8 +541,8 @@
 		<entity name="humanSoldierHunterSurvivorXBow"  prob="0.01" />
 		<entity name="humanSoldierHunterSurvivorShotty"  prob="0.01" />				
 		
-		<entity name="humanSoldierNationalGuardSurvivorClub"  prob="0.01" />
-		<entity name="humanSoldierNationalGuardSurvivorKnife"  prob="0.01" />
+		<entity name="humanSoldierNationalGuardSurvivorClub"  prob="0.02" />
+		<entity name="humanSoldierNationalGuardSurvivorKnife"  prob="0.02" />
 		<entity name="humanSoldierNationalGuardSurvivorSMG"  prob="0.01" />
 		<entity name="humanSoldierNationalGuardSurvivorAK47"  prob="0.01" />
 		<entity name="humanSoldierNationalGuardSurvivorHunter"  prob="0.01" />
@@ -550,8 +550,8 @@
 		<entity name="humanSoldierNationalGuardSurvivorXBow"  prob="0.01" />
 		<entity name="humanSoldierNationalGuardSurvivorShotty"  prob="0.01" />				
 		
-		<entity name="humanSoldierRangerSurvivorClub"  prob="0.01" />
-		<entity name="humanSoldierRangerSurvivorKnife"  prob="0.01" />
+		<entity name="humanSoldierRangerSurvivorClub"  prob="0.02" />
+		<entity name="humanSoldierRangerSurvivorKnife"  prob="0.02" />
 		<entity name="humanSoldierRangerSurvivorSMG"  prob="0.01" />
 		<entity name="humanSoldierRangerSurvivorAK47"  prob="0.01" />
 		<entity name="humanSoldierRangerSurvivorHunter"  prob="0.01" />
@@ -559,28 +559,28 @@
 		<entity name="humanSoldierRangerSurvivorXBow"  prob="0.01" />
 		<entity name="humanSoldierRangerSurvivorShotty"  prob="0.01" />					
 		
-		<entity name="humanVaultFemaleResidentSurvivorClub"  prob="0.01" />
-		<entity name="humanVaultFemaleResidentSurvivorKnife"  prob="0.01" />
+		<entity name="humanVaultFemaleResidentSurvivorClub"  prob="0.02" />
+		<entity name="humanVaultFemaleResidentSurvivorKnife"  prob="0.02" />
 		
-		<entity name="humanVaultFemaleSecuritySurvivorClub"  prob="0.01" />
-		<entity name="humanVaultFemaleSecuritySurvivorKnife"  prob="0.01" />
+		<entity name="humanVaultFemaleSecuritySurvivorClub"  prob="0.02" />
+		<entity name="humanVaultFemaleSecuritySurvivorKnife"  prob="0.02" />
 		
-		<entity name="humanVaultDoctorSurvivorClub"  prob="0.01" />
-		<entity name="humanVaultDoctorSurvivorKnife"  prob="0.01" />
+		<entity name="humanVaultDoctorSurvivorClub"  prob="0.02" />
+		<entity name="humanVaultDoctorSurvivorKnife"  prob="0.02" />
 		
-		<entity name="humanVaultPowerArmorSurvivorClub"  prob="0.01" />
-		<entity name="humanVaultPowerArmorSurvivorKnife"  prob="0.01" />
+		<entity name="humanVaultPowerArmorSurvivorClub"  prob="0.02" />
+		<entity name="humanVaultPowerArmorSurvivorKnife"  prob="0.02" />
 		
-		<entity name="humanVaultMaleResidentSurvivorClub"  prob="0.01" />
-		<entity name="humanVaultMaleResidentSurvivorKnife"  prob="0.01" />
+		<entity name="humanVaultMaleResidentSurvivorClub"  prob="0.02" />
+		<entity name="humanVaultMaleResidentSurvivorKnife"  prob="0.02" />
 		
-		<entity name="humanVaultMaleSecuritySurvivorClub"  prob="0.01" />
-		<entity name="humanVaultMaleSecuritySurvivorKnife"  prob="0.01" />
+		<entity name="humanVaultMaleSecuritySurvivorClub"  prob="0.02" />
+		<entity name="humanVaultMaleSecuritySurvivorKnife"  prob="0.02" />
 		
-		<entity name="humanVaultBossSurvivorClub"  prob="0.01" />
-		<entity name="humanVaultBossSurvivorKnife"  prob="0.01" />
+		<entity name="humanVaultBossSurvivorClub"  prob="0.02" />
+		<entity name="humanVaultBossSurvivorKnife"  prob="0.02" />
 	</append> 	
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesNight')]">
+<!--	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesNight')]">
 		<entity name="humanEveBanditClub" prob="0.04" />
 		<entity name="humanEveBanditKnife" prob="0.04" />
 		<entity name="humanEveBanditSMG" prob="0.04" />
@@ -724,7 +724,7 @@
 		<entity name="humanWhispererMale02XBow"  prob="0.04" />
 		<entity name="humanWhispererMale02Shotty"  prob="0.04" />	
 
-	</append> 
+	</append> -->
 
 	<!--  Testing Human Bandit Sleepers  -->
 	
