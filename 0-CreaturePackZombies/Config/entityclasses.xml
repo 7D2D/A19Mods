@@ -411,7 +411,6 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieCopFeral"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -442,7 +441,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="750"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -567,7 +566,6 @@
 		<property name="Weight" value="70"/>
 		<property name="Faction" value="undead"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
-
 		<property name="HandItem" value="meleeHandZombieStrong2"/>
 		<property name="JumpMaxDistance" value="1.4, 1.5"/>
 		<property name="ExperienceGain" value="750"/>
@@ -582,15 +580,12 @@
 		<property name="Tags" value="entity,cp,male,zombie,walker,feral"/>
 		<property name="ReplaceMaterial3" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
 		<property name="Faction" value="undead"/>
-
 		<property name="DismemberMultiplierHead" value=".7"/>
 		<property name="DismemberMultiplierArms" value=".7"/>
 		<property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-
 		<property name="HandItem" value="meleeHandZombieFeral2"/>
-
 		<property name="ExperienceGain" value="1200"/>
 		<property name="LootDropProb" value=".03"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -604,7 +599,6 @@
 		<property name="Tags" value="entity,cp,male,zombie,walker,feral,radiated"/>
 		<property name="ReplaceMaterial0" value="#@modfolder:Resources/GPZombies.unity3d?TraderRekt_rad.mat"/>
 		<property name="Faction" value="undead"/>
-
 		<property name="DismemberMultiplierHead" value=".4"/>
 		<property name="DismemberMultiplierArms" value=".4"/>
 		<property name="DismemberMultiplierLegs" value=".4"/>
@@ -626,11 +620,9 @@
 		<property name="Weight" value="70"/>
 		<property name="Faction" value="undead"/>
         <property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
-
 		<property name="HandItem" value="meleeHandZombieStrong2"/>
 		<property name="JumpMaxDistance" value="1.4, 1.5"/>
 		<property name="ExperienceGain" value="750"/>
-
 		<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="250"/>
 			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
@@ -641,15 +633,12 @@
 		<property name="Tags" value="entity,cp,male,zombie,walker,feral"/>
 		<property name="ReplaceMaterial4" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
 		<property name="Faction" value="undead"/>
-
 		<property name="DismemberMultiplierHead" value=".7"/>
 		<property name="DismemberMultiplierArms" value=".7"/>
 		<property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-
 		<property name="HandItem" value="meleeHandZombieFeral2"/>
-
 		<property name="ExperienceGain" value="1200"/>
 		<property name="LootDropProb" value=".03"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -663,7 +652,6 @@
 		<property name="Tags" value="entity,cp,male,zombie,walker,feral,radiated"/>
 		<property name="ReplaceMaterial0" value="#@modfolder:Resources/GPZombies.unity3d?TraderHugh_rad.mat"/>
 		<property name="Faction" value="undead"/>
-
 		<property name="DismemberMultiplierHead" value=".4"/>
 		<property name="DismemberMultiplierArms" value=".4"/>
 		<property name="DismemberMultiplierLegs" value=".4"/>
@@ -862,7 +850,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieBlackSoldierMaskHelmet"/>
 			<property name="WalkType" value="7"/>
 			<property name="Mass" value="190"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombieStrong2"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
@@ -876,7 +864,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieCopFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -892,7 +880,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieBlackSoldierHelmetNoMask"/>
 			<property name="WalkType" value="7"/>
 			<property name="Mass" value="190"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombieStrong2"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
@@ -906,7 +894,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieCopFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -922,7 +910,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieSoldier01BulletWound"/>
 			<property name="WalkType" value="7"/>
 			<property name="Mass" value="190"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombieStrong2"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
@@ -936,7 +924,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieCopFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -952,7 +940,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieSoldier01BulletWound"/>
 			<property name="WalkType" value="8"/>
 			<property name="Mass" value="190"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombie002"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
@@ -966,7 +954,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieCopFeral"/>
+			<property name="HandItem" value="meleeHandZombie02Feral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -982,7 +970,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieSoldierFemale01"/>
 			<property name="WalkType" value="6"/>
 			<property name="Mass" value="190"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombieStrong2"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
@@ -996,7 +984,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1000"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1012,7 +1000,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieSoldierFemale01Helmet"/>
 			<property name="WalkType" value="3"/>
 			<property name="Mass" value="190"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombieStrong2"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
@@ -1026,7 +1014,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1000"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1042,7 +1030,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieSoldierLeader"/>
 			<property name="WalkType" value="1"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="ExperienceGain" value="750"/>
 			<property name="LootDropProb" value=".03"/>
@@ -1060,7 +1048,7 @@
 			<property name="PhysicsBody" value="mixamoConvertedGuppyZombie"/>			
 			<property name="Mass" value="300"/>
 			<property name="SizeScale" value="1.2"/>
-			<property name="HandItem" value="meleeHandZombieDemolition"/>
+			<property name="HandItem" value="meleeHandZombieDemolition2"/>
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="PainResistPerHit" value=".7"/>
 			<property name="StompsSpikes" value="true"/>
@@ -1082,7 +1070,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor01"/>
 			<property name="WalkType" value="2"/>
 			<property name="Mass" value="180"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombie001"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
@@ -1096,7 +1084,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1111,7 +1099,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor02"/>
 			<property name="WalkType" value="7"/>
 			<property name="Mass" value="180"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombie001"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
@@ -1125,7 +1113,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1140,7 +1128,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor03"/>
 			<property name="WalkType" value="1"/>
 			<property name="Mass" value="180"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombie001"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
@@ -1154,7 +1142,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1169,7 +1157,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor04Black"/>
 			<property name="WalkType" value="3"/>
 			<property name="Mass" value="180"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombie001"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
@@ -1183,7 +1171,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="1200"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1198,7 +1186,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctorFemale01"/>
 			<property name="WalkType" value="7"/>
 			<property name="Mass" value="180"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombie001"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
@@ -1212,7 +1200,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="750"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1227,7 +1215,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctorFemale02"/>
 			<property name="WalkType" value="1"/>
 			<property name="Mass" value="180"/>
-			<property name="HandItem" value="meleeHandZombieWorker"/>
+			<property name="HandItem" value="meleeHandZombie001"/>
 			<property name="ExperienceGain" value="750"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
@@ -1241,7 +1229,7 @@
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
-			<property name="HandItem" value="meleeHandZombieFeral"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
 			<property name="ExperienceGain" value="750"/>
 			<property name="LootDropProb" value=".03"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1254,7 +1242,7 @@
 		
 		
 		<entity_class name="zombieGuppyCreepyCrawly" extends="zombieAnimalTemplate">
-			<property name="Tags" value="entity,cp,animal"/>
+			<property name="Tags" value="entity,male,animal"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
@@ -1300,7 +1288,7 @@
 		</entity_class>	 
 
 		<entity_class name="zombieGuppyInfernalDog" extends="zombieAnimalTemplate">
-			<property name="Tags" value="entity,cp,animal"/>
+			<property name="Tags" value="entity,male,animal"/>
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieAnimals.unity3d?guppyInfernalDog"/>
 			<property name="Mass" value="180"/>
 			<property name="HasRagdoll" value="true"/>
@@ -1358,7 +1346,7 @@
 		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".25"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-		<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+		<property name="HandItem" value="meleeHandZombieFeral2"/>
 		<property name="ExperienceGain" value="1200"/>
 		<property name="LootDropProb" value=".03"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1374,7 +1362,7 @@
 		<property name="Faction" value="undead"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>                
 		<property name="WalkType" value="2"/>
-		<property name="HandItem" value="meleeHandZombie01"/>
+		<property name="HandItem" value="meleeHandZombie001"/>
 		<property name="Mass" value="150"/>
 	</entity_class> 
 	
@@ -1384,7 +1372,7 @@
 		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".25"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-		<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+		<property name="HandItem" value="meleeHandZombieFeral2"/>
 		<property name="ExperienceGain" value="1200"/>
 		<property name="LootDropProb" value=".03"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1400,7 +1388,7 @@
 		<property name="Mesh" value="#@modfolder:Resources/zombiesTSBX.unity3d?zombieCopSwat01TSBX"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>                
 		<property name="WalkType" value="2"/>
-		<property name="HandItem" value="meleeHandZombie01"/>
+		<property name="HandItem" value="meleeHandZombie001"/>
 		<property name="Mass" value="150"/>
 	</entity_class> 
 	
@@ -1410,7 +1398,7 @@
 		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".25"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-		<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+		<property name="HandItem" value="meleeHandZombieFeral2"/>
 		<property name="ExperienceGain" value="1200"/>
 		<property name="LootDropProb" value=".03"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1426,7 +1414,7 @@
 		<property name="Faction" value="undead"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>                
 		<property name="WalkType" value="2"/>
-		<property name="HandItem" value="meleeHandZombie01"/>
+		<property name="HandItem" value="meleeHandZombie001"/>
 		<property name="Mass" value="150"/>
 	</entity_class> 
 	
@@ -1436,7 +1424,7 @@
 		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".25"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-		<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+		<property name="HandItem" value="meleeHandZombieFeral2"/>
 		<property name="ExperienceGain" value="1200"/>
 		<property name="LootDropProb" value=".03"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -1451,7 +1439,7 @@
 		<property name="Mesh" value="#@modfolder:Resources/zombiesTSBX.unity3d?zombieHoly01MUMPFY"/>
 		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>                
 		<property name="WalkType" value="2"/>
-		<property name="HandItem" value="meleeHandZombie01"/>
+		<property name="HandItem" value="meleeHandZombie001"/>
 		<property name="Mass" value="150"/>
 	</entity_class>	
 
@@ -1461,7 +1449,7 @@
 		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".25"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
-		<property name="HandItem" value="meleeHandZombieStrongFeral"/>
+		<property name="HandItem" value="meleeHandZombieFeral2"/>
 		<property name="ExperienceGain" value="1200"/>
 		<property name="LootDropProb" value=".03"/>
 		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
