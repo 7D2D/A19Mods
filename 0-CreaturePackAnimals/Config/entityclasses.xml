@@ -9,7 +9,7 @@
 		<entity_class name="animalTemplateHostileWalking" >
 			<property name="IsChunkObserver" value="true"/>
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
-			<property name="Tags" value="entity,cp,animal,hostile,template"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?ArcticFox_X"/>
 			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want animals to head track  -->
 			<property name="ModelType" value="Standard"/>
@@ -106,7 +106,7 @@
 		
 		<entity_class name="animalTemplateNeutralWalking" extends="animalTemplateHostileWalking">
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
-			<property name="Tags" value="entity,cp,animal,neutral,template"/>
+			<property name="Tags" value="entity,animal,neutral,template"/>
 			<property name="Faction" value="animals"/>
 			<property name="MaxViewAngle" value="270"/>
 			<property name="AITask-1" value="BreakBlock"/>
@@ -125,7 +125,7 @@
 		
 		<entity_class name="animalTemplateTimidWalking" extends="animalTemplateHostileWalking">
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
-			<property name="Tags" value="entity,cp,animal,timid,template"/>
+			<property name="Tags" value="entity,animal,timid,template"/>
 			<property name="Faction" value="animals"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
@@ -221,7 +221,7 @@
 			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
 			<property name="Class" value="EntityHornet"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Robin_X" />
-			<property name="Tags" value="entity,cp,animal,hostile,template"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
 			<property name="Faction" value="animals"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="HandItem" value="meleeHandAnimalBear"/>
@@ -307,7 +307,7 @@
 		<!--  Xyth normal animals  -->	
 		
 		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
-			<property name="Tags" value="entity,cp,animal,perkAT05,animalFox"/>
+			<property name="Tags" value="entity,animal,perkAT05,animalFox"/>
 			<property name="Faction" value="animals"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
@@ -344,7 +344,7 @@
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>
 		<entity_class name="animalGoat" extends="animalTemplateNeutralWalking">
-			<property name="Tags" value="entity,cp,animal,perkAT05,animalGoat"/>
+			<property name="Tags" value="entity,animal,perkAT05,animalGoat"/>
 			<property name="Faction" value="animals"/>		
 			<property name="Prefab" value="NPC"/>
 			<property name="Class" value="EntityAnimalStag"/>
@@ -380,7 +380,7 @@
 		</entity_class>	
 		<entity_class name="animalSpider01" extends="animalTemplateHostileWalking">
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider01_X"/>
-			<property name="Tags" value="entity,cp,animal,perkAT05,animalSpider01"/>
+			<property name="Tags" value="entity,animal,perkAT05,animalSpider01"/>
 			<property name="Faction" value="animals"/>
 			<property name="Prefab" value="NPC"/>
 			<property name="Parent" value="Animals"/>
@@ -412,11 +412,11 @@
 			<property name="HandItem" value="meleeHandAnimalSpider"/>			
 			<property name="DeadBodyHitPoints" value="100"/>
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>				
 			</effect_group>
 		</entity_class>		
 		<entity_class name="animalSpider02" extends="animalSpider01">
-			<property name="Tags" value="entity,cp,animal,hostile,animalSpider02"/>
+			<property name="Tags" value="entity,animal,hostile,animalSpider02"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider02_X"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
@@ -426,7 +426,7 @@
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
 		</entity_class>	
 		<entity_class name="animalSpider03" extends="animalSpider01">
-			<property name="Tags" value="entity,cp,animal,hostile,animalSpider03"/>
+			<property name="Tags" value="entity,animal,hostile,animalSpider03"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Spider03_X"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
@@ -438,7 +438,7 @@
 		
 		<entity_class name="animalBanditWolf" extends="animalTemplateHostileWalking">
 			<property name="Mesh" value="#@modfolder(0-CreaturePackAnimals):Resources/XythAnimals.unity3d?WarWolf_X"/>
-			<property name="Tags" value="entity,animal,NPCAnimalWarWolf"/>
+			<property name="Tags" value="entity,animal,cp,NPCAnimalWarWolf"/>
 			<property name="Faction" value="whiteriver"/>	
 			<property name="Weight" value="60"/>
 			<property name="HandItem" value="meleeHandAnimalWarWolf"/>	
@@ -589,7 +589,7 @@
 		
 <!--  Hostile Flyers  -->		
 		<entity_class name="animalBloatfly" extends="animalTemplateHostileFlying"> 
-			<property name="Tags" value="entity,cp,animal,hostile,animalBloatfly"/>
+			<property name="Tags" value="entity,animal,hostile,animalBloatfly"/>
 			<property name="Faction" value="animals"/>					
 			<property name="Mass" value="100"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Bloatfly_X"/>
@@ -623,7 +623,7 @@
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="0"/>
 		</entity_class>			
 		<entity_class name="animalGuppyInsect" extends="animalTemplateHostileFlying"> 
-			<property name="Tags" value="entity,cp,animal,hostile,animalGuppyInsect"/>
+			<property name="Tags" value="entity,animal,hostile,animalGuppyInsect"/>
 			<property name="Faction" value="animals"/>					
 			<property name="Mass" value="100"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?creatureGuppyFlyingInsect"/>
@@ -654,7 +654,7 @@
 <!--  DarkStarDragons Animals   -->
 		
 		<entity_class name="animalWolfhound" extends="animalTemplateHostileWalking">
-			<property name="Tags" value="entity,cp,animal,hostile"/>
+			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="Faction" value="animals"/>				
 			<property name="Prefab" value="NPC"/>
 			<property name="Class" value="EntityAnimalStag"/>
@@ -690,7 +690,7 @@
 
 		<entity_class name="animalBeagle" extends="animalWolfhound">
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?BeagleDark"/>
-			<property name="Tags" value="entity,cp,animal,hostile"/>
+			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="Faction" value="animals"/>					
 			<property name="HandItem" value="meleeHandAnimalFox"/>					
 			<property name="SoundRandom" value="coyoteroam"/>
@@ -714,9 +714,9 @@
 
 		<entity_class name="animalPug" extends="animalWolfhound">
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?PugDark"/>
-			<property name="Tags" value="entity,cp,animal,hostile"/>
+			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="Faction" value="animals"/>	
-			<property name="Weight" value="20"/>
+			<property name="Weight" value="10"/>
 			<property name="HandItem" value="meleeHandAnimalFox"/>					
 			<property name="SoundRandom" value="coyoteroam"/>
 			<property name="SoundAlert" value="wolfalert"/>
@@ -739,7 +739,7 @@
 
 		<entity_class name="animalWulf" extends="animalWolfhound">
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?WolfDark"/>
-			<property name="Tags" value="entity,cp,animal,hostile"/>
+			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="Faction" value="animals"/>				
 			<property name="HandItem" value="meleeHandAnimalDireWolf"/>					
 			<property name="SoundRandom" value="wolfroam"/>
@@ -760,6 +760,6 @@
 				<passive_effect name="HealthMax" operation="base_set" value="200"/>
 			</effect_group>
 		</entity_class>		
-		
+	
 	</append>
 </configs>

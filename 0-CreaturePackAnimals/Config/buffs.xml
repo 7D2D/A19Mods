@@ -1,7 +1,7 @@
 <configs>
 	<append xpath="/buffs">
 
-		<buff name="buffSnowSwarm" name_key="buffSnowSwarmName" description_key="buffSnowSwarmDesc" tooltip_key="buffSnowSwarmTooltip" >
+		<buff name="buffSnowSwarm" name_key="buffElementColdName" description_key="buffElementColdDesc" tooltip_key="buffElementColdTooltip" >
 		  <damage_type value="cold"/>
 		  <stack_type value="replace"/>
 		  <update_rate value="3"/>
@@ -11,7 +11,7 @@
 		  </effect_group>
 		</buff>
 
-		<buff name="buffFrostbite"  description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,128,0" icon_blink="false">
+		<buff name="buffFrostbite"  description_key="buffElementColdDesc" tooltip_key="buffElementColdTooltip" icon="ui_game_symbol_cold" icon_color="255,128,0" icon_blink="false">
 		  <damage_type value="cold"/>
 		  <stack_type value="replace"/>
 		  <duration value="10"/>
@@ -22,7 +22,7 @@
 			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFrostbite"/>
 		  </effect_group>
 		</buff>
-		<buff name="buffFrostbite2" description_key="buffFrostbite2Desc" tooltip_key="buffFrostbite2Tooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+		<buff name="buffFrostbite2" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
 		  <damage_type value="cold"/>
 		  <stack_type value="replace"/>
 		  <duration value="4"/>
