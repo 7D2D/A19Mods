@@ -752,16 +752,17 @@
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="3"/>
 			</effect_group>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="6"/>	
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="4"/>
-			</effect_group>
-			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="7"/>	
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="4"/>	
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="5"/>
 			</effect_group>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="7"/>	<!-- increasing chance of type 7 since that type has alternate walks as well  -->
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="5"/>	
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="6"/>
+			</effect_group>
+			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="6"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"/>
 			</effect_group>
 		</buff>
 	</append>
