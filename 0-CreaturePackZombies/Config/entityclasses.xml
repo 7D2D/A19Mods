@@ -934,7 +934,7 @@
 			</effect_group>
 		</entity_class>
 		
-		<entity_class name="zombieGuppySoldier01Crawler" extends="zombieRegularTemplate">
+		<entity_class name="zombieGuppySoldier01Crawler" extends="zombieRegularTemplate"> <!-- removed from spawning due to random walk type issues  -->
 			<property name="Tags" value="entity,cp,male,zombie"/>
 			<property name="PhysicsBody" value="mixamoConvertedGuppyZombie"/>			
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieSoldiers.unity3d?guppyZombieSoldier01BulletWound"/>
@@ -946,9 +946,9 @@
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 			</effect_group>				
-		</entity_class>
+		</entity_class> 
 		
-		<entity_class name="zombieGuppySoldier01CrawlerFeral" extends="zombieGuppySoldier01Crawler">
+		<entity_class name="zombieGuppySoldier01CrawlerFeral" extends="zombieGuppySoldier01Crawler"> <!-- removed from spawning due to random walk type issues  -->
 			<property name="Tags" value="entity,cp,male,zombie"/>
 			<property name="PhysicsBody" value="mixamoConvertedGuppyZombie"/>			
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
@@ -962,7 +962,7 @@
 				<passive_effect name="HealthMax" operation="base_set" value="550"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 			</effect_group>
-		</entity_class>
+		</entity_class> 
 		
 		<entity_class name="zombieGuppySoldierFemale01" extends="zombieRegularFemaleTemplate">
 			<property name="Tags" value="entity,cp,female,zombie,walker"/>

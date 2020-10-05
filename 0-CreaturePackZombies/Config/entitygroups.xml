@@ -84,7 +84,7 @@
 		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".5" />
 		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".5" />
         <entity name="zombieGuppySoldier01" prob=".5"/>
-		<entity name="zombieGuppySoldier01Crawler" prob=".5"/>
+<!--		<entity name="zombieGuppySoldier01Crawler" prob=".5"/> -->
 		<entity name="zombieGuppySoldierFemale01" prob=".5" />
         <entity name="zombieGuppySoldierFemale01Helmet" prob=".5"/>
 		<entity name="zombieGuppySoldierLeader" prob=".5"/>
@@ -292,7 +292,7 @@
 		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob="1" />
 		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob="1" />
         <entity name="zombieGuppySoldier01" prob="1"/>
-		<entity name="zombieGuppySoldier01Crawler" prob="1"/>
+<!--		<entity name="zombieGuppySoldier01Crawler" prob="1"/> -->
 		<entity name="zombieGuppySoldierFemale01" prob="1" />
         <entity name="zombieGuppySoldierFemale01Helmet" prob="1"/>
 		<entity name="zombieGuppySoldierLeader" prob="1"/>
@@ -302,7 +302,7 @@
         <entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".01" />
         <entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".01" />
 		<entity name="zombieGuppySoldier01Feral" prob=".01" />
-        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".01" />
+ <!--       <entity name="zombieGuppySoldier01CrawlerFeral" prob=".01" /> -->
 		<entity name="zombieGuppySoldierFemale01Feral" prob=".01" />
         <entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".01" />
 		<entity name="zombieGuppySoldierLeaderFeral" prob=".01" />
@@ -311,7 +311,7 @@
         <entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".02" />
         <entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".02" />
 		<entity name="zombieGuppySoldier01Feral" prob=".02" />
-        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".02" />
+<!--        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".02" /> -->
 		<entity name="zombieGuppySoldierFemale01Feral" prob=".02" />
         <entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".02" />
 		<entity name="zombieGuppySoldierLeaderFeral" prob=".02" />
@@ -320,7 +320,7 @@
         <entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".03" />
         <entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".03" />
 		<entity name="zombieGuppySoldier01Feral" prob=".03" />
-        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".03" />
+<!--        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".03" /> -->
 		<entity name="zombieGuppySoldierFemale01Feral" prob=".03" />
         <entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".03" />
 		<entity name="zombieGuppySoldierLeaderFeral" prob=".03" />
@@ -329,7 +329,7 @@
         <entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".04" />
         <entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".04" />
 		<entity name="zombieGuppySoldier01Feral" prob=".04" />
-        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".04" />
+<!--        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".04" /> -->
 		<entity name="zombieGuppySoldierFemale01Feral" prob=".04" />
         <entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".04" />
 		<entity name="zombieGuppySoldierLeaderFeral" prob=".04" />
@@ -338,7 +338,7 @@
         <entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".05" />
         <entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".05" />
 		<entity name="zombieGuppySoldier01Feral" prob=".05" />
-        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".05" />
+<!--        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".05" /> -->
 		<entity name="zombieGuppySoldierFemale01Feral" prob=".05" />
         <entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".05" />
 		<entity name="zombieGuppySoldierLeaderFeral" prob=".05" />
@@ -379,7 +379,7 @@
 		<entity name="zombieGuppyBlackSoldierMaskHelmet" prob=".3" />
 		<entity name="zombieGuppyBlackSoldierHelmetNoMask" prob=".3" />
         <entity name="zombieGuppySoldier01" prob=".3"/>
-		<entity name="zombieGuppySoldier01Crawler" prob=".3"/>
+<!--		<entity name="zombieGuppySoldier01Crawler" prob=".3"/> -->
 		<entity name="zombieGuppySoldierFemale01" prob=".3" />
         <entity name="zombieGuppySoldierFemale01Helmet" prob=".3"/>
 		<entity name="zombieGuppySoldierLeader" prob=".3"/>
@@ -405,7 +405,7 @@
         <entity name="zombieGuppyBlackSoldierMaskHelmetFeral" prob=".15" />
         <entity name="zombieGuppyBlackSoldierHelmetNoMaskFeral" prob=".15" />
 		<entity name="zombieGuppySoldier01Feral" prob=".15" />
-        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".15" />
+<!--        <entity name="zombieGuppySoldier01CrawlerFeral" prob=".15" /> -->
 		<entity name="zombieGuppySoldierFemale01Feral" prob=".15" />
         <entity name="zombieGuppySoldierFemale01HelmetFeral" prob=".15" />
 		<entity name="zombieGuppySoldierLeaderFeral" prob=".15" />
