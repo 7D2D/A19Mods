@@ -33,7 +33,7 @@
 			3) Human NPC sounds: Dies.
 			-->
 			<!--  Calculation; Random sound played every [(update_rate) * (CVarCompare match chance)] so every 3 seconds, there is a 2/10 chance of a random sound or on average one sound every 15 seconds  -->
-			<requirement name="!EntityTagCompare" tags="player"/>
+<!--			<requirement name="!EntityTagCompare" tags="player"/> -->
 			<effect_group name="RndmSoundPlayRandomizer"> 
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RndmSoundPlay" operation="set" value="randomint(1,11)"/>
 			</effect_group>
@@ -361,8 +361,8 @@
 		<buff name="IsHuman">
 			<stack_type value="replace"/>
 			<duration value="0"/>
-			<requirement name="!EntityTagCompare" tags="player"/>
-			<requirement name="!EntityTagCompare" tags="animal"/>
+<!--			<requirement name="!EntityTagCompare" tags="player"/>
+			<requirement name="!EntityTagCompare" tags="animal"/> -->
 <!--			<requirement name="NotHasBuff" buff="IsZombie"/>
 			<requirement name="NotHasBuff" buff="IsInfected"/> -->
 			<!-- IsHuman Animator set to "0" for zombie 
@@ -444,9 +444,10 @@
 				 Set Animator "IsHuman" to Value="1". 
 				 Establish "InfectedStageCvar" value="0" 
 			-->
-			<requirement name="!EntityTagCompare" tags="player"/>
-			<requirement name="!EntityTagCompare" tags="animal"/>
+
 			<effect_group name="Intital stage 0">
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="IsHuman"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="InfectedStageCvar" operation="set" value="0"/>
@@ -454,11 +455,15 @@
 			</effect_group>
 			<!-- Every Update Rate adds 1 to "InfectedStageCvar" which correspond to stage levels -->
 			<effect_group name="InfectedStageAdd">
+			<requirement name="!EntityTagCompare" tags="player"/>
+			<requirement name="!EntityTagCompare" tags="animal"/> 
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="InfectedStageCvar" operation="add" value="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 1 -->
 			<effect_group name="Infected_Stage1">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="1"/>
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.125" duration="1"/>
 				<passive_effect name="RunSpeed" operation="perc_set" value="0.95"/>
@@ -467,6 +472,8 @@
 			<!-- See if Infected stage Cvar equals 2 -->
 			<effect_group name="Infected_Stage2">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="2"/>
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 								
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.25" duration="1"/>
 				<passive_effect name="RunSpeed" operation="perc_set" value="0.9"/>
@@ -475,6 +482,8 @@
 			<!-- See if Infected stage Cvar equals 3 -->
 			<effect_group name="Infected_Stage3">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="3"/>
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 								
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.375" duration="1"/>
 				<passive_effect name="RunSpeed" operation="perc_set" value="0.85"/>
@@ -484,6 +493,8 @@
 			<!-- See if Infected stage Cvar equals 4 -->
 			<effect_group name="Infected_Stage4">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="4"/>
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 								
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.5" duration="1"/>
 				<passive_effect name="RunSpeed" operation="perc_set" value="0.8"/>
@@ -492,6 +503,8 @@
 			<!-- See if Infected stage Cvar equals 5 -->
 			<effect_group name="Infected_Stage5">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="5"/>
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 								
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.625" duration="1"/>
 				<passive_effect name="RunSpeed" operation="perc_set" value="0.75"/>
@@ -501,6 +514,8 @@
 			<!-- See if Infected stage Cvar equals 6 -->
 			<effect_group name="Infected_Stage6">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="6"/>
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 								
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.75" duration="1"/>
 				<passive_effect name="RunSpeed" operation="perc_set" value="0.7"/>
@@ -509,6 +524,8 @@
 			<!-- See if Infected stage Cvar equals 7 -->
 			<effect_group name="Infected_Stage7">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="7"/>
+				<requirement name="!EntityTagCompare" tags="player"/>
+				<requirement name="!EntityTagCompare" tags="animal"/> 								
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.875" duration="1"/>
 				<passive_effect name="RunSpeed" operation="perc_set" value="0.65"/>
@@ -534,8 +551,7 @@
 				 Remove Buff "IsInfected".
 				 Add Buff "InfectedAttack".
 			-->
-			<requirement name="!EntityTagCompare" tags="player"/>
-			<requirement name="!EntityTagCompare" tags="animal"/>
+
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="NPCSoundSys">
 				<requirement name="EntityTagCompare" tags="zombie"/>
@@ -606,8 +622,9 @@
 				 Set Animator "IsHuman" to Value="1". 
 				 Establish "InfectedStageCvar" value="0" 
 			-->
-			<requirement name="EntityTagCompare" tags="saveable"/>
+			
 			<effect_group name="Intital stage 0">
+				<requirement name="EntityTagCompare" tags="saveable"/>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="IsZombie"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="InfectedStageCvar" operation="set" value="8"/>
@@ -615,52 +632,61 @@
 			</effect_group>
 			<!-- Every Update Rate subtracts 1 to "InfectedStageCvar" which correspond to stage levels -->
 			<effect_group name="InfectedStageAdd">
+				<requirement name="EntityTagCompare" tags="saveable"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="InfectedStageCvar" operation="subtract" value="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 7 -->
 			<effect_group name="Infected_Stage1">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="7"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.875" duration="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 6 -->
 			<effect_group name="Infected_Stage2">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="6"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.75" duration="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 5 -->
 			<effect_group name="Infected_Stage3">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="5"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.625" duration="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 4 -->
 			<effect_group name="Infected_Stage4">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="4"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.5" duration="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 3 -->
 			<effect_group name="Infected_Stage5">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="3"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.375" duration="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 2 -->
 			<effect_group name="Infected_Stage6">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="2"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.25" duration="1"/>
 			</effect_group>
 			<!-- See if Infected stage Cvar equals 1 -->
 			<effect_group name="Infected_Stage7">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="Equals" value="1"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>				
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.125" duration="1"/>
 			</effect_group>
 			<effect_group name="Now Human">
 				<requirement name="CVarCompare" cvar="InfectedStageCvar" operation="LT" value="1"/>
+				<requirement name="EntityTagCompare" tags="saveable"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="IsHuman" />
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="IsCured" />
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="InfectedAttack" />
@@ -710,6 +736,8 @@
                 <requirement name="CVarCompare" cvar="InfectChance" operation="Equals" value="1"/>
                 <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="IsInfected">
                     <requirement name="EntityTagCompare" target="other" tags="npc"/>
+					<requirement name="!EntityTagCompare" target="other" tags="animal"/>
+					<requirement name="!EntityTagCompare" target="other" tags="mech"/>
                 </triggered_effect>
             </effect_group>    
 <!--			<effect_group name="Infection Attack Buff Player">
@@ -740,28 +768,34 @@
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="WalkChange" operation="set" value="randomint(1,6)"/>
 			</effect_group>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="1"/>	
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="1"/>
+				<requirement name="!EntityTagCompare" tags="crawler"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="1"/>
 			</effect_group>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="2"/>	
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="2"/>
+				<requirement name="!EntityTagCompare" tags="crawler"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="2"/>
 			</effect_group>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="3"/>	
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="3"/>
+				<requirement name="!EntityTagCompare" tags="crawler"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="3"/>
 			</effect_group>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="4"/>	
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="4"/>
+				<requirement name="!EntityTagCompare" tags="crawler"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="5"/>
 			</effect_group>
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="5"/>	
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="5"/>
+				<requirement name="!EntityTagCompare" tags="crawler"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="6"/>
 			</effect_group>
 			
 			<effect_group>
-				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="6"/>	
+				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="6"/>
+				<requirement name="!EntityTagCompare" tags="crawler"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"/>
 			</effect_group>
 		</buff>
