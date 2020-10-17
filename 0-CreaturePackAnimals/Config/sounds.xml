@@ -32,7 +32,7 @@
 		</SoundDataNode>
 		<SoundDataNode name="RobinSounds">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<AudioClip ClipName="#@modfolder:Resources/RobinSounds.unity3d?Robin"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Robin"/>
 			<Channel name="Mouth"/>
 			<Priority name="5"/>
 			<maxVoicesPerEntity value="3"/>
@@ -42,14 +42,14 @@
 		</SoundDataNode>	
 		<SoundDataNode name="CrowRandom">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow1"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow3"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow4"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow5"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow6"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow7"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow8"/>	
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow9"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow1"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow3"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow4"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow5"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow6"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow7"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow8"/>	
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow9"/>
 			<Channel name="Mouth"/>
 			<Priority name="5"/>
 			<maxVoicesPerEntity value="1"/>
@@ -59,7 +59,7 @@
 		</SoundDataNode>
 		<SoundDataNode name="CrowAttack">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow11"/>				
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?Crow11"/>				
 			<Channel name="Mouth"/>
 			<Priority name="5"/>
 			<maxVoicesPerEntity value="1"/>
@@ -69,8 +69,8 @@
 		</SoundDataNode>		
 		<SoundDataNode name="BatRandom">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatIdle"/>
-			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatIdle2"/>			
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?BatIdle"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?BatIdle2"/>			
 			<Channel name="Mouth"/>
 			<Priority name="5"/>
 			<maxVoicesPerEntity value="3"/>
@@ -80,7 +80,7 @@
 		</SoundDataNode>	
 		<SoundDataNode name="BatAttack">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatAttack"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?BatAttack"/>
 			<Channel name="Mouth"/>
 			<Priority name="5"/>
 			<maxVoicesPerEntity value="1"/>
@@ -90,7 +90,7 @@
 		</SoundDataNode>			
 		<SoundDataNode name="BatHurt">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatHurt"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?BatHurt"/>
 			<Channel name="Mouth"/>
 			<Priority name="5"/>
 			<maxVoicesPerEntity value="1"/>
