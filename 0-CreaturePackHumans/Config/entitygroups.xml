@@ -71,32 +71,32 @@
 			<entity name="humanRaiderMotoXBow"  />
 			<entity name="humanRaiderMotoShotty"  />	
 
-			<entity name="HumanRaiderPestClub"  />
-			<entity name="HumanRaiderPestKnife"  />
-			<entity name="HumanRaiderPestSMG"  />
-			<entity name="HumanRaiderPestAK47"  />
-			<entity name="HumanRaiderPestHunter"  />
-			<entity name="HumanRaiderPestPistol"  />
-			<entity name="HumanRaiderPestXBow"  />
-			<entity name="HumanRaiderPestShotty"  />	
+			<entity name="humanRaiderPestClub"  />
+			<entity name="humanRaiderPestKnife"  />
+			<entity name="humanRaiderPestSMG"  />
+			<entity name="humanRaiderPestAK47"  />
+			<entity name="humanRaiderPestHunter"  />
+			<entity name="humanRaiderPestPistol"  />
+			<entity name="humanRaiderPestXBow"  />
+			<entity name="humanRaiderPestShotty"  />	
 			
-			<entity name="HumanRaiderRatClub"  />
-			<entity name="HumanRaiderRatKnife"  />
-			<entity name="HumanRaiderRatSMG"  />
-			<entity name="HumanRaiderRatAK47"  />
-			<entity name="HumanRaiderRatHunter"  />
-			<entity name="HumanRaiderRatPistol"  />
-			<entity name="HumanRaiderRatXBow"  />
-			<entity name="HumanRaiderRatShotty"  />	
+			<entity name="humanRaiderRatClub"  />
+			<entity name="humanRaiderRatKnife"  />
+			<entity name="humanRaiderRatSMG"  />
+			<entity name="humanRaiderRatAK47"  />
+			<entity name="humanRaiderRatHunter"  />
+			<entity name="humanRaiderRatPistol"  />
+			<entity name="humanRaiderRatXBow"  />
+			<entity name="humanRaiderRatShotty"  />	
 
-			<entity name="HumanRaiderSluggerClub"  />
-			<entity name="HumanRaiderSluggerKnife"  />
-			<entity name="HumanRaiderSluggerSMG"  />
-			<entity name="HumanRaiderSluggerAK47"  />
-			<entity name="HumanRaiderSluggerHunter"  />
-			<entity name="HumanRaiderSluggerPistol"  />
-			<entity name="HumanRaiderSluggerXBow"  />
-			<entity name="HumanRaiderSluggerShotty"  />	
+			<entity name="humanRaiderSluggerClub"  />
+			<entity name="humanRaiderSluggerKnife"  />
+			<entity name="humanRaiderSluggerSMG"  />
+			<entity name="humanRaiderSluggerAK47"  />
+			<entity name="humanRaiderSluggerHunter"  />
+			<entity name="humanRaiderSluggerPistol"  />
+			<entity name="humanRaiderSluggerXBow"  />
+			<entity name="humanRaiderSluggerShotty"  />	
 
 			<entity name="humanWhispererAlphaClub"  />
 			<entity name="humanWhispererAlphaKnife"  />
@@ -402,32 +402,32 @@
 		<entity name="humanRaiderMotoXBow"  prob="0.01" />
 		<entity name="humanRaiderMotoShotty"  prob="0.01" />	
 
-		<entity name="HumanRaiderPestClub"  prob="0.02" />
-		<entity name="HumanRaiderPestKnife"  prob="0.02" />
-		<entity name="HumanRaiderPestSMG"  prob="0.01" />
-		<entity name="HumanRaiderPestAK47"  prob="0.01" />
-		<entity name="HumanRaiderPestHunter"  prob="0.01" />
-		<entity name="HumanRaiderPestPistol"  prob="0.01" />
-		<entity name="HumanRaiderPestXBow"  prob="0.01" />
-		<entity name="HumanRaiderPestShotty"  prob="0.01" />	
+		<entity name="humanRaiderPestClub"  prob="0.02" />
+		<entity name="humanRaiderPestKnife"  prob="0.02" />
+		<entity name="humanRaiderPestSMG"  prob="0.01" />
+		<entity name="humanRaiderPestAK47"  prob="0.01" />
+		<entity name="humanRaiderPestHunter"  prob="0.01" />
+		<entity name="humanRaiderPestPistol"  prob="0.01" />
+		<entity name="humanRaiderPestXBow"  prob="0.01" />
+		<entity name="humanRaiderPestShotty"  prob="0.01" />	
 		
-		<entity name="HumanRaiderRatClub"  prob="0.02" />
-		<entity name="HumanRaiderRatKnife"  prob="0.02" />
-		<entity name="HumanRaiderRatSMG"  prob="0.01" />
-		<entity name="HumanRaiderRatAK47"  prob="0.01" />
-		<entity name="HumanRaiderRatHunter"  prob="0.01" />
-		<entity name="HumanRaiderRatPistol"  prob="0.01" />
-		<entity name="HumanRaiderRatXBow"  prob="0.01" />
-		<entity name="HumanRaiderRatShotty"  prob="0.01" />	
+		<entity name="humanRaiderRatClub"  prob="0.02" />
+		<entity name="humanRaiderRatKnife"  prob="0.02" />
+		<entity name="humanRaiderRatSMG"  prob="0.01" />
+		<entity name="humanRaiderRatAK47"  prob="0.01" />
+		<entity name="humanRaiderRatHunter"  prob="0.01" />
+		<entity name="humanRaiderRatPistol"  prob="0.01" />
+		<entity name="humanRaiderRatXBow"  prob="0.01" />
+		<entity name="humanRaiderRatShotty"  prob="0.01" />	
 
-		<entity name="HumanRaiderSluggerClub"  prob="0.02" />
-		<entity name="HumanRaiderSluggerKnife"  prob="0.02" />
-		<entity name="HumanRaiderSluggerSMG"  prob="0.01" />
-		<entity name="HumanRaiderSluggerAK47"  prob="0.01" />
-		<entity name="HumanRaiderSluggerHunter"  prob="0.01" />
-		<entity name="HumanRaiderSluggerPistol"  prob="0.01" />
-		<entity name="HumanRaiderSluggerXBow"  prob="0.01" />
-		<entity name="HumanRaiderSluggerShotty"  prob="0.01" />	
+		<entity name="humanRaiderSluggerClub"  prob="0.02" />
+		<entity name="humanRaiderSluggerKnife"  prob="0.02" />
+		<entity name="humanRaiderSluggerSMG"  prob="0.01" />
+		<entity name="humanRaiderSluggerAK47"  prob="0.01" />
+		<entity name="humanRaiderSluggerHunter"  prob="0.01" />
+		<entity name="humanRaiderSluggerPistol"  prob="0.01" />
+		<entity name="humanRaiderSluggerXBow"  prob="0.01" />
+		<entity name="humanRaiderSluggerShotty"  prob="0.01" />	
 
 		<entity name="humanWhispererAlphaClub"  prob="0.02" />
 		<entity name="humanWhispererAlphaKnife"  prob="0.02" />
@@ -643,32 +643,32 @@
 		<entity name="humanRaiderMotoXBow"  prob="0.04" />
 		<entity name="humanRaiderMotoShotty"  prob="0.04" />	
 
-		<entity name="HumanRaiderPestClub"  prob="0.04" />
-		<entity name="HumanRaiderPestKnife"  prob="0.04" />
-		<entity name="HumanRaiderPestSMG"  prob="0.04" />
-		<entity name="HumanRaiderPestAK47"  prob="0.04" />
-		<entity name="HumanRaiderPestHunter"  prob="0.04" />
-		<entity name="HumanRaiderPestPistol"  prob="0.04" />
-		<entity name="HumanRaiderPestXBow"  prob="0.04" />
-		<entity name="HumanRaiderPestShotty"  prob="0.04" />	
+		<entity name="humanRaiderPestClub"  prob="0.04" />
+		<entity name="humanRaiderPestKnife"  prob="0.04" />
+		<entity name="humanRaiderPestSMG"  prob="0.04" />
+		<entity name="humanRaiderPestAK47"  prob="0.04" />
+		<entity name="humanRaiderPestHunter"  prob="0.04" />
+		<entity name="humanRaiderPestPistol"  prob="0.04" />
+		<entity name="humanRaiderPestXBow"  prob="0.04" />
+		<entity name="humanRaiderPestShotty"  prob="0.04" />	
 		
-		<entity name="HumanRaiderRatClub"  prob="0.04" />
-		<entity name="HumanRaiderRatKnife"  prob="0.04" />
-		<entity name="HumanRaiderRatSMG"  prob="0.04" />
-		<entity name="HumanRaiderRatAK47"  prob="0.04" />
-		<entity name="HumanRaiderRatHunter"  prob="0.04" />
-		<entity name="HumanRaiderRatPistol"  prob="0.04" />
-		<entity name="HumanRaiderRatXBow"  prob="0.04" />
-		<entity name="HumanRaiderRatShotty"  prob="0.04" />	
+		<entity name="humanRaiderRatClub"  prob="0.04" />
+		<entity name="humanRaiderRatKnife"  prob="0.04" />
+		<entity name="humanRaiderRatSMG"  prob="0.04" />
+		<entity name="humanRaiderRatAK47"  prob="0.04" />
+		<entity name="humanRaiderRatHunter"  prob="0.04" />
+		<entity name="humanRaiderRatPistol"  prob="0.04" />
+		<entity name="humanRaiderRatXBow"  prob="0.04" />
+		<entity name="humanRaiderRatShotty"  prob="0.04" />	
 
-		<entity name="HumanRaiderSluggerClub"  prob="0.04" />
-		<entity name="HumanRaiderSluggerKnife"  prob="0.04" />
-		<entity name="HumanRaiderSluggerSMG"  prob="0.04" />
-		<entity name="HumanRaiderSluggerAK47"  prob="0.04" />
-		<entity name="HumanRaiderSluggerHunter"  prob="0.04" />
-		<entity name="HumanRaiderSluggerPistol"  prob="0.04" />
-		<entity name="HumanRaiderSluggerXBow"  prob="0.04" />
-		<entity name="HumanRaiderSluggerShotty"  prob="0.04" />	
+		<entity name="humanRaiderSluggerClub"  prob="0.04" />
+		<entity name="humanRaiderSluggerKnife"  prob="0.04" />
+		<entity name="humanRaiderSluggerSMG"  prob="0.04" />
+		<entity name="humanRaiderSluggerAK47"  prob="0.04" />
+		<entity name="humanRaiderSluggerHunter"  prob="0.04" />
+		<entity name="humanRaiderSluggerPistol"  prob="0.04" />
+		<entity name="humanRaiderSluggerXBow"  prob="0.04" />
+		<entity name="humanRaiderSluggerShotty"  prob="0.04" />	
 
 		<entity name="humanWhispererAlphaClub"  prob="0.04" />
 		<entity name="humanWhispererAlphaKnife"  prob="0.04" />

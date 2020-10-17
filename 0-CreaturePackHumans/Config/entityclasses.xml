@@ -54,7 +54,7 @@
 			<property name="Weight" value="70"/>			
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Faction" value="bandits"/>
-			<property name="IsEnemyEntity" value="true"/>			
+			<property name="IsEnemyEntity" value="false"/>			
 			<!--<property name="MapIcon" value="ui_game_symbol_enemy_dot" />  --> 
 			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />  <!-- comment out these lines if you dont want to see the NPC name and location on map -->
 			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
@@ -1139,7 +1139,7 @@
 
 		<!--  RaiderPest -->
 		
-		<entity_class name="HumanRaiderPestClub" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestClub" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>
@@ -1150,7 +1150,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
 		</entity_class>
 		
-		<entity_class name="HumanRaiderPestKnife" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestKnife" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>
@@ -1160,7 +1160,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderPestSMG" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestSMG" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>
@@ -1171,7 +1171,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderPestAK47" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestAK47" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>	
@@ -1182,7 +1182,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
 		</entity_class>
 		
-		<entity_class name="HumanRaiderPestHunter" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestHunter" extends="humanRangedMaleBanditTemplate"> 
             <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>	
@@ -1193,7 +1193,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
         </entity_class>    		
 		
-		<entity_class name="HumanRaiderPestPistol" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestPistol" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>			
@@ -1204,7 +1204,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
 		</entity_class>			
 		
-		<entity_class name="HumanRaiderPestXBow" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestXBow" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>			
@@ -1214,7 +1214,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderPestShotty" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderPestShotty" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderPest2Dark"/>		
@@ -1226,7 +1226,7 @@
 
 		<!--  RaiderRat -->
 
-		<entity_class name="HumanRaiderRatClub" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatClub" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>
@@ -1237,7 +1237,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
 		</entity_class>
 		
-		<entity_class name="HumanRaiderRatKnife" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatKnife" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>
@@ -1247,7 +1247,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderRatSMG" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatSMG" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>
@@ -1258,7 +1258,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderRatAK47" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatAK47" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>	
@@ -1269,7 +1269,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
 		</entity_class>
 		
-		<entity_class name="HumanRaiderRatHunter" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatHunter" extends="humanRangedMaleBanditTemplate"> 
             <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>	
@@ -1280,7 +1280,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
         </entity_class>    		
 		
-		<entity_class name="HumanRaiderRatPistol" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatPistol" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>			
@@ -1291,7 +1291,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
 		</entity_class>			
 		
-		<entity_class name="HumanRaiderRatXBow" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatXBow" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>			
@@ -1301,7 +1301,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderRatShotty" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderRatShotty" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderRatDark"/>		
@@ -1315,7 +1315,7 @@
 
 		<!--  RaiderSlugger -->
 
-		<entity_class name="HumanRaiderSluggerClub" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerClub" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>
@@ -1326,7 +1326,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/> 
 		</entity_class>
 		
-		<entity_class name="HumanRaiderSluggerKnife" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerKnife" extends="humanMeleeMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>
@@ -1336,7 +1336,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditKnifeIron"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderSluggerSMG" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerSMG" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>
@@ -1347,7 +1347,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderSluggerAK47" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerAK47" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>	
@@ -1358,7 +1358,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC762mmBulletBall"/> 
 		</entity_class>
 		
-		<entity_class name="HumanRaiderSluggerHunter" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerHunter" extends="humanRangedMaleBanditTemplate"> 
             <property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>	
@@ -1369,7 +1369,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditHuntingRifle,ammoNPC762mmBulletAP"/> 
         </entity_class>    		
 		
-		<entity_class name="HumanRaiderSluggerPistol" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerPistol" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>			
@@ -1380,7 +1380,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
 		</entity_class>			
 		
-		<entity_class name="HumanRaiderSluggerXBow" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerXBow" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>			
@@ -1390,7 +1390,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
 		</entity_class>	
 		
-		<entity_class name="HumanRaiderSluggerShotty" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanRaiderSluggerShotty" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,cp,male,human,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/RaiderGuyz.unity3d?RaiderSlugger2Dark"/>		
