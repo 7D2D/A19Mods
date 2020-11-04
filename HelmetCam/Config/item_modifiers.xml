@@ -5,9 +5,12 @@
 				<property name="Material" value="Msteel"/>
 				<property name="CustomIcon" value="modHelmetCam"/>
 				<effect_group tiered="false">
-					<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="HelmetCam"/>
-					<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="HelmetCam"/>
-				</effect_group>				
+                <!--    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="HelmetCam"/>
+                -->
+                    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="HelmetCam"/>
+                    <triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="HelmetCam"/>
+                    <triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="HelmetCam"/>
+                </effect_group> 				
 			</item_modifier>
 		</append>
 </configs>
