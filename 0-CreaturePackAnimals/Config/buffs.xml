@@ -16,7 +16,7 @@
 		  <stack_type value="replace"/>
 		  <duration value="10"/>
 		  <effect_group>
-	 <!--       <passive_effect name="StaminaLossMaxMult" operation="perc_add" value="4"/> -->
+			 <passive_effect name="StaminaChangeOT" operation="base_subtract" value="1"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="2" effect_name="Cold"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Cold"/>
 			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFrostbite"/>
@@ -29,6 +29,7 @@
 		  <effect_group>
 	<!--        <passive_effect name="StaminaLossMaxMult" operation="perc_add" value="10"/> -->
 			 <passive_effect name="HealthChangeOT" operation="base_subtract" value=".5"/>
+			 <passive_effect name="StaminaChangeOT" operation="base_subtract" value="2"/>
 			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFrostbite2"/>
 		  </effect_group>
 		</buff>
