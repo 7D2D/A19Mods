@@ -1,8 +1,8 @@
-Key,Source,Context,UsedInMainMenu,NoTranslate,English
+Key,Source,Context,UsedInMainMenu,NoTranslate,English,Spanish
 
 qc_Strays,items,Item,New,Strays Quest,,,,,
-qc_StraysDesc,items,Quest - Challenge,,,There are a bunch of stray dogs at this location terrorizing survivors.,,
-challenge_Strays,Quest,Challenge Info,,,Strays
-challenge_Strays_offer,Quest,Challenge Info,,,"Dear Survivor,\nYea I get it they are cute and used to be mans best friend. You know what you have to do.\n\nGood Luck, Crazy Jake."
-challenge_Strays_subtitle,Quest,Challenge Info,,,Woof woof?
-challenge_Strays_completion,Quest,Quest Info,,,Well Done...here are some things I found awhile ago. \nTake it.  
+qc_StraysDesc,items,Quest - Challenge,,,There are a bunch of stray dogs at this location terrorizing survivors.,Hay un montón de perros en esta localización aterrorizando a supervivientes.,
+challenge_Strays,Quest,Challenge Info,,,Strays,Callejeros
+challenge_Strays_offer,Quest,Challenge Info,,,"Dear Survivor,\nYea I get it they are cute and used to be mans best friend. You know what you have to do.\n\nGood Luck, Crazy Jake.","Querido Superviviente,\nLo sé, son bonitos y se supone que son el mejor amigo del hombre. Ya sabes lo que tienes que hacer.\n\nBuena suerte, Jake el Loco."
+challenge_Strays_subtitle,Quest,Challenge Info,,,Woof woof?,Guau Guau?
+challenge_Strays_completion,Quest,Quest Info,,,Well Done...here are some things I found awhile ago. \nTake it.,Bien hecho...aquí hay algunas cosas que encontré hace tiempo. \nCógelas.
