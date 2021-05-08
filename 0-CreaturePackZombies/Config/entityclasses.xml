@@ -553,7 +553,6 @@
 				<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
-<!--				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ItsMe"/> -->
 			</effect_group> 
 		</entity_class>		
 		
@@ -1458,7 +1457,26 @@
 		</effect_group>
 	</entity_class>		
 	
-
+	<entity_class name="zombieMannequinFemale" extends="zombieRegularFemaleTemplate">
+		<property name="Tags" value="entity,cp,female,zombie,mannequin"/>
+		<property name="Mesh" value="#@modfolder:Resources/mannequin.unity3d?mannequinFemale_X"/>
+		<property name="Faction" value="undead"/>
+		<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>                
+		<property name="WalkType" value="7"/>
+		<property name="HandItem" value="meleeHandZombie001"/>
+		<property name="Mass" value="120"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityEnemyAnimal,0,EntitySurvivor,0,EntityPlayer,0,EntityBandit,0"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,3,3,EntityAlive,3,3"/> 		
+	</entity_class> 	
+	
 <!-- Testing  -->
 
 

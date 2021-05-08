@@ -60,12 +60,6 @@
 		<entity name="zombieFemaleTutorialFeral" prob=".15"/>
 	</insertAfter>	
 	
-	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieBadassGroup']/entity[@name='zombieArleneFeral']" >	
-		<entity name="zombieSantaFeral"/>
-		<entity name="zombieNurseTemplateFeral"/>
-		<entity name="zombieFemaleTutorialFeral" prob=".15" />
-	</insertAfter>		
-	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']/entity[@name='animalZombieDog']" >
 		<entity name="zombieGuppyCreepyCrawly" prob="10" />
 		<entity name="zombieGuppyInfernalDog" prob="10" />

@@ -769,33 +769,33 @@
 			</effect_group>
 			<effect_group>
 				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="1"/>
-				<requirement name="!EntityTagCompare" tags="crawler"/>
+				<requirement name="!EntityTagCompare" tags="crawler,mannequin"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="1"/>
 			</effect_group>
 			<effect_group>
 				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="2"/>
-				<requirement name="!EntityTagCompare" tags="crawler"/>
+				<requirement name="!EntityTagCompare" tags="crawler,mannequin"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="2"/>
 			</effect_group>
 			<effect_group>
 				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="3"/>
-				<requirement name="!EntityTagCompare" tags="crawler"/>
+				<requirement name="!EntityTagCompare" tags="crawler,mannequin"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="3"/>
 			</effect_group>
 			<effect_group>
 				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="4"/>
-				<requirement name="!EntityTagCompare" tags="crawler"/>
+				<requirement name="!EntityTagCompare" tags="crawler,mannequin"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="5"/>
 			</effect_group>
 			<effect_group>
 				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="5"/>
-				<requirement name="!EntityTagCompare" tags="crawler"/>
+				<requirement name="!EntityTagCompare" tags="crawler,mannequin"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="6"/>
 			</effect_group>
 			
 			<effect_group>
 				<requirement name="CVarCompare" cvar="WalkChange" operation="Equals" value="6"/>
-				<requirement name="!EntityTagCompare" tags="crawler"/>
+				<requirement name="!EntityTagCompare" tags="crawler,mannequin"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WalkType" value="7"/>
 			</effect_group>
 		</buff>
