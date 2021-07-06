@@ -84,7 +84,8 @@
 	
 	<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
 		<effect_group name="RNDWalkStart">
-			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ZombieWalkChange"/>		
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ZombieWalkChange"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsZombie"/>	
 		</effect_group>
 	</append>
 	<append xpath="/entity_classes/entity_class[@name='zombieRegularTemplate']">
@@ -92,6 +93,7 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ZombieWalkChange"/>		
 		</effect_group>
 	</append>	
+	
 	
 <!-- Removing the default vanilla sounds from humanoids and zombies to be replaced by new sound system  -->
 
